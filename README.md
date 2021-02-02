@@ -17,6 +17,6 @@ yarn add yperteam/yper-js-libs
 ```
 
 ## To load a specific library in your project (example: LeafletHelper)
-```bash
+```js
 import {LeafletHelper} from "yper-js-libs/dist/yper_libs";
 ```
