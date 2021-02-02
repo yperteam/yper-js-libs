@@ -8,6 +8,7 @@ import {
     ReloadingTimeInterval,
     UrlAjax
 } from "./enums/GenericEnums";
+import { ScreenSizeEnum } from "./enums/screen_size_enum";
 import {StatusEnum} from "./enums/StatusEnum";
 import {YperException} from "./error/YperException";
 import {AutocompletionAddressGoogle} from "./helpers/autocompletion_address_google_helper";
@@ -78,6 +79,7 @@ export {
     UrlAjax,
     ReloadingTimeInterval,
     StatusEnum,
+    ScreenSizeEnum,
     YperException,
     QueryHelper,
     StatusHelper,
