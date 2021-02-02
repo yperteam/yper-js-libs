@@ -1,0 +1,31 @@
+export enum ParcelStatusEnum {
+    created = "created",
+    delivered = "delivered",
+    delivery_failed = "delivery_failed",
+    delivery_in_progress = "delivery_in_progress",
+    hub_customer_handover = "hub_customer_handover",
+    lost = "lost",
+    pending_delivery = "pending_delivery",
+    pending_hub_customer_handover = "pending_hub_customer_handover",
+    pending_provider_return = "pending_provider_return",
+    ready_for_delivery = "ready_for_delivery",
+    refused = "refused",
+    returned_to_provider = "returned_to_provider",
+    stolen = "stolen",
+}
+
+export enum ParcelTransEnum {
+    created = "scanné",
+    delivered = "livré",
+    delivery_failed = "livraison échouée",
+    delivery_in_progress = "en cours de livraison",
+    hub_customer_handover = "remis en main propre",
+    lost = "perdu",
+    pending_delivery = "à préparer",
+    pending_hub_customer_handover = "en attente de remise en main propre",
+    pending_provider_return = "à rendre",
+    ready_for_delivery = "prêt",
+    refused = "refused",
+    returned_to_provider = "Rendu",
+    stolen = "volé",
+}
