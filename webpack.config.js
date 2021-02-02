@@ -9,6 +9,18 @@ module.exports = {
                 use: 'ts-loader',
                 exclude: /node_modules/,
             },
+            {
+                test: /\.css$/i,
+                use: ["style-loader", "css-loader"],
+            },
+            {
+                test: /\.(png|jpe?g|gif)$/i,
+                use: [
+                    {
+                        loader: 'file-loader',
+                    },
+                ],
+            },
         ],
     },
     resolve: {
@@ -25,5 +37,5 @@ module.exports = {
         filename: "yper_libs.js",
         path: path.resolve(__dirname, 'dist'),
     },
-    mode: "development",
+    mode: "production",
 };
