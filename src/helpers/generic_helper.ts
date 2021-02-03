@@ -429,7 +429,6 @@ export function bindPopover($selector: JQuery<HTMLElement>) {
     $selector.popover({
         html: true,
     });
-    console.log('toto');
     $('body').on('click', e => {
         $selector.each(function () {
             if (!$selector.is(e.target) && $selector.has(e.target).length === 0 && $selector.has(e.target).length === 0) {
