@@ -36,7 +36,7 @@ module.exports = {
     },
     output: {
         filename: "yper_libs.js",
-        path: path.resolve(__dirname, 'lib'),
+        path: path.resolve(__dirname),
         library: "yperLibs",
         libraryTarget: "umd"
     },
