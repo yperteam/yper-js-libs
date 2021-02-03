@@ -35,7 +35,7 @@ module.exports = {
     },
     output: {
         filename: "yper_libs.js",
-        path: path.resolve(__dirname, 'dist'),
+        path: path.resolve(__dirname, 'lib'),
     },
     mode: "production",
 };
