@@ -427,15 +427,14 @@ export function bindTooltip($selector: JQuery<HTMLElement>) {
  */
 export function bindPopover($selector: JQuery<HTMLElement>) {
     $selector.popover({
-        delay: {
-            show: 500,
-            hide: 100,
-        },
+        html: true,
     });
-    $selector.on("click", e => {
-        setTimeout(e => {
-            $(".popover").fadeOut("slow");
-        }, 2000);
+    $('body').on('click', e => {
+        $selector.each(function () {
+            if (!$selector.is(e.target) && $selector.has(e.target).length === 0 && $selector.has(e.target).length === 0) {
+                $selector.popover('hide');
+            }
+        });
     });
 }
 
