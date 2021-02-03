@@ -1,7 +1,7 @@
 import { StatusEnum } from "../enums/StatusEnum";
 import { JourneyStatusEnum } from "../enums/journey_status_enum";
 
-export interface ProEntity {
+export default interface ProEntity {
     _id: string;
     billingEmails: string[];
     companyIds: string[];

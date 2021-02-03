@@ -38,8 +38,15 @@ module.exports = {
         filename: "yper_libs.js",
         path: path.resolve(__dirname, 'lib'),
         library: "yperLibs",
-        libraryTarget: "umd",
-        umdNamedDefine: true
+        libraryTarget: "umd"
+    },
+    externals: {
+        lodash: {
+            commonjs: 'lodash',
+            commonjs2: 'lodash',
+            amd: 'lodash',
+            root: '_',
+        },
     },
     mode: "production",
 };
