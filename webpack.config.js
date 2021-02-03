@@ -2,6 +2,7 @@ const path = require('path');
 
 module.exports = {
     entry: './src/index.ts',
+    devtool: 'source-map',
     module: {
         rules: [
             {
@@ -36,6 +37,9 @@ module.exports = {
     output: {
         filename: "yper_libs.js",
         path: path.resolve(__dirname, 'lib'),
+        library: "yperLibs",
+        libraryTarget: "umd",
+        umdNamedDefine: true
     },
     mode: "production",
 };
