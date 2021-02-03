@@ -40,13 +40,5 @@ module.exports = {
         library: "yperLibs",
         libraryTarget: "umd"
     },
-    externals: {
-        lodash: {
-            commonjs: 'lodash',
-            commonjs2: 'lodash',
-            amd: 'lodash',
-            root: '_',
-        },
-    },
     mode: "production",
 };
