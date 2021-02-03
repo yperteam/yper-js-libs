@@ -64,8 +64,10 @@ import {LoaderHelper} from "./helpers/loader_helper";
 import QueryHelper from "./helpers/query_helper";
 import StatusHelper from "./helpers/status_helper";
 import StatusHistoryHelper from "./helpers/status_history_helper";
+import { translationHelper } from "./helpers/translation_helper";
 
 export {
+    translationHelper,
     AutocompletionAddressGoogle,
     FlatpickrHelper,
     LoaderHelper,

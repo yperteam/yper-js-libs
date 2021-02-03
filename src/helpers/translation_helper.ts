@@ -7,7 +7,7 @@ DO NOT EXPORT THE CLASS.
 SINGLETON CLASS WITH WEBPACK.
 ----------------------------
  */
-export class TranslationHelper {
+class TranslationHelper {
     private locale: string;
     private translations: object;
 
@@ -112,3 +112,5 @@ export class TranslationHelper {
         }
     }
 }
+
+export let translationHelper = new TranslationHelper();
