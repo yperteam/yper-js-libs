@@ -1,4 +1,4 @@
-import { AjaxCallbackError } from "@yper-script/error/YperException";
+import { AjaxCallbackError } from "@yper-script/error/yper_exception";
 import { AbstractLib } from "@yper-script/libs/abstract_lib";
 
 /**

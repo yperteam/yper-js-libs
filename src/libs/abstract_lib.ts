@@ -3,7 +3,7 @@
  */
 import { CallbackHelper } from "@yper-script/helpers/callback_helper";
 import { formatString, get } from "@yper-script/helpers/generic_helper";
-import { AjaxCallbackError } from "@yper-script/error/YperException";
+import { AjaxCallbackError } from "@yper-script/error/yper_exception";
 import {LoaderHelper} from "@yper-script/helpers/loader_helper";
 
 export abstract class AbstractLib {

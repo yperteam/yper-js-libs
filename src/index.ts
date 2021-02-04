@@ -10,7 +10,7 @@ import {
 } from "./enums/GenericEnums";
 import { ScreenSizeEnum } from "./enums/screen_size_enum";
 import {StatusEnum} from "./enums/StatusEnum";
-import {YperException} from "./error/YperException";
+import {YperException} from "./error/yper_exception";
 import {AutocompletionAddressHelper} from "./helpers/autocompletion_address_helper";
 import FlatpickrHelper from "./helpers/flatpickr_helper";
 import * as GenericHelper from "./helpers/generic_helper";
@@ -20,10 +20,12 @@ import QueryHelper from "./helpers/query_helper";
 import StatusHelper from "./helpers/status_helper";
 import LottieHelper from "./helpers/lottie_helper";
 import StatusHistoryHelper from "./helpers/status_history_helper";
+import * as Error from "./error/yper_exception";
 import { translationHelper } from "./helpers/translation_helper";
 
 export {
     translationHelper,
+    Error,
     AutocompletionAddressHelper,
     FlatpickrHelper,
     LoaderHelper,
