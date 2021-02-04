@@ -11,7 +11,7 @@ import {
 import { ScreenSizeEnum } from "./enums/screen_size_enum";
 import {StatusEnum} from "./enums/StatusEnum";
 import {YperException} from "./error/YperException";
-import {AutocompletionAddressGoogle} from "./helpers/autocompletion_address_google_helper";
+import {AutocompletionAddressHelper} from "./helpers/autocompletion_address_helper";
 import FlatpickrHelper from "./helpers/flatpickr_helper";
 import * as GenericHelper from "./helpers/generic_helper";
 import {LeafletHelper} from "./helpers/leaflet_helper";
@@ -24,7 +24,7 @@ import { translationHelper } from "./helpers/translation_helper";
 
 export {
     translationHelper,
-    AutocompletionAddressGoogle,
+    AutocompletionAddressHelper,
     FlatpickrHelper,
     LoaderHelper,
     AddressChoice,

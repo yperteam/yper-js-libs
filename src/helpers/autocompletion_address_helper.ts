@@ -2,7 +2,7 @@ import {isDef, isIEbrowser, isSet} from "@yper-script/helpers/generic_helper";
 import {GoogleMapError} from "@yper-script/error/YperException";
 import {GoogleAddress} from "@yper-script/entity/google_address_entity";
 
-export class AutocompletionAddressGoogle {
+export class AutocompletionAddressHelper {
     private googleAutocomplete: google.maps.places.Autocomplete;
     private onChangeCallback: Function | null = null;
     private readonly inputSelector: JQuery;

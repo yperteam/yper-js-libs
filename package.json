@@ -1,8 +1,8 @@
 {
   "name": "yper-js-libs",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Yper JS Libs",
-  "main": "dist/index_bundle.js",
+  "main": "yper_libs.js",
   "repository": "git@github.com:yperteam/yper-js-libs.git",
   "author": "Nils Peritore <nils.peritore@epitech.eu>",
   "license": "MIT",
