@@ -1,6 +1,6 @@
 {
   "name": "yper-js-libs",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Yper JS Libs",
   "main": "dist/index_bundle.js",
   "repository": "git@github.com:yperteam/yper-js-libs.git",
