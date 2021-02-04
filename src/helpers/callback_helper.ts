@@ -1,6 +1,6 @@
 import { CallbackError } from "@yper-script/error/yper_exception";
 
-export class CallbackHelper {
+export default class CallbackHelper {
     private callback: Function = null;
     private parameters: any = null;
 

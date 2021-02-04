@@ -1,4 +1,4 @@
-import { CallbackHelper } from "@yper-script/helpers/callback_helper";
+import CallbackHelper  from "@yper-script/helpers/callback_helper";
 import { AbstractLib } from "@yper-script/libs/abstract_lib";
 import { UrlAjax } from "@yper-script/enums/GenericEnums";
 
