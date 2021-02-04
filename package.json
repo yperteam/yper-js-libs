@@ -1,6 +1,6 @@
 {
   "name": "yper-js-libs",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "Yper JS Libs",
   "main": "yper_libs.js",
   "repository": "git@github.com:yperteam/yper-js-libs.git",

@@ -21,6 +21,7 @@ import StatusHelper from "./helpers/status_helper";
 import LottieHelper from "./helpers/lottie_helper";
 import CallbackHelper from "./helpers/callback_helper";
 import StatusHistoryHelper from "./helpers/status_history_helper";
+import RetailPointController from "./controller/retail_point_controller";
 import * as Error from "./error/yper_exception";
 import { translationHelper } from "./helpers/translation_helper";
 
@@ -48,5 +49,6 @@ export {
     StatusHelper,
     StatusHistoryHelper,
     LeafletHelper,
-    GenericHelper
+    GenericHelper,
+    RetailPointController
 };
