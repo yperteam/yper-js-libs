@@ -6,6 +6,7 @@
   "repository": "git@github.com:yperteam/yper-js-libs.git",
   "author": "Nils Peritore <nils.peritore@epitech.eu>",
   "license": "MIT",
+  "types": "index.d.ts",
   "scripts": {
     "build": "webpack"
   },
