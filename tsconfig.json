@@ -1,32 +1,39 @@
 {
   // Change this to match your project
-  "include": ["src/index.ts"],
+  "include": [
+    "src/index.ts"
+  ],
   "compilerOptions": {
     // Tells TypeScript to read JS files, as
     // normally they are ignored as source files
     // "allowJs": true,
     // Generate d.ts files
-    "declaration": true,
-    // This compiler run should
-    // only output d.ts files
-    // "emitDeclarationOnly": true,
-    // Types should go into this directory.
-    // Removing this would place the .d.ts files
-    // next to the .js files
-    // "outDir": "dist",
-    "sourceMap": true,
-    // "outDir": "./",
-    "noImplicitAny": true,
+    //    "declaration": true,
+    //    // This compiler run should
+    //    // only output d.ts files
+    //    // "emitDeclarationOnly": true,
+    //    // Types should go into this directory.
+    //    // Removing this would place the .d.ts files
+    //    // next to the .js files
+    //    // "outDir": "dist",
     // "sourceMap": true,
+    "inlineSourceMap": true,
+    //    // "outDir": "./",
+    //    "noImplicitAny": true,
+    //    // "sourceMap": true,
     "allowSyntheticDefaultImports": true,
-    "module": "es6",
     "moduleResolution": "Node",
+    "baseUrl": "./",
+    "outDir": "./dist/",
+    "noImplicitAny": true,
+    "module": "es6",
     "target": "es5",
     "jsx": "react",
     "allowJs": true,
-    "baseUrl": "./",
     "paths": {
-      "@yper-script/*": ["src/*"]
+      "@yper-script/*": [
+        "src/*"
+      ]
     }
   }
 }
