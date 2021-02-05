@@ -1,12 +1,12 @@
 {
   "name": "yper-js-libs",
-  "version": "1.0.15",
+  "version": "1.0.16",
   "description": "Yper JS Libs",
   "main": "yper_libs.js",
   "repository": "git@github.com:yperteam/yper-js-libs.git",
   "author": "Nils Peritore <nils.peritore@epitech.eu>",
   "license": "MIT",
-  "types": "index.d.ts",
+  "types": "dist/index.d.ts",
   "scripts": {
     "build": "webpack"
   },
