@@ -1,7 +1,7 @@
 import { StatusEnum } from "../enums/StatusEnum";
 import { JourneyStatusEnum } from "../enums/journey_status_enum";
 
-export default interface ProEntity {
+export interface ProEntity {
     _id: string;
     billingEmails: string[];
     companyIds: string[];
@@ -126,7 +126,7 @@ export interface AddressEntity {
     country: string | null;
     location: {
         type: string;
-        coordinates: number[];
+        coordinates: [number, number];
     } | null;
 }
 
@@ -211,7 +211,7 @@ export interface DeliveriesStatsEntity {
     };
 }
 
-export interface delivery_entity {
+export interface DeliveryEntity {
     _id: string;
     status: StatusEnum;
     customer: {
@@ -223,7 +223,7 @@ export interface delivery_entity {
     };
 }
 
-export interface parcel_stats_entity {
+export interface ParcelStatsEntity {
     all: number;
     delivered: number;
     pending_hub_customer_handover: number;
@@ -233,7 +233,7 @@ export interface parcel_stats_entity {
     returned_to_provider: number;
 }
 
-export interface journey_stats_entity {
+export interface JourneyStatsEntity {
     all: number;
     created: number;
     end: number;
@@ -241,7 +241,7 @@ export interface journey_stats_entity {
     running: number;
 }
 
-export interface journey_entity {
+export interface JourneyEntity {
     available_at: string;
     current_step: string;
     date_end: string;
@@ -259,29 +259,4 @@ export interface journey_entity {
     transport_type: string;
     _id: string;
     provider: string;
-}
-
-export interface retail_point_entity {
-    _id: string;
-    address: {};
-    comment: string;
-    company_id: string;
-    company_name: string;
-    delivery_hours: [];
-    enabled: boolean;
-    logo: string;
-    name: string;
-    opening_hours: string;
-    phone: { private: string; public: string };
-    rating: number;
-    rating_details: {};
-    special_delivery_days: [];
-    stats: {
-        customer_count: number;
-        deliveries_per_customer: number;
-        deliveries_per_shopper: number;
-        favorite_shopper_count: number;
-        last_delivery_date: string;
-    };
-    type: string;
 }

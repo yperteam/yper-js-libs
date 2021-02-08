@@ -14,6 +14,7 @@ import {YperException} from "./error/yper_exception";
 import {AutocompletionAddressHelper} from "./helpers/autocompletion_address_helper";
 import FlatpickrHelper from "./helpers/flatpickr_helper";
 import * as Entity from "./entity/Entity";
+import {RetailPointAddressEntity, RetailPointEntity} from "./entity/retail_point_entity";
 import {GoogleAddressEntity} from "./entity/google_address_entity";
 import * as GenericHelper from "./helpers/generic_helper";
 import {LeafletHelper} from "./helpers/leaflet_helper";
@@ -32,6 +33,8 @@ export {
     Error,
     Entity,
     GoogleAddressEntity,
+    RetailPointAddressEntity,
+    RetailPointEntity,
     AutocompletionAddressHelper,
     CallbackHelper,
     FlatpickrHelper,
