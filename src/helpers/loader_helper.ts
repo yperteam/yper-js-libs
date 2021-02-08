@@ -1,5 +1,5 @@
 require("jquery-blockui/jquery.blockUI");
-import { uuidv4 } from "@yper-script/helpers/generic_helper";
+import { uuidv4 } from "./generic_helper";
 
 /**
  * Create a loader with a selector and attach it an id

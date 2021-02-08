@@ -1,5 +1,5 @@
-import { AjaxCallbackError } from "@yper-script/error/yper_exception";
-import { AbstractLib } from "@yper-script/libs/abstract_lib";
+import { AjaxCallbackError } from "../error/yper_exception";
+import { AbstractLib } from "../libs/abstract_lib";
 
 /**
  * UploadHelper class

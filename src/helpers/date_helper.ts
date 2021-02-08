@@ -3,7 +3,7 @@ import {
     DateInvoiceParamsEnum,
     SearchCommonParamsEnum,
     SearchDeliveriesParamsEnum,
-} from "@yper-script/enums/RoutesParametersKeys";
+} from "../enums/RoutesParametersKeys";
 
 export class DateHelper {
     public static yesterdayStart = moment()

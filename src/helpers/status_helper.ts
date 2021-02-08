@@ -1,4 +1,4 @@
-import {StatusEnum} from "@yper-script/enums/StatusEnum";
+import {StatusEnum} from "../enums/StatusEnum";
 
 /**
  * StatusHelper

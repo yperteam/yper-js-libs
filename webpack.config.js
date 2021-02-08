@@ -30,13 +30,12 @@ module.exports = {
         ],
         extensions: ['.tsx', '.ts', '.js'],
         alias: {
-            "@yper-script": path.resolve(__dirname, "src/"),
             jquery: "jquery/src/jquery"
         }
     },
     output: {
-        filename: 'yper_libs.js',
-        path: path.resolve(__dirname),
+        filename: 'index.js',
+        path: path.resolve(__dirname, "lib"),
         library: "yperLibs",
         libraryTarget: "umd"
     },

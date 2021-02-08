@@ -1,5 +1,5 @@
-import { AbstractLib } from "@yper-script/libs/abstract_lib";
-import { UrlAjax } from "@yper-script/enums/GenericEnums";
+import { AbstractLib } from "../libs/abstract_lib";
+import { UrlAjax } from "../enums/GenericEnums";
 
 /**
  * RemoveLikeLib object

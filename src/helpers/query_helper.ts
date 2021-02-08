@@ -1,7 +1,7 @@
 /**
  * QueryHelper used to format our call
  */
-import { keyExists, removeKey } from "@yper-script/helpers/generic_helper";
+import { keyExists, removeKey } from "./generic_helper";
 
 export default class QueryHelper {
     protected formattedUrl: string = "";

@@ -1,5 +1,5 @@
-import { StatusEnum } from "@yper-script/enums/StatusEnum";
-import { isSet } from "@yper-script/helpers/generic_helper";
+import { StatusEnum } from "../enums/StatusEnum";
+import { isSet } from "./generic_helper";
 import moment from "moment";
 
 export default class StatusHistoryHelper {

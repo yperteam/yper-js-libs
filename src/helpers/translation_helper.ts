@@ -1,5 +1,5 @@
-import {isSet, isUnDef} from "@yper-script/helpers/generic_helper";
-import {AbstractLib} from "@yper-script/libs/abstract_lib";
+import {isSet, isUnDef} from "./generic_helper";
+import {AbstractLib} from "../libs/abstract_lib";
 
 /*
 ----------------------------

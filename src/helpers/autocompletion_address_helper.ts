@@ -1,18 +1,17 @@
 import {
     isDef,
     isIEbrowser,
-    isSet,
-} from "@yper-script/helpers/generic_helper";
-import {GoogleMapError} from "@yper-script/error/yper_exception";
-import {GoogleAddress} from "@yper-script/entity/google_address_entity";
+    isSet, get
+} from "./generic_helper";
+import {GoogleMapError} from "../error/yper_exception";
+import {GoogleAddressEntity} from "../entity/google_address_entity";
 import Circle = google.maps.Circle;
-import {get} from "@yper-script/helpers/generic_helper";
 
 export class AutocompletionAddressHelper {
     private googleAutocomplete: google.maps.places.Autocomplete;
     private onChangeCallback: Function | null = null;
     private readonly inputSelector: JQuery;
-    private googleAddress: GoogleAddress = new GoogleAddress({
+    private googleAddress: GoogleAddressEntity = new GoogleAddressEntity({
         formattedAddress: null,
         street: null,
         streetNumber: null,
@@ -43,7 +42,7 @@ export class AutocompletionAddressHelper {
      */
     constructor(
         inputSelector: JQuery,
-        address: GoogleAddress | null = null,
+        address: GoogleAddressEntity | null = null,
         formInputsToBind: FormInputInterface = null
     ) {
         !this.currentRetailPoint ? (this.currentRetailPoint = []) : null;
@@ -243,7 +242,7 @@ export class AutocompletionAddressHelper {
             }
         }
 
-        this.googleAddress = new GoogleAddress({
+        this.googleAddress = new GoogleAddressEntity({
             formattedAddress: place.formatted_address,
             street: street,
             streetNumber: streetNumber,

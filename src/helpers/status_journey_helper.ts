@@ -1,6 +1,6 @@
 /**
  * StatusJourneyHelper
  */
-import StatusHelper from "@yper-script/helpers/status_helper";
+import StatusHelper from "../helpers/status_helper";
 
 export default class StatusJourneyHelper extends StatusHelper {}

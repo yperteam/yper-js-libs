@@ -1,4 +1,4 @@
-import { isSet } from "@yper-script/helpers/generic_helper";
+import { isSet } from "../helpers/generic_helper";
 
 interface GoogleAddressInfo {
     formattedAddress?: string;
@@ -11,7 +11,7 @@ interface GoogleAddressInfo {
     zip?: number;
 }
 
-export class GoogleAddress {
+export class GoogleAddressEntity {
     public formattedAddress?: string;
     public lng?: number;
     public lat?: number;

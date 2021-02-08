@@ -1,4 +1,4 @@
-import { JourneyStatusEnum } from "@yper-script/enums/journey_status_enum";
+import { JourneyStatusEnum } from "../enums/journey_status_enum";
 
 export class JourneyStatusHelper {
     public readonly statusAll = "journey-all";

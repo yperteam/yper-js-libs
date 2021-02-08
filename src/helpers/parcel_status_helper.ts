@@ -1,4 +1,4 @@
-import { ParcelStatusEnum } from "@yper-script/enums/parcel_status_enum";
+import { ParcelStatusEnum } from "../enums/parcel_status_enum";
 
 /**
  * ParcelStatusHelper

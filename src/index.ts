@@ -13,6 +13,8 @@ import {StatusEnum} from "./enums/StatusEnum";
 import {YperException} from "./error/yper_exception";
 import {AutocompletionAddressHelper} from "./helpers/autocompletion_address_helper";
 import FlatpickrHelper from "./helpers/flatpickr_helper";
+import * as Entity from "./entity/Entity";
+import {GoogleAddressEntity} from "./entity/google_address_entity";
 import * as GenericHelper from "./helpers/generic_helper";
 import {LeafletHelper} from "./helpers/leaflet_helper";
 import {LoaderHelper} from "./helpers/loader_helper";
@@ -28,6 +30,8 @@ import { translationHelper } from "./helpers/translation_helper";
 export {
     translationHelper,
     Error,
+    Entity,
+    GoogleAddressEntity,
     AutocompletionAddressHelper,
     CallbackHelper,
     FlatpickrHelper,

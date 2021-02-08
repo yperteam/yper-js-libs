@@ -1,5 +1,5 @@
-import {AbstractLib} from "@yper-script/libs/abstract_lib";
-import {ApiUrlEnum} from "@yper-script/enums/api_url_enum";
+import {AbstractLib} from "../libs/abstract_lib";
+import {ApiUrlEnum} from "../enums/api_url_enum";
 
 export default class RetailPointController extends AbstractLib {
     /**
