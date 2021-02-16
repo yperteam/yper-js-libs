@@ -3,14 +3,14 @@
 /// <reference types="jqueryui" />
 /// <reference types="bootstrap" />
 import { AbstractLib } from "../libs/abstract_lib";
-export default class RetailPointController extends AbstractLib {
+export default class DeliveryController extends AbstractLib {
     /**
      *
      * @param $elem
      */
     constructor($elem?: JQuery<HTMLElement> | null);
     /**
-     * search retail point
+     * Update delivery data
      */
-    search(): Promise<any>;
+    updateDelivery(): Promise<any>;
 }

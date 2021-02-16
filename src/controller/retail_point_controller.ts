@@ -1,5 +1,5 @@
 import {AbstractLib} from "../libs/abstract_lib";
-import {ApiUrlEnum} from "../enums/api_url_enum";
+import {ApiRetailPointUrlEnum} from "../enums/api_url_enum";
 
 export default class RetailPointController extends AbstractLib {
     /**
@@ -16,7 +16,7 @@ export default class RetailPointController extends AbstractLib {
     /**
      * search retail point
      */
-    public async search() {
-        return this._getPromise(ApiUrlEnum.retailPointSearch);
+    public async search(): Promise<any> {
+        return this._getPromise(ApiRetailPointUrlEnum.get_retail_point_search);
     }
 }

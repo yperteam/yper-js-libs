@@ -8,11 +8,6 @@ export enum MessageType {
     sms = "sms",
 }
 
-export enum InvoicesTransEnum {
-    processed = "émise",
-    draft = "à approuver",
-}
-
 export enum ProposalAnswer {
     accepted = "accepted",
     refused = "refused",
@@ -25,30 +20,6 @@ export enum ProposalReason {
     notFree = "not_free",
     freeLater = "free_later",
     other = "other",
-}
-
-export enum RpEnable {
-    enable = "enable",
-    disable = "disable",
-}
-
-export enum SearchPro {
-    enable = "enable",
-    disable = "disable",
-}
-
-export enum UserCoordinateType {
-    phone = "phone",
-    email = "email",
-}
-
-export enum SearchEngineAlias {
-    ALL_ALIAS = "all",
-    INVOICE_ALIAS = "invoice",
-    MISSION_ALIAS = "mission",
-    PRO_ALIAS = "pro",
-    RETAIL_POINT_ALIAS = "retailpoint",
-    USER_ALIAS = "user",
 }
 
 export enum UrlAjax {
@@ -134,24 +105,6 @@ export enum UrlAjax {
     deleteBlockDeliveries = "/ajax/admin/block_deliveries/{0}",
 }
 
-export enum ViewUrl {
-    deliveryDetails = "delivery/{0}/details",
-    rpDetails = "retailpoint/{0}",
-    proDetails = "pro/{0}",
-    userDetails = "user/{0}/infos",
-    invoiceDetail = "invoice/{0}",
-    parcelDetail = "parcel/{0}",
-}
-
-export enum RedirectUrl {
-    logout = "/logout",
-}
-
-export enum FillTarget {
-    latitude = "latitude",
-    longitude = "longitude",
-}
-
 export enum ReloadingTimeInterval {
     query = 250,
     query_number = 500,
@@ -161,41 +114,4 @@ export enum ReloadingTimeInterval {
     deliveryHome = 15000,
     proposalDatatable = deliveryHome,
     homeDateFiler = ReloadingTimeInterval.deliveryHome * 2,
-}
-
-export enum TimeIndicatorEnum {
-    toasterLifeTime = 5000,
-}
-
-export enum TicketStatus {
-    opened = "opened",
-    closed = "closed",
-}
-
-export enum TicketType {
-    task = "task",
-    problem = "problem",
-    incident = "incident",
-}
-
-export enum MediaType {
-    mission_attachment = "mission_attachment",
-    ticket_message_attachment = "ticket_message_attachment",
-    parcel_attachment = "parcel_attachment",
-}
-
-export enum ThreadStatus {
-    opened = "opened",
-    closed = "closed",
-}
-
-export enum DateFilters {
-    yesterday = "<span class='date--deco'>d'hier</span> <i class=\"material-icons rotate\">keyboard_arrow_down</i>",
-    today = "<span class='date--deco'>d'aujourd'hui</span> <i class=\"material-icons rotate\">keyboard_arrow_down</i>",
-    tomorrow = "<span class='date--deco'>de demain</span> <i class=\"material-icons rotate\">keyboard_arrow_down</i>",
-    thisweek = "<span class='date--deco'>de cette semaine</span> <i class=\"material-icons rotate\">keyboard_arrow_down</i>",
-}
-
-export enum TypeOfCustomer {
-    AccountMission = "AccountMission",
 }

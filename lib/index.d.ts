@@ -18,6 +18,7 @@ import LottieHelper from "./helpers/lottie_helper";
 import CallbackHelper from "./helpers/callback_helper";
 import StatusHistoryHelper from "./helpers/status_history_helper";
 import RetailPointController from "./controller/retail_point_controller";
+import DeliveryController from "./controller/delivery_controller";
 import * as Error from "./error/yper_exception";
 import { translationHelper } from "./helpers/translation_helper";
-export { translationHelper, Error, Entity, GoogleAddressEntity, RetailPointAddressEntity, RetailPointEntity, AutocompletionAddressHelper, CallbackHelper, FlatpickrHelper, LoaderHelper, AddressChoice, PictoChoice, DeliveryChoiceEnum, CssClass, MessageType, ProposalAnswer, ProposalReason, UrlAjax, ReloadingTimeInterval, StatusEnum, ScreenSizeEnum, YperException, QueryHelper, LottieHelper, StatusHelper, StatusHistoryHelper, LeafletHelper, GenericHelper, RetailPointController };
+export { translationHelper, Error, Entity, GoogleAddressEntity, RetailPointAddressEntity, RetailPointEntity, AutocompletionAddressHelper, CallbackHelper, FlatpickrHelper, LoaderHelper, AddressChoice, PictoChoice, DeliveryChoiceEnum, CssClass, MessageType, ProposalAnswer, ProposalReason, UrlAjax, ReloadingTimeInterval, StatusEnum, ScreenSizeEnum, YperException, QueryHelper, LottieHelper, StatusHelper, StatusHistoryHelper, LeafletHelper, GenericHelper, RetailPointController, DeliveryController };

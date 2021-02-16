@@ -25,6 +25,7 @@ import LottieHelper from "./helpers/lottie_helper";
 import CallbackHelper from "./helpers/callback_helper";
 import StatusHistoryHelper from "./helpers/status_history_helper";
 import RetailPointController from "./controller/retail_point_controller";
+import DeliveryController from "./controller/delivery_controller";
 import * as Error from "./error/yper_exception";
 import { translationHelper } from "./helpers/translation_helper";
 
@@ -57,5 +58,6 @@ export {
     StatusHistoryHelper,
     LeafletHelper,
     GenericHelper,
-    RetailPointController
+    RetailPointController,
+    DeliveryController
 };
