@@ -1,10 +1,8 @@
-/// <reference types="googlemaps" />
 /// <reference types="jquery" />
 /// <reference types="jquery.blockui" />
 /// <reference types="jqueryui" />
 /// <reference types="bootstrap" />
 import { GoogleAddressEntity } from "../entity/google_address_entity";
-import Circle = google.maps.Circle;
 export declare class AutocompletionAddressHelper {
     private googleAutocomplete;
     private onChangeCallback;
@@ -17,9 +15,6 @@ export declare class AutocompletionAddressHelper {
     private readonly locality;
     private readonly country;
     private readonly postalCode;
-    /** Required data */
-    private readonly currentRetailPoint;
-    private readonly rpRadius;
     /**
      *
      * @param inputSelector
@@ -50,7 +45,12 @@ export declare class AutocompletionAddressHelper {
      * Address getter
      */
     getInputSelector(): JQuery<HTMLElement>;
-    googleAutocompleteField(autocompleteValue?: string): void;
+    /**
+     *
+     * @param autocompleteValue
+     * @private
+     */
+    private googleAutocompleteField;
     /**
      * Set a custom callback on OnChange event
      */
@@ -65,13 +65,24 @@ export declare class AutocompletionAddressHelper {
      */
     cleanFormData(): void;
     /**
-     * Get bounds
+     * Set default bounds
      */
-    getPickUpBounds(): Promise<Circle | null>;
+    private setDefaultBounds;
+    /**
+     *
+     * @param conf
+     */
+    setCustomBounds(conf: {
+        center: {
+            lat: number;
+            lng: number;
+        };
+        radius: number;
+    }): void;
     /**
      * Bind the autocompletion to an input
      */
-    bindAddressAutocomplete(): void;
+    private bindAddressAutocomplete;
     private onPlaceChanged;
 }
 export interface FormInputInterface {
