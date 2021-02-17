@@ -30,10 +30,6 @@ export class AutocompletionAddressHelper {
     private readonly country = "country";
     private readonly postalCode = "postal_code";
 
-    /** Required data */
-    private readonly currentRetailPoint = get(window, ["currentRetailPoint"]);
-    private readonly rpRadius = 25000;
-
     /**
      *
      * @param inputSelector
@@ -45,10 +41,12 @@ export class AutocompletionAddressHelper {
         address: GoogleAddressEntity | null = null,
         formInputsToBind: FormInputInterface = null
     ) {
-        !this.currentRetailPoint ? (this.currentRetailPoint = []) : null;
         this.inputSelector = inputSelector;
         if (address !== null) this.googleAddress = address;
         this.formInputs = formInputsToBind;
+        this.bindAddressAutocomplete();
+        this.googleAutocompleteField();
+        this.setDefaultBounds();
     }
 
     /**
@@ -72,7 +70,12 @@ export class AutocompletionAddressHelper {
         return this.inputSelector;
     }
 
-    public googleAutocompleteField(autocompleteValue?: string) {
+    /**
+     *
+     * @param autocompleteValue
+     * @private
+     */
+    private googleAutocompleteField(autocompleteValue?: string) {
         let autocompleteInput = this.inputSelector.get(0);
         let observerHack = new MutationObserver(() => {
             observerHack.disconnect();
@@ -125,77 +128,65 @@ export class AutocompletionAddressHelper {
     }
 
     /**
-     * Get bounds
+     * Set default bounds
      */
-    public async getPickUpBounds(): Promise<Circle | null> {
-        let rpCoordinates = get(
-            this.currentRetailPoint,
-            ["address", "location", "coordinates"],
-            []
-        );
+    private setDefaultBounds() {
         let geolocation: {
             lat: number;
             lng: number;
         };
 
-        return new Promise((resolve, reject) => {
-            if (rpCoordinates.length === 2) {
-                geolocation = {
-                    lat: rpCoordinates[1],
-                    lng: rpCoordinates[0],
-                };
-                resolve(
-                    new google.maps.Circle({
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(
+                position => {
+                    geolocation = {
+                        lat: position.coords.latitude,
+                        lng: position.coords.longitude,
+                    };
+                    this.setCustomBounds({
                         center: geolocation,
-                        radius: this.rpRadius,
-                    })
-                );
-            } else if (navigator.geolocation) {
-                navigator.geolocation.getCurrentPosition(
-                    position => {
-                        geolocation = {
-                            lat: position.coords.latitude,
-                            lng: position.coords.longitude,
-                        };
-                        resolve(
-                            new google.maps.Circle({
-                                center: geolocation,
-                                radius: position.coords.accuracy,
-                            })
-                        );
-                    },
-                    err => {
-                        resolve(null);
-                    }
-                );
-            } else {
-                resolve(null);
-            }
+                        radius: position.coords.accuracy,
+                    });
+                },
+                err => {
+                    console.log(err);
+                }
+            );
+        }
+    }
+
+    /**
+     *
+     * @param conf
+     */
+    public setCustomBounds(conf: { center: { lat: number, lng: number }, radius: number }) {
+        const googleBounds: google.maps.Circle = new google.maps.Circle({
+            center: conf.center,
+            radius: conf.radius,
         });
+
+        this.googleAutocomplete.setBounds(
+            googleBounds.getBounds()
+        );
     }
 
     /**
      * Bind the autocompletion to an input
      */
-    public bindAddressAutocomplete() {
+    private bindAddressAutocomplete() {
         let input = <HTMLInputElement>this.inputSelector.get(0);
 
-        this.getPickUpBounds().then((circle: Circle | null) => {
-            this.googleAutocomplete = new google.maps.places.Autocomplete(input, {
-                componentRestrictions: {country: ["fr", "be", "de", "lu"]},
-                fields: ["address_component", "formatted_address", "geometry"],
-            });
-            if (circle) {
-                this.googleAutocomplete.setBounds(circle.getBounds());
-            }
-            google.maps.event.addListener(
-                this.googleAutocomplete,
-                "place_changed",
-                () => {
-                    this.onPlaceChanged();
-                }
-            );
+        this.googleAutocomplete = new google.maps.places.Autocomplete(input, {
+            componentRestrictions: {country: ["fr", "be", "de", "lu"]},
+            fields: ["address_component", "formatted_address", "geometry"],
         });
+        google.maps.event.addListener(
+            this.googleAutocomplete,
+            "place_changed",
+            () => {
+                this.onPlaceChanged();
+            }
+        );
     }
 
     private onPlaceChanged() {
