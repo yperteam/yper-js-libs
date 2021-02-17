@@ -6,10 +6,6 @@ export declare enum MessageType {
     notification = "notifs",
     sms = "sms"
 }
-export declare enum InvoicesTransEnum {
-    processed = "\u00E9mise",
-    draft = "\u00E0 approuver"
-}
 export declare enum ProposalAnswer {
     accepted = "accepted",
     refused = "refused",
@@ -21,26 +17,6 @@ export declare enum ProposalReason {
     notFree = "not_free",
     freeLater = "free_later",
     other = "other"
-}
-export declare enum RpEnable {
-    enable = "enable",
-    disable = "disable"
-}
-export declare enum SearchPro {
-    enable = "enable",
-    disable = "disable"
-}
-export declare enum UserCoordinateType {
-    phone = "phone",
-    email = "email"
-}
-export declare enum SearchEngineAlias {
-    ALL_ALIAS = "all",
-    INVOICE_ALIAS = "invoice",
-    MISSION_ALIAS = "mission",
-    PRO_ALIAS = "pro",
-    RETAIL_POINT_ALIAS = "retailpoint",
-    USER_ALIAS = "user"
 }
 export declare enum UrlAjax {
     patchDelivery = "/ajax/delivery/{0}/patch",
@@ -124,21 +100,6 @@ export declare enum UrlAjax {
     userBlockDeliveries = "/ajax/admin/user/{0}/block_deliveries",
     deleteBlockDeliveries = "/ajax/admin/block_deliveries/{0}"
 }
-export declare enum ViewUrl {
-    deliveryDetails = "delivery/{0}/details",
-    rpDetails = "retailpoint/{0}",
-    proDetails = "pro/{0}",
-    userDetails = "user/{0}/infos",
-    invoiceDetail = "invoice/{0}",
-    parcelDetail = "parcel/{0}"
-}
-export declare enum RedirectUrl {
-    logout = "/logout"
-}
-export declare enum FillTarget {
-    latitude = "latitude",
-    longitude = "longitude"
-}
 export declare enum ReloadingTimeInterval {
     query = 250,
     query_number = 500,
@@ -148,34 +109,4 @@ export declare enum ReloadingTimeInterval {
     deliveryHome = 15000,
     proposalDatatable = 15000,
     homeDateFiler = 30000
-}
-export declare enum TimeIndicatorEnum {
-    toasterLifeTime = 5000
-}
-export declare enum TicketStatus {
-    opened = "opened",
-    closed = "closed"
-}
-export declare enum TicketType {
-    task = "task",
-    problem = "problem",
-    incident = "incident"
-}
-export declare enum MediaType {
-    mission_attachment = "mission_attachment",
-    ticket_message_attachment = "ticket_message_attachment",
-    parcel_attachment = "parcel_attachment"
-}
-export declare enum ThreadStatus {
-    opened = "opened",
-    closed = "closed"
-}
-export declare enum DateFilters {
-    yesterday = "<span class='date--deco'>d'hier</span> <i class=\"material-icons rotate\">keyboard_arrow_down</i>",
-    today = "<span class='date--deco'>d'aujourd'hui</span> <i class=\"material-icons rotate\">keyboard_arrow_down</i>",
-    tomorrow = "<span class='date--deco'>de demain</span> <i class=\"material-icons rotate\">keyboard_arrow_down</i>",
-    thisweek = "<span class='date--deco'>de cette semaine</span> <i class=\"material-icons rotate\">keyboard_arrow_down</i>"
-}
-export declare enum TypeOfCustomer {
-    AccountMission = "AccountMission"
 }
