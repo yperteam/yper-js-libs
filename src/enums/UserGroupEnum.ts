@@ -8,4 +8,7 @@ export enum UserGroupEnum {
     pro = "pro",
     hub = "hub",
     collaborator = "collaborator",
+    employee = "employee",
+    partner = "partner",
+    admin = "Admin Yper",
 }
