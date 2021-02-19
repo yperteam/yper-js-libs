@@ -15,7 +15,7 @@ export default class FlatpickrHelper {
      * @param customOnChange
      * @param conf
      */
-    constructor(inputSelector: string, customOnChange?: Function, mode?: "single" | "multiple" | "range" | "time", wrap?: boolean, dateFormat?: string, conf?: Options);
+    constructor(inputSelector: string, customOnChange?: Function, conf?: Options, mode?: "single" | "multiple" | "range" | "time", wrap?: boolean, dateFormat?: string);
     /**
      *
      * @param date

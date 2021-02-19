@@ -25,10 +25,10 @@ export default class FlatpickrHelper {
     constructor(
         inputSelector: string,
         customOnChange: Function = null,
+        conf: Options = {},
         mode: "single" | "multiple" | "range" | "time" = "single",
         wrap: boolean = true,
-        dateFormat: string = "d-m-Y",
-        conf: Options = {}
+        dateFormat: string = "d-m-Y"
     ) {
         this.$flatPickr = flatpickr(document.querySelector(inputSelector), {
             wrap: wrap,
