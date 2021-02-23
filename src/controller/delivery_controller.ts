@@ -19,4 +19,11 @@ export default class DeliveryController extends AbstractLib {
     public async updateDelivery(): Promise<any> {
         return this._putPromise(ApiDeliveryUrlEnum.e_root_delivery);
     }
+
+    /**
+     * Get delivery data
+     */
+    public async getDelivery(): Promise<any> {
+        return this._getPromise(ApiDeliveryUrlEnum.e_root_delivery);
+    }
 }
