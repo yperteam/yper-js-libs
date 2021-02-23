@@ -1,5 +1,5 @@
 import flatpickr from "flatpickr";
-import { French } from "flatpickr/dist/l10n/fr";
+import {French} from "flatpickr/dist/l10n/fr";
 import Options = flatpickr.Options.Options;
 
 flatpickr.localize(French);
@@ -70,5 +70,13 @@ export default class FlatpickrHelper {
      */
     public setDate(date: string) {
         return this.$flatPickr.setDate(date);
+    }
+
+    /**
+     *
+     * @return flatpickr.Instance
+     */
+    public getInstance(): flatpickr.Instance {
+        return this.$flatPickr;
     }
 }

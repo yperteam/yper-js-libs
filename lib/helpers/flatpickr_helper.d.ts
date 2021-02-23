@@ -21,4 +21,9 @@ export default class FlatpickrHelper {
      * @param date
      */
     setDate(date: string): void;
+    /**
+     *
+     * @return flatpickr.Instance
+     */
+    getInstance(): flatpickr.Instance;
 }
