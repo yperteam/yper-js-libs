@@ -244,11 +244,7 @@ export abstract class AbstractLib {
                     }
                 })
                 .then(data => {
-                    resolve({
-                        pathParams: pathParams,
-                        payloadParams: payloadParams,
-                        data: data,
-                    });
+                    resolve(data);
                 })
                 .always(data => {
                     if (this.loader) {
@@ -286,11 +282,7 @@ export abstract class AbstractLib {
                     }
                 })
                 .then(data => {
-                    resolve({
-                        pathParams: pathParams,
-                        payloadParams: payloadParams,
-                        data: data,
-                    });
+                    resolve(data);
                 })
                 .always(data => {
                     if (this.loader) {

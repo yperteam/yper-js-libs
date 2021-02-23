@@ -1,4 +1,3 @@
-import { StatusEnum } from "../enums/StatusEnum";
 import { JourneyStatusEnum } from "../enums/journey_status_enum";
 export interface ProEntity {
     _id: string;
@@ -107,13 +106,14 @@ export interface AddressTypeEntity {
     address: AddressEntity;
 }
 export interface AddressEntity {
+    additional?: string;
+    additional_number?: string;
+    apartment?: string;
+    city: string | null;
     formatted_address: string | null;
     street: string | null;
     street_number: string | number | null;
-    additional?: string;
-    additional_number?: string;
     zip: number | null;
-    city: string | null;
     country: string | null;
     location: {
         type: string;
@@ -199,17 +199,6 @@ export interface DeliveriesStatsEntity {
         started: number;
         total: number;
         verified: number;
-    };
-}
-export interface DeliveryEntity {
-    _id: string;
-    status: StatusEnum;
-    customer: {
-        id: string;
-    };
-    shopper: shopper_entity;
-    sender: {
-        type: string;
     };
 }
 export interface ParcelStatsEntity {
