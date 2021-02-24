@@ -314,7 +314,7 @@ export function get(
     defaultValue = null
 ): any {
     // @ts-ignore
-    if (iteretable[indexes[0]] !== undefined) {
+    if (iteretable[indexes[0]] !== undefined && iteretable[indexes[0]] !==  null) {
         // @ts-ignore
         if (isIterable(iteretable[indexes[0]]) && indexes.length > 1) {
             // @ts-ignore
