@@ -13,3 +13,22 @@ export class ApiRetailPointUrlEnum {
 
     public static get_retail_point_search = ApiRetailPointUrlEnum.root_retail_point + "/search";
 }
+
+export class ApiOrderUrlEnum {
+    public static root_order = AbstractApiUrlEnum.root + "/order";
+    public static e_root_order = ApiOrderUrlEnum.root_order + "/{0}";
+    public static e_root_order_add_items = ApiOrderUrlEnum.e_root_order + "/add_items";
+    public static e_root_order_pay = ApiOrderUrlEnum.e_root_order + "/pay";
+    public static e_root_order_validate = ApiOrderUrlEnum.e_root_order + "/validate";
+}
+
+export class ApiUserUrlEnum {
+    public static root_user = AbstractApiUrlEnum.root + "/user";
+    public static e_root_user = ApiUserUrlEnum.root_user + "/{0}";
+}
+
+export class ApiUserPaymentMethodUrlEnum {
+    public static root_user_payment_method = ApiUserUrlEnum.e_root_user + "/wallet/payment_method";
+    public static e_root_user_payment_method = ApiUserPaymentMethodUrlEnum.root_user_payment_method + "/{1}";
+    public static user_payment_method_primary = ApiUserPaymentMethodUrlEnum.e_root_user_payment_method + "/primary";
+}

@@ -27,6 +27,8 @@ import CallbackHelper from "./helpers/callback_helper";
 import StatusHistoryHelper from "./helpers/status_history_helper";
 import RetailPointController from "./controller/retail_point_controller";
 import DeliveryController from "./controller/delivery_controller";
+import OrderController from "./controller/order_controller";
+import UserPaymentMethodController from "./controller/user_payment_method_controller";
 import * as Error from "./error/yper_exception";
 import {translationHelper} from "./helpers/translation_helper";
 
@@ -63,5 +65,7 @@ export {
     LeafletHelper,
     GenericHelper,
     RetailPointController,
-    DeliveryController
+    DeliveryController,
+    OrderController,
+    UserPaymentMethodController
 };
