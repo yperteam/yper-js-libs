@@ -14,6 +14,7 @@
     "build": "webpack"
   },
   "dependencies": {
+    "@stripe/stripe-js": "^1.13.0",
     "flatpickr": "^4.6.9",
     "jquery": "^3.5.1",
     "jquery-blockui": "^2.7.0",
