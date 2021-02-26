@@ -9,12 +9,11 @@ export default class StripeHelper {
     /** Private keys */
     protected stripeCardElementPrivateKey: string;
     protected stripeIbanElementPrivateKey: string;
-    constructor();
     /**
-     *
-     * @param publishableKey
+     * @constructor
+     * @param stripe
      */
-    setStripeClient(publishableKey: string): Promise<void>;
+    constructor(stripe: Stripe);
     /**
      *
      * @param stripeIbanElementOptions

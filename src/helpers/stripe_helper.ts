@@ -34,24 +34,13 @@ export default class StripeHelper {
     protected stripeCardElementPrivateKey: string
     protected stripeIbanElementPrivateKey: string
 
-
-    constructor() {
-    }
-
     /**
-     *
-     * @param publishableKey
+     * @constructor
+     * @param stripe
      */
-    public async setStripeClient(publishableKey: string) {
-        // TODO: LOADER IF WE WANT
-        // 'pk_test_TYooMQauvdEDq54NiTphI7jx'
-        //this.stripe = await loadStripe(publishableKey);
-        //this.stripeElements = this.stripe.elements();
-
-        return await loadStripe(publishableKey).then((stripe: Stripe) => {
-            this.stripe = stripe
-            this.stripeElements = this.stripe.elements();
-        });
+    constructor(stripe: Stripe) {
+        this.stripe = stripe;
+        this.stripeElements = this.stripe.elements();
     }
 
     /**
