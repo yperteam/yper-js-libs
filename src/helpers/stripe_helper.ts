@@ -45,8 +45,13 @@ export default class StripeHelper {
     public async setStripeClient(publishableKey: string) {
         // TODO: LOADER IF WE WANT
         // 'pk_test_TYooMQauvdEDq54NiTphI7jx'
-        this.stripe = await loadStripe(publishableKey);
-        this.stripeElements = this.stripe.elements();
+        //this.stripe = await loadStripe(publishableKey);
+        //this.stripeElements = this.stripe.elements();
+
+        return await loadStripe(publishableKey).then((stripe: Stripe) => {
+            this.stripe = stripe
+            this.stripeElements = this.stripe.elements();
+        });
     }
 
     /**
