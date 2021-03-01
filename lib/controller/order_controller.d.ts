@@ -10,13 +10,17 @@ export default class OrderController extends AbstractLib {
      */
     constructor($elem?: JQuery<HTMLElement> | null);
     /**
+     * Add item(s) to the order
+     */
+    addItems(): Promise<any>;
+    /**
      * Create a new order corresponding to mission(s)
      */
     createOrder(): Promise<any>;
     /**
-     * Add item(s) to the order
+     * Get an order
      */
-    addItems(): Promise<any>;
+    getOrder(): Promise<any>;
     /**
      * Validate Order
      */

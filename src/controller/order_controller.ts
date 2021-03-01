@@ -14,6 +14,13 @@ export default class OrderController extends AbstractLib {
     }
 
     /**
+     * Add item(s) to the order
+     */
+    public async addItems(): Promise<any> {
+        return this._postPromise(ApiOrderUrlEnum.e_root_order_add_items);
+    }
+
+    /**
      * Create a new order corresponding to mission(s)
      */
     public async createOrder(): Promise<any> {
@@ -21,10 +28,10 @@ export default class OrderController extends AbstractLib {
     }
 
     /**
-     * Add item(s) to the order
+     * Get an order
      */
-    public async addItems(): Promise<any> {
-        return this._postPromise(ApiOrderUrlEnum.e_root_order_add_items);
+    public async getOrder(): Promise<any> {
+        return this._getPromise(ApiOrderUrlEnum.e_root_order);
     }
 
     /**
