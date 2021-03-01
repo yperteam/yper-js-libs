@@ -32,3 +32,8 @@ export class ApiUserPaymentMethodUrlEnum {
     public static e_root_user_payment_method = ApiUserPaymentMethodUrlEnum.root_user_payment_method + "/{1}";
     public static user_payment_method_primary = ApiUserPaymentMethodUrlEnum.e_root_user_payment_method + "/primary";
 }
+
+export class ApiPaymentIntentUrlEnum {
+    public static root_payment_intent = AbstractApiUrlEnum.root + "/payment_intent";
+    public static e_root_payment_intent = ApiPaymentIntentUrlEnum.root_payment_intent + "/{0}";
+}

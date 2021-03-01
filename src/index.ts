@@ -30,6 +30,7 @@ import RetailPointController from "./controller/retail_point_controller";
 import DeliveryController from "./controller/delivery_controller";
 import OrderController from "./controller/order_controller";
 import UserPaymentMethodController from "./controller/user_payment_method_controller";
+import PaymentIntentController from "./controller/payment_intent_controller";
 import * as Error from "./error/yper_exception";
 import {translationHelper} from "./helpers/translation_helper";
 
@@ -69,5 +70,6 @@ export {
     RetailPointController,
     DeliveryController,
     OrderController,
-    UserPaymentMethodController
+    UserPaymentMethodController,
+    PaymentIntentController
 };

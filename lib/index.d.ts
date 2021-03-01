@@ -23,6 +23,7 @@ import RetailPointController from "./controller/retail_point_controller";
 import DeliveryController from "./controller/delivery_controller";
 import OrderController from "./controller/order_controller";
 import UserPaymentMethodController from "./controller/user_payment_method_controller";
+import PaymentIntentController from "./controller/payment_intent_controller";
 import * as Error from "./error/yper_exception";
 import { translationHelper } from "./helpers/translation_helper";
-export { translationHelper, Error, Entity, DeliveryAddressEntity, DeliveryEntity, UserDeliveryEntity, GoogleAddressEntity, RetailPointAddressEntity, RetailPointEntity, AutocompletionAddressHelper, CallbackHelper, FlatpickrHelper, LoaderHelper, StripeHelper, AddressChoice, PictoChoice, DeliveryChoiceEnum, CssClass, MessageType, ProposalAnswer, ProposalReason, UrlAjax, ReloadingTimeInterval, StatusEnum, ScreenSizeEnum, YperException, QueryHelper, LottieHelper, StatusHelper, StatusHistoryHelper, LeafletHelper, GenericHelper, RetailPointController, DeliveryController, OrderController, UserPaymentMethodController };
+export { translationHelper, Error, Entity, DeliveryAddressEntity, DeliveryEntity, UserDeliveryEntity, GoogleAddressEntity, RetailPointAddressEntity, RetailPointEntity, AutocompletionAddressHelper, CallbackHelper, FlatpickrHelper, LoaderHelper, StripeHelper, AddressChoice, PictoChoice, DeliveryChoiceEnum, CssClass, MessageType, ProposalAnswer, ProposalReason, UrlAjax, ReloadingTimeInterval, StatusEnum, ScreenSizeEnum, YperException, QueryHelper, LottieHelper, StatusHelper, StatusHistoryHelper, LeafletHelper, GenericHelper, RetailPointController, DeliveryController, OrderController, UserPaymentMethodController, PaymentIntentController };

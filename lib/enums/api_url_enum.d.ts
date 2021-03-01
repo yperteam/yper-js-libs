@@ -26,3 +26,7 @@ export declare class ApiUserPaymentMethodUrlEnum {
     static e_root_user_payment_method: string;
     static user_payment_method_primary: string;
 }
+export declare class ApiPaymentIntentUrlEnum {
+    static root_payment_intent: string;
+    static e_root_payment_intent: string;
+}
