@@ -1,7 +1,7 @@
 /**
  * Distinct order status
  */
-export enum OrderStatus {
+export enum OrderStatusEnum {
     created = "created",
     levy = "levy",
     pending = "pending",
@@ -14,7 +14,7 @@ export enum OrderStatus {
 /**
  * Order item types
  */
-export enum OrderItemType {
+export enum OrderItemTypeEnum {
     delivery = "delivery",
     invoice = "invoice",
     pro_subscription = "pro_subscription"
