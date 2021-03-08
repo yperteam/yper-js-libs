@@ -1,7 +1,7 @@
 import flatpickr from "flatpickr";
 import { French } from "flatpickr/dist/l10n/fr";
 flatpickr.localize(French);
-// require("flatpickr/dist/themes/light.css");
+require("flatpickr/dist/themes/light.css");
 
 export default class FlatpickrHelper {
     private $flatPickr: flatpickr.Instance;
