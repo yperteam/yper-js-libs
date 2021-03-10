@@ -14,9 +14,12 @@ export default class LottieHelper {
      * Load loader animation with lottieJs
      */
     loaderAnimation(): void;
-    start(): void;
     /**
-     * Destroy loader animation with lottieJs
+     * Play loader animation
+     */
+    play(): void;
+    /**
+     * Stop loader animation
      */
     stop(): void;
 }

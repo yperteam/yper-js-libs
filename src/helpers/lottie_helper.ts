@@ -18,9 +18,9 @@ export default class LottieHelper {
      * @constructor
      */
     constructor(elemId: string, conf: LottieConfTypes) {
+        this.lottieInst = lottie;
         this.elem = document.getElementById(elemId);
         this.conf = conf;
-        this.lottieInst = lottie;
     }
 
     /**
@@ -33,15 +33,18 @@ export default class LottieHelper {
         })
     }
 
-    public start() {
-        this.loaderAnimation();
+    /**
+     * Play loader animation
+     */
+    public play() {
+        this.lottieInst.play();
     }
 
     /**
-     * Destroy loader animation with lottieJs
+     * Stop loader animation
      */
     public stop() {
-        this.lottieInst.destroy();
+        this.lottieInst.stop();
     }
 }
 
