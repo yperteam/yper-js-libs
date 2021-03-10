@@ -5,6 +5,7 @@ import lottie, {
     LottiePlayer,
     SVGRendererConfig
 } from "lottie-web";
+import Lottie from "lottie-web";
 
 /**
  * Lottie Helper
@@ -12,15 +13,21 @@ import lottie, {
 export default class LottieHelper {
     protected elem: HTMLElement;
     protected conf: LottieConfTypes;
-    protected lottieInst: LottiePlayer;
+    protected lottieInst: LottiePlayer | null;
 
     /**
      * @constructor
      */
     constructor(elemId: string, conf: LottieConfTypes) {
-        this.lottieInst = lottie;
         this.elem = document.getElementById(elemId);
         this.conf = conf;
+    }
+
+    /**
+     * Load Instance
+     */
+    private loadLottieInstance() {
+        this.lottieInst = lottie;
     }
 
     /**
@@ -37,7 +44,12 @@ export default class LottieHelper {
      * Play loader animation
      */
     public play() {
-        this.lottieInst.play();
+        if (this.lottieInst) {
+            this.lottieInst.play();
+        } else {
+            this.loadLottieInstance();
+            this.loaderAnimation();
+        }
     }
 
     /**

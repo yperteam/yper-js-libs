@@ -5,11 +5,15 @@ import { AnimationSegment, CanvasRendererConfig, HTMLRendererConfig, LottiePlaye
 export default class LottieHelper {
     protected elem: HTMLElement;
     protected conf: LottieConfTypes;
-    protected lottieInst: LottiePlayer;
+    protected lottieInst: LottiePlayer | null;
     /**
      * @constructor
      */
     constructor(elemId: string, conf: LottieConfTypes);
+    /**
+     * Load Instance
+     */
+    private loadLottieInstance;
     /**
      * Load loader animation with lottieJs
      */
