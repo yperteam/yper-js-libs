@@ -1,9 +1,9 @@
 import flatpickr from "flatpickr";
 import {French} from "flatpickr/dist/l10n/fr";
 import Options = flatpickr.Options.Options;
+import "flatpickr/dist/themes/light.css";
 
 flatpickr.localize(French);
-require("flatpickr/dist/themes/light.css");
 
 export default class FlatpickrHelper {
     private $flatPickr: flatpickr.Instance;

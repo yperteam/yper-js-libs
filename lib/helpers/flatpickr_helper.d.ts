@@ -1,5 +1,6 @@
 import flatpickr from "flatpickr";
 import Options = flatpickr.Options.Options;
+import "flatpickr/dist/themes/light.css";
 export default class FlatpickrHelper {
     private $flatPickr;
     static modeSingle: string;

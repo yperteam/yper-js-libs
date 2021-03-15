@@ -41,6 +41,8 @@ import UserController from "./controller/user_controller";
 import UserPaymentMethodController from "./controller/user_payment_method_controller";
 import PaymentIntentController from "./controller/payment_intent_controller";
 
+import PasswordChecker from "./component/password_checker/password_checker";
+
 import * as Error from "./error/yper_exception";
 
 export {
@@ -83,5 +85,6 @@ export {
     OrderController,
     UserPaymentMethodController,
     PaymentIntentController,
-    UserController
+    UserController,
+    PasswordChecker
 };

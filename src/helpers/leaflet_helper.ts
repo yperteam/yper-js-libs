@@ -1,6 +1,5 @@
 import L from "leaflet";
-
-require("leaflet/dist/leaflet.css");
+import "leaflet/dist/leaflet.css";
 
 export class LeafletHelper {
     private selector: string | HTMLElement;
