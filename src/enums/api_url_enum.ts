@@ -3,6 +3,18 @@ export class AbstractApiUrlEnum {
 }
 
 /**
+ * Admin Delivery
+ */
+export class ApiAdminDeliveryUrlEnum {
+    public static root_admin_delivery = AbstractApiUrlEnum.root + "/admin/delivery";
+    public static e_root_admin_delivery = ApiAdminDeliveryUrlEnum.root_admin_delivery + "/{0}";
+
+    public static root_admin_mission_parcel = ApiAdminDeliveryUrlEnum.e_root_admin_delivery + "/parcel";
+    public static e_root_admin_mission_parcel = ApiAdminDeliveryUrlEnum.root_admin_mission_parcel + "/{1}";
+    public static endpoint_post_parcel_refuse = ApiAdminDeliveryUrlEnum.root_admin_mission_parcel + "/refuse";
+}
+
+/**
  * Delivery
  */
 export class ApiDeliveryUrlEnum {

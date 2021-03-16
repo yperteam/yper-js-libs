@@ -2,6 +2,16 @@ export declare class AbstractApiUrlEnum {
     static root: string;
 }
 /**
+ * Admin Delivery
+ */
+export declare class ApiAdminDeliveryUrlEnum {
+    static root_admin_delivery: string;
+    static e_root_admin_delivery: string;
+    static root_admin_mission_parcel: string;
+    static e_root_admin_mission_parcel: string;
+    static endpoint_post_parcel_refuse: string;
+}
+/**
  * Delivery
  */
 export declare class ApiDeliveryUrlEnum {

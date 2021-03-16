@@ -22,6 +22,7 @@ import CallbackHelper from "./helpers/callback_helper";
 import StatusHistoryHelper from "./helpers/status_history_helper";
 import StripeHelper from "./helpers/stripe_helper";
 import RetailPointController from "./controller/retail_point_controller";
+import AdminDeliveryController from "./controller/admin_delivery_controller";
 import DeliveryController from "./controller/delivery_controller";
 import OrderController from "./controller/order_controller";
 import UserController from "./controller/user_controller";
@@ -29,4 +30,4 @@ import UserPaymentMethodController from "./controller/user_payment_method_contro
 import PaymentIntentController from "./controller/payment_intent_controller";
 import PasswordChecker from "./component/password_checker/password_checker";
 import * as Error from "./error/yper_exception";
-export { translationHelper, Error, Entity, DeliveryAddressEntity, DeliveryEntity, UserDeliveryEntity, GoogleAddressEntity, RetailPointAddressEntity, RetailPointEntity, AutocompletionAddressHelper, CallbackHelper, FlatpickrHelper, LoaderHelper, StripeHelper, AddressChoice, PictoChoice, DeliveryChoiceEnum, OrderStatusEnum, OrderItemTypeEnum, CssClass, MessageType, ProposalAnswer, ProposalReason, UrlAjax, ReloadingTimeInterval, StatusEnum, ScreenSizeEnum, YperException, QueryHelper, LottieHelper, StatusHelper, StatusHistoryHelper, LeafletHelper, GenericHelper, RetailPointController, DeliveryController, OrderController, UserPaymentMethodController, PaymentIntentController, UserController, PasswordChecker };
+export { translationHelper, Error, Entity, DeliveryAddressEntity, DeliveryEntity, UserDeliveryEntity, GoogleAddressEntity, RetailPointAddressEntity, RetailPointEntity, AutocompletionAddressHelper, CallbackHelper, FlatpickrHelper, LoaderHelper, StripeHelper, AddressChoice, PictoChoice, DeliveryChoiceEnum, OrderStatusEnum, OrderItemTypeEnum, CssClass, MessageType, ProposalAnswer, ProposalReason, UrlAjax, ReloadingTimeInterval, StatusEnum, ScreenSizeEnum, YperException, QueryHelper, LottieHelper, StatusHelper, StatusHistoryHelper, LeafletHelper, GenericHelper, RetailPointController, AdminDeliveryController, DeliveryController, OrderController, UserPaymentMethodController, PaymentIntentController, UserController, PasswordChecker };
