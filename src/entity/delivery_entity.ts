@@ -38,6 +38,7 @@ export interface DeliveryEntity {
     is_late: boolean,
     mission_template: { id: string, name: string },
     options: [],
+    order_id: string,
     order: { id: string, id_full: string },
     pickup_address: null,
     price: { base: number, detail: { discounts: [], surcharges: [] }, total: number, total_ht: number, total_ttc: number, tva: number },

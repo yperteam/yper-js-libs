@@ -55,6 +55,7 @@ export interface DeliveryEntity {
         name: string;
     };
     options: [];
+    order_id: string;
     order: {
         id: string;
         id_full: string;
