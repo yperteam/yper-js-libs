@@ -20,6 +20,7 @@ export class ApiAdminDeliveryUrlEnum {
 export class ApiDeliveryUrlEnum {
     public static root_delivery = AbstractApiUrlEnum.root + "/delivery";
     public static e_root_delivery = ApiDeliveryUrlEnum.root_delivery + "/{0}";
+    public static shift_delivery = ApiDeliveryUrlEnum.e_root_delivery + "/shift";
 }
 
 /**

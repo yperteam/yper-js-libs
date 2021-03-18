@@ -12,6 +12,10 @@ export default class DeliveryController extends AbstractLib {
     /**
      * Update delivery data
      */
+    shiftDelivery(): Promise<any>;
+    /**
+     * Update delivery data
+     */
     updateDelivery(): Promise<any>;
     /**
      * Get delivery data
