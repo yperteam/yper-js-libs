@@ -10,6 +10,7 @@ import {
 } from "./enums/GenericEnums";
 import {ScreenSizeEnum} from "./enums/screen_size_enum";
 import {StatusEnum} from "./enums/StatusEnum";
+import {DeliverySourceEnum} from "./enums/delivery_source_enum";
 import {
     OrderStatusEnum,
     OrderItemTypeEnum
@@ -66,14 +67,15 @@ export {
     DeliveryChoiceEnum,
     OrderStatusEnum,
     OrderItemTypeEnum,
+    StatusEnum,
+    ScreenSizeEnum,
+    DeliverySourceEnum,
     CssClass,
     MessageType,
     ProposalAnswer,
     ProposalReason,
     UrlAjax,
     ReloadingTimeInterval,
-    StatusEnum,
-    ScreenSizeEnum,
     YperException,
     QueryHelper,
     LottieHelper,
