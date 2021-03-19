@@ -28,6 +28,13 @@ export default class DeliveryController extends AbstractLib {
     }
 
     /**
+     * Get delivery timeslot data
+     */
+    public async getTimeslot(): Promise<any> {
+        return this._getPromise(ApiDeliveryUrlEnum.delivery_timeslot);
+    }
+
+    /**
      * Get delivery data
      */
     public async getDelivery(): Promise<any> {

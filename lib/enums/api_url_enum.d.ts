@@ -18,6 +18,7 @@ export declare class ApiDeliveryUrlEnum {
     static root_delivery: string;
     static e_root_delivery: string;
     static shift_delivery: string;
+    static delivery_timeslot: string;
 }
 /**
  * RetailPoint
