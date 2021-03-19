@@ -1,4 +1,5 @@
 import {AddressEntity} from "./Entity";
+import {DeliverySourceEnum} from "../enums/delivery_source_enum";
 
 export interface DeliveryAddressEntity extends AddressEntity {
     city_id?: string;
@@ -48,6 +49,7 @@ export interface DeliveryEntity {
     retailpoint_id: string,
     return_policy: string,
     sender: { address: DeliveryAddressEntity, avatar: string, business_name: string, email: string, firstname: string, id: string, lastname: string, nickname: string, phone: string, type: string },
+    source: DeliverySourceEnum,
     shopper: UserDeliveryEntity,
     shopper_earnings: { base: number, surcharges: [], total: number },
     status: string,
