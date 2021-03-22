@@ -10,6 +10,10 @@ export default class DeliveryController extends AbstractLib {
      */
     constructor($elem?: JQuery<HTMLElement> | null);
     /**
+     * Patch delivery data
+     */
+    patchDelivery(): Promise<any>;
+    /**
      * Update delivery data
      */
     shiftDelivery(): Promise<any>;

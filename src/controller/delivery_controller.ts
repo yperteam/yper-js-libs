@@ -14,6 +14,13 @@ export default class DeliveryController extends AbstractLib {
     }
 
     /**
+     * Patch delivery data
+     */
+    public async patchDelivery(): Promise<any> {
+        return this._patchPromise(ApiDeliveryUrlEnum.e_root_delivery);
+    }
+
+    /**
      * Update delivery data
      */
     public async shiftDelivery(): Promise<any> {

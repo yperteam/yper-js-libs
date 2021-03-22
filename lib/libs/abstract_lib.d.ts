@@ -107,6 +107,12 @@ export declare abstract class AbstractLib {
      * @param path
      * @private
      */
+    protected _patchPromise(path: string): Promise<unknown>;
+    /**
+     *
+     * @param path
+     * @private
+     */
     protected _putPromise(path: string): Promise<unknown>;
     /**
      *

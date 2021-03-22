@@ -259,6 +259,41 @@ export abstract class AbstractLib {
      * @param path
      * @private
      */
+    protected async _patchPromise(path: string) {
+        if (this.loader) {
+            this.loader.initLoader();
+        }
+        return new Promise((resolve, reject) => {
+            $.ajax({
+                url: formatString(path, this.pathParams) + this.queryParams,
+                type: "PATCH",
+                contentType: "application/json",
+                dataType: "json",
+                data: JSON.stringify(this.payloadParams),
+            })
+                .fail(r => {
+                    if (this.customFail) {
+                        reject(r);
+                    } else {
+                        reject(AbstractLib.failProcess(r));
+                    }
+                })
+                .then(data => {
+                    resolve(data);
+                })
+                .always(data => {
+                    if (this.loader) {
+                        this.loader.hideLoader();
+                    }
+                });
+        });
+    }
+
+    /**
+     *
+     * @param path
+     * @private
+     */
     protected async _putPromise(path: string) {
         const pathParams = this.pathParams;
         const payloadParams = this.payloadParams;

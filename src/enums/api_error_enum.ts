@@ -1,4 +1,5 @@
 export enum PostUser {
+    invalid_request = "invalid_request",
     invalid_email = "invalid_email",
     email_already_exists = "email_already_exists",
     invalid_phone_number = "invalid_phone_number",
