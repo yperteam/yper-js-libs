@@ -1,9 +1,9 @@
 export enum PostUser {
-    invalid_email = "InvalidEmail",
-    email_already_exists = "EmailAlreadyExists",
-    invalid_phone_number = "InvalidPhoneNumber",
-    phone_number_already_exists = "PhoneNumberAlreadyExists",
-    password_complexity_error = "PasswordComplexityError",
-    invalid_value_type = "InvalidValueType",
-    invalid_age = "InvalidAge",
+    invalid_email = "invalid_email",
+    email_already_exists = "email_already_exists",
+    invalid_phone_number = "invalid_phone_number",
+    phone_already_exists = "phone_already_exists",
+    password_low_complexity = "password_low_complexity",
+    invalid_value = "invalid_value",
+    invalid_age = "invalid_age",
 }
