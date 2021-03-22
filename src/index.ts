@@ -10,11 +10,13 @@ import {
 } from "./enums/GenericEnums";
 import {ScreenSizeEnum} from "./enums/screen_size_enum";
 import {StatusEnum} from "./enums/StatusEnum";
+import {PostUser} from "./enums/api_error_enum";
 import {DeliverySourceEnum} from "./enums/delivery_source_enum";
 import {
     OrderStatusEnum,
     OrderItemTypeEnum
 } from "./enums/order_enum";
+
 import {YperException} from "./error/yper_exception";
 
 import * as Entity from "./entity/Entity";
@@ -70,6 +72,7 @@ export {
     StatusEnum,
     ScreenSizeEnum,
     DeliverySourceEnum,
+    PostUser,
     CssClass,
     MessageType,
     ProposalAnswer,

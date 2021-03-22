@@ -3,6 +3,7 @@ import { DeliveryChoiceEnum } from "./enums/DeliveryChoiceEnum";
 import { CssClass, MessageType, ProposalAnswer, ProposalReason, ReloadingTimeInterval, UrlAjax } from "./enums/GenericEnums";
 import { ScreenSizeEnum } from "./enums/screen_size_enum";
 import { StatusEnum } from "./enums/StatusEnum";
+import { PostUser } from "./enums/api_error_enum";
 import { DeliverySourceEnum } from "./enums/delivery_source_enum";
 import { OrderStatusEnum, OrderItemTypeEnum } from "./enums/order_enum";
 import { YperException } from "./error/yper_exception";
@@ -31,4 +32,4 @@ import UserPaymentMethodController from "./controller/user_payment_method_contro
 import PaymentIntentController from "./controller/payment_intent_controller";
 import PasswordChecker from "./component/password_checker/password_checker";
 import * as Error from "./error/yper_exception";
-export { translationHelper, Error, Entity, DeliveryAddressEntity, DeliveryEntity, UserDeliveryEntity, GoogleAddressEntity, RetailPointAddressEntity, RetailPointEntity, AutocompletionAddressHelper, CallbackHelper, FlatpickrHelper, LoaderHelper, StripeHelper, AddressChoice, PictoChoice, DeliveryChoiceEnum, OrderStatusEnum, OrderItemTypeEnum, StatusEnum, ScreenSizeEnum, DeliverySourceEnum, CssClass, MessageType, ProposalAnswer, ProposalReason, UrlAjax, ReloadingTimeInterval, YperException, QueryHelper, LottieHelper, StatusHelper, StatusHistoryHelper, LeafletHelper, GenericHelper, RetailPointController, AdminDeliveryController, DeliveryController, OrderController, UserPaymentMethodController, PaymentIntentController, UserController, PasswordChecker };
+export { translationHelper, Error, Entity, DeliveryAddressEntity, DeliveryEntity, UserDeliveryEntity, GoogleAddressEntity, RetailPointAddressEntity, RetailPointEntity, AutocompletionAddressHelper, CallbackHelper, FlatpickrHelper, LoaderHelper, StripeHelper, AddressChoice, PictoChoice, DeliveryChoiceEnum, OrderStatusEnum, OrderItemTypeEnum, StatusEnum, ScreenSizeEnum, DeliverySourceEnum, PostUser, CssClass, MessageType, ProposalAnswer, ProposalReason, UrlAjax, ReloadingTimeInterval, YperException, QueryHelper, LottieHelper, StatusHelper, StatusHistoryHelper, LeafletHelper, GenericHelper, RetailPointController, AdminDeliveryController, DeliveryController, OrderController, UserPaymentMethodController, PaymentIntentController, UserController, PasswordChecker };
