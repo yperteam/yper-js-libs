@@ -23,6 +23,7 @@ export class ApiDeliveryUrlEnum {
 
     public static shift_delivery = ApiDeliveryUrlEnum.e_root_delivery + "/shift";
     public static delivery_timeslot = ApiDeliveryUrlEnum.e_root_delivery + "/delivery_timeslot";
+    public static transfer_journey = ApiDeliveryUrlEnum.e_root_delivery + "/transfer_journey";
 
     public static root_delivery_parcel = ApiDeliveryUrlEnum.e_root_delivery + "/parcel";
     public static delivery_failure = ApiDeliveryUrlEnum.root_delivery_parcel + "/delivery_failure";

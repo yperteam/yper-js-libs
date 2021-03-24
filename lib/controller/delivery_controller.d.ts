@@ -33,4 +33,8 @@ export default class DeliveryController extends AbstractLib {
      * Get delivery data
      */
     getDelivery(): Promise<any>;
+    /**
+     * Transfer journey
+     */
+    transferJourney(): Promise<any>;
 }
