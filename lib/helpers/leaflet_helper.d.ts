@@ -1,15 +1,64 @@
 import L from "leaflet";
-import "leaflet/dist/leaflet.css";
+/**
+ * LeafletHelper
+ */
 export declare class LeafletHelper {
-    private zoomControl;
-    private location;
+    /** Default values */
+    static defaultLat: number;
+    static defaultLng: number;
+    static defaultZoomValue: number;
+    private static urlTemplate;
+    static defaultTileLayerOpts: L.TileLayerOptions;
     private selector;
     private map;
     private marker;
     private markerList;
-    constructor(selector: string | HTMLElement, zoomControl?: boolean, location?: [number, number]);
-    getMarkerList(): L.Marker<any>[];
-    initMap(zoom: boolean, location?: [number, number]): void;
+    private mapOpts;
+    private viewCoordinates;
+    private zoomValue;
+    private tileLayerOpts;
+    private latLng;
+    /**
+     *
+     * @param selector
+     * @param mapOpts
+     * @param viewCoordinates
+     * @param zoomValue
+     * @param tileLayerOpts
+     */
+    constructor(selector: string | HTMLElement, mapOpts?: L.MapOptions, viewCoordinates?: {
+        lat: number;
+        lng: number;
+        alt?: number;
+    }, zoomValue?: number, tileLayerOpts?: L.TileLayerOptions);
+    /**
+     *
+     * @param mapOpts
+     */
+    setMapOpts(mapOpts: L.MapOptions): this;
+    /**
+     *
+     * @param viewCoordinates
+     */
+    setViewCoordinates(viewCoordinates: {
+        lat: number;
+        lng: number;
+        alt?: number;
+    }): this;
+    /**
+     *
+     * @param zoomValue
+     */
+    setZoomValue(zoomValue: number): this;
+    /**
+     *
+     * @param tileLayerOpts
+     */
+    setTileLayerOpts(tileLayerOpts: L.TileLayerOptions): this;
+    /**
+     * Apply settings and create Map
+     */
+    createMap(): void;
     /**
      * Set map view and position, based on coordinates
      * @param latitude
@@ -17,8 +66,27 @@ export declare class LeafletHelper {
      * @param zoom
      */
     setPosition(latitude: number, longitude: number, zoom: number): void;
+    /**
+     * Set Auto Zoom
+     */
     setAutoZoom(): void;
-    getMarkers(): L.Marker<any>[];
+    /**
+     * Get Marker List
+     */
+    getMarkers(): L.Marker[];
+    /**
+     * Get Map
+     **/
+    getMap(): L.Map;
+    /**
+     * Calculate distance between 2 markers
+     * @param from
+     * @param to
+     */
+    getDistance(from: L.Marker, to: L.Marker): number;
+    /**
+     * Remove all markers
+     */
     removeMarkers(): void;
     /**
      * Remove a specific marker
@@ -27,12 +95,24 @@ export declare class LeafletHelper {
     removeSpecificMarker(marker: L.Marker): void;
     /**
      *
-     * @param coordList
+     * @param markerLatLng
+     * @param iconOpts
      */
-    setMarkers(coordList: []): L.Marker<any>[];
-    getDistance(from: L.Marker, to: L.Marker): number;
+    setMarker(markerLatLng: {
+        latitude: number;
+        longitude: number;
+        altitude?: number;
+    }, iconOpts?: L.IconOptions): L.Marker;
     /**
-     * Display
-     **/
-    getMap(): L.Map;
+     *
+     * @param markersOpts
+     */
+    setMarkers(markersOpts: {
+        markerLatLng: {
+            latitude: number;
+            longitude: number;
+            altitude?: number;
+        };
+        iconOpts: L.IconOptions;
+    }[]): L.Marker<any>[];
 }
