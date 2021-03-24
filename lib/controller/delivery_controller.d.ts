@@ -18,10 +18,6 @@ export default class DeliveryController extends AbstractLib {
      */
     shiftDelivery(): Promise<any>;
     /**
-     * Declare delivery as failed (Parcel)
-     */
-    postFailure(): Promise<any>;
-    /**
      * Update delivery data
      */
     updateDelivery(): Promise<any>;

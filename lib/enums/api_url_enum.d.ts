@@ -10,6 +10,7 @@ export declare class ApiAdminDeliveryUrlEnum {
     static root_admin_mission_parcel: string;
     static e_root_admin_mission_parcel: string;
     static endpoint_post_parcel_refuse: string;
+    static endpoint_post_delivery_failure: string;
 }
 /**
  * Delivery
@@ -21,7 +22,6 @@ export declare class ApiDeliveryUrlEnum {
     static delivery_timeslot: string;
     static transfer_journey: string;
     static root_delivery_parcel: string;
-    static delivery_failure: string;
 }
 /**
  * RetailPoint

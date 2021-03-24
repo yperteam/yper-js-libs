@@ -13,4 +13,8 @@ export default class AdminDeliveryController extends AbstractLib {
      * Refuse delivery's parcel(s)
      */
     refuseParcel(): Promise<any>;
+    /**
+     * Declare delivery as failed (Parcel)
+     */
+    postFailure(): Promise<any>;
 }
