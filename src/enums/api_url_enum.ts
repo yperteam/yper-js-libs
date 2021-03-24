@@ -20,8 +20,12 @@ export class ApiAdminDeliveryUrlEnum {
 export class ApiDeliveryUrlEnum {
     public static root_delivery = AbstractApiUrlEnum.root + "/delivery";
     public static e_root_delivery = ApiDeliveryUrlEnum.root_delivery + "/{0}";
+
     public static shift_delivery = ApiDeliveryUrlEnum.e_root_delivery + "/shift";
     public static delivery_timeslot = ApiDeliveryUrlEnum.e_root_delivery + "/delivery_timeslot";
+
+    public static root_delivery_parcel = ApiDeliveryUrlEnum.e_root_delivery + "/parcel";
+    public static delivery_failure = ApiDeliveryUrlEnum.root_delivery_parcel + "/delivery_failure";
 }
 
 /**

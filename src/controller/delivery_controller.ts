@@ -28,6 +28,13 @@ export default class DeliveryController extends AbstractLib {
     }
 
     /**
+     * Declare delivery as failed (Parcel)
+     */
+    public async postFailure(): Promise<any> {
+        return this._postPromise(ApiDeliveryUrlEnum.delivery_failure);
+    }
+
+    /**
      * Update delivery data
      */
     public async updateDelivery(): Promise<any> {
