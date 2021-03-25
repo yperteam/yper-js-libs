@@ -12,6 +12,7 @@ import {ScreenSizeEnum} from "./enums/screen_size_enum";
 import {StatusEnum} from "./enums/StatusEnum";
 import {PostUser} from "./enums/api_error_enum";
 import {DeliverySourceEnum} from "./enums/delivery_source_enum";
+import {DeliveryParcelFailureReasonEnum} from "./enums/delivery_parcel_failure_reason_enum";
 import {
     OrderStatusEnum,
     OrderItemTypeEnum
@@ -72,6 +73,7 @@ export {
     StatusEnum,
     ScreenSizeEnum,
     DeliverySourceEnum,
+    DeliveryParcelFailureReasonEnum,
     PostUser,
     CssClass,
     MessageType,

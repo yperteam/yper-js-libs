@@ -14,13 +14,6 @@ export default class AdminDeliveryController extends AbstractLib {
     }
 
     /**
-     * Refuse delivery's parcel(s)
-     */
-    public async refuseParcel(): Promise<any> {
-        return this._postPromise(ApiAdminDeliveryUrlEnum.endpoint_post_parcel_refuse);
-    }
-
-    /**
      * Declare delivery as failed (Parcel)
      */
     public async postFailure(): Promise<any> {
