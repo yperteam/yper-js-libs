@@ -97,13 +97,13 @@ export declare class LeafletHelper {
     /**
      *
      * @param markerLatLng
-     * @param iconOpts
+     * @param markerOpts
      */
     setMarker(markerLatLng: {
         latitude: number;
         longitude: number;
         altitude?: number;
-    }, iconOpts?: L.IconOptions): L.Marker;
+    }, markerOpts?: L.MarkerOptions): L.Marker;
     /**
      *
      * @param markersOpts
@@ -114,6 +114,6 @@ export declare class LeafletHelper {
             longitude: number;
             altitude?: number;
         };
-        iconOpts: L.IconOptions;
+        markerOpts?: L.MarkerOptions;
     }[]): L.Marker<any>[];
 }

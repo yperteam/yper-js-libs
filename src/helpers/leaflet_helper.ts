@@ -179,14 +179,14 @@ export class LeafletHelper {
     /**
      *
      * @param markerLatLng
-     * @param iconOpts
+     * @param markerOpts
      */
     public setMarker(
         markerLatLng: { latitude: number, longitude: number, altitude?: number },
-        iconOpts: L.IconOptions = {iconUrl: "https://via.placeholder.com/150"}
+        markerOpts?: L.MarkerOptions
     ): L.Marker {
         let latLng = new L.LatLng(markerLatLng.latitude, markerLatLng.longitude, markerLatLng.altitude);
-        let newMarker: L.Marker = L.marker(latLng, {icon: L.icon(iconOpts)});
+        let newMarker: L.Marker = L.marker(latLng, markerOpts);
 
         this.markerList.push(newMarker);
         newMarker.addTo(this.map);
@@ -202,12 +202,12 @@ export class LeafletHelper {
      */
     public setMarkers(markersOpts: {
         markerLatLng: { latitude: number, longitude: number, altitude?: number },
-        iconOpts: L.IconOptions
+        markerOpts?: L.MarkerOptions
     }[]) {
         let markerListCreated: L.Marker[] = [];
 
         markersOpts.map(markerOpts => {
-            markerListCreated.push(this.setMarker(markerOpts.markerLatLng, markerOpts.iconOpts))
+            markerListCreated.push(this.setMarker(markerOpts.markerLatLng, markerOpts.markerOpts))
         });
 
         return markerListCreated;
