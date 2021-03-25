@@ -1,4 +1,4 @@
-import L, {FitBoundsOptions} from "leaflet";
+import L from "leaflet";
 
 /**
  * LeafletHelper
@@ -23,6 +23,7 @@ export class LeafletHelper {
     private zoomValue: number;
     private tileLayerOpts: L.TileLayerOptions;
     private latLng: L.LatLng;
+    private fitBoundsOpts?: L.FitBoundsOptions;
 
     /**
      *
@@ -90,6 +91,16 @@ export class LeafletHelper {
     }
 
     /**
+     *
+     * @param fitBoundsOpts
+     */
+    public setFitBoundsOpts(fitBoundsOpts: L.FitBoundsOptions) {
+        this.fitBoundsOpts = fitBoundsOpts;
+
+        return this;
+    }
+
+    /**
      * Apply settings and create Map
      */
     public createMap() {
@@ -119,12 +130,11 @@ export class LeafletHelper {
 
     /**
      * Set Auto Zoom
-     * @param fitBoundsOpts
      */
-    public setAutoZoom(fitBoundsOpts?: L.FitBoundsOptions) {
+    public setAutoZoom() {
         const group = L.featureGroup(this.markerList);
 
-        this.map.fitBounds(group.getBounds(), fitBoundsOpts);
+        this.map.fitBounds(group.getBounds(), this.fitBoundsOpts);
     }
 
     /**

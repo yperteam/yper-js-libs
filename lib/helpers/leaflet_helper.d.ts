@@ -18,6 +18,7 @@ export declare class LeafletHelper {
     private zoomValue;
     private tileLayerOpts;
     private latLng;
+    private fitBoundsOpts?;
     /**
      *
      * @param selector
@@ -56,6 +57,11 @@ export declare class LeafletHelper {
      */
     setTileLayerOpts(tileLayerOpts: L.TileLayerOptions): this;
     /**
+     *
+     * @param fitBoundsOpts
+     */
+    setFitBoundsOpts(fitBoundsOpts: L.FitBoundsOptions): this;
+    /**
      * Apply settings and create Map
      */
     createMap(): void;
@@ -68,9 +74,8 @@ export declare class LeafletHelper {
     setPosition(latitude: number, longitude: number, zoom: number): void;
     /**
      * Set Auto Zoom
-     * @param fitBoundsOpts
      */
-    setAutoZoom(fitBoundsOpts?: L.FitBoundsOptions): void;
+    setAutoZoom(): void;
     /**
      * Get Marker List
      */
