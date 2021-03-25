@@ -10,10 +10,6 @@ export default class AdminDeliveryController extends AbstractLib {
      */
     constructor($elem?: JQuery<HTMLElement> | null);
     /**
-     * Refuse delivery's parcel(s)
-     */
-    refuseParcel(): Promise<any>;
-    /**
      * Declare delivery as failed (Parcel)
      */
     postFailure(): Promise<any>;

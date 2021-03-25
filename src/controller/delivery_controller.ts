@@ -21,6 +21,13 @@ export default class DeliveryController extends AbstractLib {
     }
 
     /**
+     * Refuse delivery's parcel(s)
+     */
+    public async refuseParcel(): Promise<any> {
+        return this._postPromise(ApiDeliveryUrlEnum.endpoint_post_parcel_refuse);
+    }
+
+    /**
      * Update delivery data
      */
     public async shiftDelivery(): Promise<any> {

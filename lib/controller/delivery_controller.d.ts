@@ -14,6 +14,10 @@ export default class DeliveryController extends AbstractLib {
      */
     patchDelivery(): Promise<any>;
     /**
+     * Refuse delivery's parcel(s)
+     */
+    refuseParcel(): Promise<any>;
+    /**
      * Update delivery data
      */
     shiftDelivery(): Promise<any>;
