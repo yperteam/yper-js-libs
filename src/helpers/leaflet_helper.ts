@@ -1,4 +1,4 @@
-import L from "leaflet";
+import L, {FitBoundsOptions} from "leaflet";
 
 /**
  * LeafletHelper
@@ -34,7 +34,7 @@ export class LeafletHelper {
      */
     constructor(
         selector: string | HTMLElement,
-        mapOpts: L.MapOptions = {scrollWheelZoom: false, zoomControl: false},
+        mapOpts: L.MapOptions = {scrollWheelZoom: false, zoomControl: true},
         viewCoordinates: { lat: number, lng: number, alt?: number } = {
             lat: LeafletHelper.defaultLat,
             lng: LeafletHelper.defaultLng
@@ -119,11 +119,12 @@ export class LeafletHelper {
 
     /**
      * Set Auto Zoom
+     * @param fitBoundsOpts
      */
-    public setAutoZoom() {
+    public setAutoZoom(fitBoundsOpts?: L.FitBoundsOptions) {
         const group = L.featureGroup(this.markerList);
 
-        this.map.fitBounds(group.getBounds());
+        this.map.fitBounds(group.getBounds(), fitBoundsOpts);
     }
 
     /**

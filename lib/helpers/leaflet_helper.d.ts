@@ -68,8 +68,9 @@ export declare class LeafletHelper {
     setPosition(latitude: number, longitude: number, zoom: number): void;
     /**
      * Set Auto Zoom
+     * @param fitBoundsOpts
      */
-    setAutoZoom(): void;
+    setAutoZoom(fitBoundsOpts?: L.FitBoundsOptions): void;
     /**
      * Get Marker List
      */
