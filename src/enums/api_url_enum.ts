@@ -12,7 +12,7 @@ export class ApiAdminDeliveryUrlEnum {
     public static root_admin_mission_parcel = ApiAdminDeliveryUrlEnum.e_root_admin_delivery + "/parcel";
     public static e_root_admin_mission_parcel = ApiAdminDeliveryUrlEnum.root_admin_mission_parcel + "/{1}";
     public static endpoint_post_parcel_refuse = ApiAdminDeliveryUrlEnum.root_admin_mission_parcel + "/refuse";
-    public static endpoint_post_delivery_failure = ApiAdminDeliveryUrlEnum.root_admin_mission_parcel + "/refuse";
+    public static endpoint_post_delivery_failure = ApiAdminDeliveryUrlEnum.root_admin_mission_parcel + "/delivery_failure";
 }
 
 /**
