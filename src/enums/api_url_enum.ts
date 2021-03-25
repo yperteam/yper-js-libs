@@ -30,6 +30,16 @@ export class ApiDeliveryUrlEnum {
 }
 
 /**
+ * Parcel
+ */
+export class ApiParcelUrlEnum {
+    public static root_parcel = AbstractApiUrlEnum.root + "/parcel";
+    public static e_root_parcel = ApiParcelUrlEnum.root_parcel + "/{0}";
+
+    public static endpoint_post_parcel_refuse = ApiParcelUrlEnum.e_root_parcel + "/refuse";
+}
+
+/**
  * RetailPoint
  */
 export class ApiRetailPointUrlEnum {

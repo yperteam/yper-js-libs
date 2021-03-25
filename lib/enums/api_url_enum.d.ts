@@ -24,6 +24,14 @@ export declare class ApiDeliveryUrlEnum {
     static endpoint_post_parcel_refuse: string;
 }
 /**
+ * Parcel
+ */
+export declare class ApiParcelUrlEnum {
+    static root_parcel: string;
+    static e_root_parcel: string;
+    static endpoint_post_parcel_refuse: string;
+}
+/**
  * RetailPoint
  */
 export declare class ApiRetailPointUrlEnum {
