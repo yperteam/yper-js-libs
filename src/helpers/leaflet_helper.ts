@@ -1,55 +1,102 @@
 import L from "leaflet";
-import "leaflet/dist/leaflet.css";
 
+/**
+ * LeafletHelper
+ */
 export class LeafletHelper {
+    /** Default values */
+    public static defaultLat = 42.348778;
+    public static defaultLng = 8.853407;
+    public static defaultZoomValue = 8;
+    private static urlTemplate: string = "https://osm.yper.org/osm_tiles_light/{z}/{x}/{y}.png?keyId=3P783r3MFhDAekx";
+    public static defaultTileLayerOpts: L.TileLayerOptions = {
+        attribution:
+            '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMaps</a>',
+    };
+
     private selector: string | HTMLElement;
     private map: L.Map;
     private marker: L.Marker;
     private markerList: L.Marker[] = [];
+    private mapOpts: L.MapOptions;
+    private viewCoordinates: { lat: number, lng: number, alt?: number };
+    private zoomValue: number;
+    private tileLayerOpts: L.TileLayerOptions;
+    private latLng: L.LatLng;
 
+    /**
+     *
+     * @param selector
+     * @param mapOpts
+     * @param viewCoordinates
+     * @param zoomValue
+     * @param tileLayerOpts
+     */
     constructor(
         selector: string | HTMLElement,
-        private zoomControl: boolean = true,
-        private location: [number, number] = null
+        mapOpts: L.MapOptions = {scrollWheelZoom: false, zoomControl: false},
+        viewCoordinates: { lat: number, lng: number, alt?: number } = {
+            lat: LeafletHelper.defaultLat,
+            lng: LeafletHelper.defaultLng
+        },
+        zoomValue: number = LeafletHelper.defaultZoomValue,
+        tileLayerOpts: L.TileLayerOptions = LeafletHelper.defaultTileLayerOpts
     ) {
         this.selector = selector;
-        this.initMap(zoomControl, location);
+        this.mapOpts = mapOpts;
+        this.viewCoordinates = viewCoordinates;
+        this.zoomValue = zoomValue;
+        this.tileLayerOpts = tileLayerOpts;
     }
 
-    /*
-     * Get the marker list
+    /**
+     *
+     * @param mapOpts
      */
-    public getMarkerList() {
-        return this.markerList;
+    public setMapOpts(mapOpts: L.MapOptions) {
+        this.mapOpts = mapOpts;
+
+        return this;
     }
 
-    public initMap(zoom: boolean, location: [number, number] = null) {
-        if (this.map === undefined) {
-            let options = {
-                scrollWheelZoom: false,
-            };
-            if (zoom === false) {
-                // @ts-ignore
-                options["zoomControl"] = false;
-            }
-            // We set a default view point to prevent grey background on init
-            var zoomValue = 8;
-            var defautRegion = [48.853407, 2.348778];
+    /**
+     *
+     * @param viewCoordinates
+     */
+    public setViewCoordinates(viewCoordinates: { lat: number, lng: number, alt?: number }) {
+        this.viewCoordinates = viewCoordinates;
 
-            if (location !== null) {
-                // TODO: WTF why we swap the array
-                defautRegion = [location[1], location[0]];
-                zoomValue = 12;
-            }
-            const latLng = L.latLng(defautRegion[0], defautRegion[1]);
-            this.map = L.map(this.selector, options).setView(latLng, zoomValue);
-            L.tileLayer(
-                "https://osm.yper.org/osm_tiles_light/{z}/{x}/{y}.png?keyId=3P783r3MFhDAekx",
-                {
-                    attribution:
-                        '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMaps</a>',
-                }
-            ).addTo(this.map);
+        return this;
+    }
+
+    /**
+     *
+     * @param zoomValue
+     */
+    public setZoomValue(zoomValue: number) {
+        this.zoomValue = zoomValue;
+
+        return this;
+    }
+
+    /**
+     *
+     * @param tileLayerOpts
+     */
+    public setTileLayerOpts(tileLayerOpts: L.TileLayerOptions) {
+        this.tileLayerOpts = tileLayerOpts;
+
+        return this;
+    }
+
+    /**
+     * Apply settings and create Map
+     */
+    public createMap() {
+        if (!this.map) {
+            this.latLng = L.latLng(this.viewCoordinates);
+            this.map = L.map(this.selector, this.mapOpts).setView(this.latLng, this.zoomValue);
+            L.tileLayer(LeafletHelper.urlTemplate, this.tileLayerOpts).addTo(this.map);
         }
     }
 
@@ -61,27 +108,54 @@ export class LeafletHelper {
      */
     public setPosition(latitude: number, longitude: number, zoom: number) {
         let latLng = new L.LatLng(latitude, longitude);
-        this.map.setView(latLng, zoom);
 
+        this.map.setView(latLng, zoom);
         if (this.marker === undefined) {
             this.marker = L.marker(latLng).addTo(this.map);
         }
-
         this.map.panTo(latLng);
         this.marker.setLatLng(latLng);
     }
 
+    /**
+     * Set Auto Zoom
+     */
     public setAutoZoom() {
         const group = L.featureGroup(this.markerList);
 
         this.map.fitBounds(group.getBounds());
     }
 
-    public getMarkers() {
+    /**
+     * Get Marker List
+     */
+    public getMarkers(): L.Marker[] {
         return this.markerList;
     }
 
-    public removeMarkers() {
+    /**
+     * Get Map
+     **/
+    public getMap() {
+        return this.map;
+    }
+
+    /**
+     * Calculate distance between 2 markers
+     * @param from
+     * @param to
+     */
+    public getDistance(from: L.Marker, to: L.Marker) {
+        const fromLatLng = from.getLatLng();
+        const toLatLng = to.getLatLng();
+
+        return this.map.distance(fromLatLng, toLatLng);
+    }
+
+    /**
+     * Remove all markers
+     */
+    public removeMarkers(): void {
         this.markerList.forEach(marker => {
             this.map.removeLayer(marker);
         });
@@ -92,7 +166,7 @@ export class LeafletHelper {
      * Remove a specific marker
      * @param marker
      */
-    public removeSpecificMarker(marker: L.Marker) {
+    public removeSpecificMarker(marker: L.Marker): void {
         this.markerList.map((mk, idx) => {
             if (mk == marker) {
                 this.map.removeLayer(marker);
@@ -103,54 +177,38 @@ export class LeafletHelper {
 
     /**
      *
-     * @param coordList
+     * @param markerLatLng
+     * @param iconOpts
      */
-    public setMarkers(coordList: []) {
-        let sumLat = 0;
-        let sumLong = 0;
-        let lat = 0;
-        let long = 0;
-        let latLng = null;
-        let newMarkerList: L.Marker[] = [];
-        let newMarker: L.Marker;
+    public setMarker(
+        markerLatLng: { latitude: number, longitude: number, altitude?: number },
+        iconOpts: L.IconOptions = {iconUrl: "https://via.placeholder.com/150"}
+    ): L.Marker {
+        let latLng = new L.LatLng(markerLatLng.latitude, markerLatLng.longitude, markerLatLng.altitude);
+        let newMarker: L.Marker = L.marker(latLng, {icon: L.icon(iconOpts)});
 
-        coordList.forEach(coordObj => {
-            lat = coordObj["latitude"];
-            long = coordObj["longitude"];
-            sumLat = sumLat + lat;
-            sumLong = sumLong + long;
-
-            latLng = new L.LatLng(lat, long);
-
-            const myIcon = L.icon({
-                iconUrl: "/img/" + coordObj["icon"],
-                iconAnchor: coordObj["iconAnchor"],
-            });
-            newMarker = L.marker(latLng, {icon: myIcon});
-
-            this.markerList.push(newMarker);
-            newMarker.addTo(this.map);
-            newMarkerList.push(newMarker);
-        });
-
+        this.markerList.push(newMarker);
+        newMarker.addTo(this.map);
         this.setAutoZoom();
-        return newMarkerList;
+
+        return newMarker;
     }
 
-    /*
-     * Calculate distance between 2 markers
-     */
-    public getDistance(from: L.Marker, to: L.Marker) {
-        const fromLatLng = from.getLatLng();
-        const toLatLng = to.getLatLng();
-
-        return this.map.distance(fromLatLng, toLatLng);
-    }
 
     /**
-     * Display
-     **/
-    public getMap() {
-        return this.map;
+     *
+     * @param markersOpts
+     */
+    public setMarkers(markersOpts: {
+        markerLatLng: { latitude: number, longitude: number, altitude?: number },
+        iconOpts: L.IconOptions
+    }[]) {
+        let markerListCreated: L.Marker[] = [];
+
+        markersOpts.map(markerOpts => {
+            markerListCreated.push(this.setMarker(markerOpts.markerLatLng, markerOpts.iconOpts))
+        });
+
+        return markerListCreated;
     }
 }
