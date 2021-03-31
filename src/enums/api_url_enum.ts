@@ -27,6 +27,7 @@ export class ApiDeliveryUrlEnum {
 
     public static root_delivery_parcel = ApiDeliveryUrlEnum.e_root_delivery + "/parcel";
     public static endpoint_post_parcel_refuse = ApiDeliveryUrlEnum.root_delivery_parcel + "/refuse";
+    public static endpoint_post_pending_hub_customer_handover = ApiDeliveryUrlEnum.root_delivery_parcel + "/pending_hub_customer_handover";
 }
 
 /**

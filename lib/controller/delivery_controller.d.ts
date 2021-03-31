@@ -37,4 +37,8 @@ export default class DeliveryController extends AbstractLib {
      * Transfer journey
      */
     transferJourney(): Promise<any>;
+    /**
+     * Mark all parcels of a delivery as pending hub customer handover
+     */
+    pendingHubCustomerHandover(): Promise<any>;
 }

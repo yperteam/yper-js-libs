@@ -22,6 +22,7 @@ export declare class ApiDeliveryUrlEnum {
     static transfer_journey: string;
     static root_delivery_parcel: string;
     static endpoint_post_parcel_refuse: string;
+    static endpoint_post_pending_hub_customer_handover: string;
 }
 /**
  * Parcel

@@ -61,4 +61,11 @@ export default class DeliveryController extends AbstractLib {
     public async transferJourney(): Promise<any> {
         return this._postPromise(ApiDeliveryUrlEnum.transfer_journey);
     }
+
+    /**
+     * Mark all parcels of a delivery as pending hub customer handover
+     */
+    public async pendingHubCustomerHandover(): Promise<any> {
+        return this._postPromise(ApiDeliveryUrlEnum.endpoint_post_pending_hub_customer_handover);
+    }
 }
