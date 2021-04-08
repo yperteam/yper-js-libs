@@ -1,4 +1,5 @@
 import {
+    ConfirmCardPaymentOptions,
     loadStripe, SetupIntent,
     Stripe,
     StripeCardElement, StripeCardElementOptions,
@@ -137,9 +138,23 @@ export default class StripeHelper {
     }
 
     /**
+     * Pay with a card
+     */
+    public async payWithCard(name: string, options?: ConfirmCardPaymentOptions): Promise<{ setupIntent?: SetupIntent; error?: StripeError }> {
+        return this.stripe.confirmCardPayment(this.stripeCardElementPrivateKey, {
+            payment_method: {
+                card: this.stripeCardElement,
+                billing_details: {
+                    name: name,
+                },
+            },
+        }, options);
+    }
+
+    /**
      * submit event to add a card
      */
-    public async pushCard(name: string): Promise<{ setupIntent?: SetupIntent; error?: StripeError }> {
+    public async saveCard(name: string): Promise<{ setupIntent?: SetupIntent; error?: StripeError }> {
         return this.stripe.confirmCardSetup(this.stripeCardElementPrivateKey, {
             payment_method: {
                 card: this.stripeCardElement,
@@ -153,7 +168,7 @@ export default class StripeHelper {
     /**
      * submit event to add an IBAN
      */
-    public async pushIban(name: string, email: string): Promise<{ setupIntent?: SetupIntent; error?: StripeError }> {
+    public async saveIban(name: string, email: string): Promise<{ setupIntent?: SetupIntent; error?: StripeError }> {
         return this.stripe.confirmSepaDebitSetup(this.stripeIbanElementPrivateKey, {
             payment_method: {
                 sepa_debit: this.stripeIbanElement,
@@ -170,18 +185,8 @@ export default class StripeHelper {
      * @param onChangeFunction
      */
     public onChangeStripeCardElement(onChangeFunction: Function) {
-        // Handle real-time validation errors from the card Element.
         this.stripeCardElement.on("change", event => {
             return onChangeFunction(event);
         });
-        //     const displayError = document.getElementById("card-errors");
-        //     if (event.error) {
-        //         displayError.textContent = event.error.message;
-        //     } else if (event.complete) {
-        //         displayError.textContent = "";
-        //     } else {
-        //         displayError.textContent = "";
-        //     }
-        // });
     }
 }
