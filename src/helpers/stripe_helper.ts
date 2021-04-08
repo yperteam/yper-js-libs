@@ -1,6 +1,6 @@
 import {
     ConfirmCardPaymentOptions,
-    loadStripe, SetupIntent,
+    loadStripe, PaymentIntent, SetupIntent,
     Stripe,
     StripeCardElement, StripeCardElementOptions,
     StripeElements,
@@ -140,7 +140,7 @@ export default class StripeHelper {
     /**
      * Pay with a card
      */
-    public async payWithCard(name: string, options?: ConfirmCardPaymentOptions): Promise<{ setupIntent?: SetupIntent; error?: StripeError }> {
+    public async payWithCard(name: string, options?: ConfirmCardPaymentOptions): Promise<{paymentIntent?: PaymentIntent; error?: StripeError}> {
         return this.stripe.confirmCardPayment(this.stripeCardElementPrivateKey, {
             payment_method: {
                 card: this.stripeCardElement,
