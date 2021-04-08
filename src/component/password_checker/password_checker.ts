@@ -221,7 +221,7 @@ export default class PasswordChecker {
     public renderChecksView() {
         return `<div class="parent-checks row p-0 ml-2">
                  <div class="col-12 d-flex flex-column mt-4 parent-checks_content">
-                    <span class="mb-2 condition--title">Doit contenir au minimum :</span>
+                    <span class="mb-2 condition--title">Le mot de passe doit contenir au minimum :</span>
                     <div class="condition--password d-flex flex-column flex-sm-row align-items-start">
                       <div class="mr-4">
                           <p class="check-length basic-check mb-0">
