@@ -221,7 +221,7 @@ export default class PasswordChecker {
     public renderChecksView() {
         return `<div class="parent-checks row p-0 ml-2">
                  <div class="col-12 d-flex flex-column mt-4 parent-checks_content">
-                    <span class="mb-2 condition--title">Doit contenir au minimum :</span>
+                    <span class="mb-2 condition--title">Le mot de passe doit contenir au minimum :</span>
                     <div class="condition--password d-flex flex-column flex-sm-row align-items-start">
                       <div class="mr-4">
                           <p class="check-length basic-check mb-0">
@@ -239,8 +239,8 @@ export default class PasswordChecker {
                       </div>
                       <div>
                           <p class="check-one-special-char basic-check mb-0">
-                              <i class="material-icons">fiber_manual_record</i>
-                              <span>1 caractère spécial (ex : !?/$€%#)</span>
+                                <i class="material-icons">fiber_manual_record</i>
+                                <span>1 caractère spécial (ex : !?/$€%#) <i class="cf-information-circle popover--password ml-3" data-toggle="popover" title="<i class='cf-information-circle-full'></i> Caractères spéciaux acceptés :" data-placement="bottom" data-content='_ + - . , ! @ # $ % ^ & * ( ) ; / | < > “ ’ £ ?> </i></span>
                           </p>
                           <p class="check-one-number basic-check mb-0">
                               <i class="material-icons">fiber_manual_record</i>
