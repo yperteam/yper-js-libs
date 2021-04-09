@@ -24,6 +24,7 @@ import * as Entity from "./entity/Entity";
 import {DeliveryAddressEntity, DeliveryEntity, UserDeliveryEntity} from "./entity/delivery_entity";
 import {RetailPointAddressEntity, RetailPointEntity} from "./entity/retail_point_entity";
 import {GoogleAddressEntity} from "./entity/google_address_entity";
+import {OrderEntity} from "./entity/order_entity";
 
 import {translationHelper} from "./helpers/translation_helper";
 import * as GenericHelper from "./helpers/generic_helper";
@@ -61,6 +62,7 @@ export {
     GoogleAddressEntity,
     RetailPointAddressEntity,
     RetailPointEntity,
+    OrderEntity,
     AutocompletionAddressHelper,
     CallbackHelper,
     FlatpickrHelper,
