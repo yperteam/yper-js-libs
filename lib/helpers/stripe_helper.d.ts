@@ -1,4 +1,4 @@
-import { SetupIntent, Stripe, StripeCardElement, StripeCardElementOptions, StripeElements, StripeElementStyle, StripeError, StripeIbanElement, StripeIbanElementOptions } from '@stripe/stripe-js';
+import { ConfirmCardPaymentOptions, PaymentIntent, SetupIntent, Stripe, StripeCardElement, StripeCardElementOptions, StripeElements, StripeElementStyle, StripeError, StripeIbanElement, StripeIbanElementOptions } from '@stripe/stripe-js';
 export default class StripeHelper {
     /** Stripe clients */
     protected stripe: Stripe;
@@ -66,16 +66,23 @@ export default class StripeHelper {
      */
     setStripeElementStyle(stripeElementStyle: StripeElementStyle): void;
     /**
+     * Pay with a card
+     */
+    payWithCard(name: string, options?: ConfirmCardPaymentOptions): Promise<{
+        paymentIntent?: PaymentIntent;
+        error?: StripeError;
+    }>;
+    /**
      * submit event to add a card
      */
-    pushCard(name: string): Promise<{
+    saveCard(name: string): Promise<{
         setupIntent?: SetupIntent;
         error?: StripeError;
     }>;
     /**
      * submit event to add an IBAN
      */
-    pushIban(name: string, email: string): Promise<{
+    saveIban(name: string, email: string): Promise<{
         setupIntent?: SetupIntent;
         error?: StripeError;
     }>;
