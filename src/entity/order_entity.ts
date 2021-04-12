@@ -1,3 +1,5 @@
+import {OrderStatusEnum} from "../enums/order_enum";
+
 export interface OrderEntity {
     amount_received: number,
     items: any[],
@@ -10,6 +12,6 @@ export interface OrderEntity {
         total_ht: number,
         tva: number
     }
-    status: string,
+    status: OrderStatusEnum,
     _id: string
 }
