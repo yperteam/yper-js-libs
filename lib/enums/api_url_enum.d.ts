@@ -57,6 +57,7 @@ export declare class ApiOrderUrlEnum {
 export declare class ApiUserUrlEnum {
     static root_user: string;
     static e_root_user: string;
+    static e_root_user_confirm_subscription: string;
 }
 /**
  * UserPaymentMethod

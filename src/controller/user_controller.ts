@@ -19,4 +19,11 @@ export default class UserController extends AbstractLib {
     public async subscribe(path: string): Promise<any> {
         return this._postPromise(path);
     }
+
+    /**
+     * Confirm User Subscription
+     */
+    public async confirmSubscription(): Promise<any> {
+        return this._postPromise(ApiUserUrlEnum.e_root_user_confirm_subscription);
+    }
 }

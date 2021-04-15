@@ -13,4 +13,8 @@ export default class UserController extends AbstractLib {
      * Subscribe user - Need to define your own route
      */
     subscribe(path: string): Promise<any>;
+    /**
+     * Confirm User Subscription
+     */
+    confirmSubscription(): Promise<any>;
 }
