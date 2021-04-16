@@ -20,6 +20,6 @@ export default class UserController extends AbstractLib {
      * Search
      */
     public async searchRetailPoint(): Promise<any> {
-        return this._postPromise(ApiSearchUrlEnum.e_root_search_retail_point);
+        return this._getPromise(ApiSearchUrlEnum.e_root_search_retail_point);
     }
 }
