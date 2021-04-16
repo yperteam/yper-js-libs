@@ -74,3 +74,11 @@ export declare class ApiPaymentIntentUrlEnum {
     static root_payment_intent: string;
     static e_root_payment_intent: string;
 }
+/**
+ * Search
+ */
+export declare class ApiSearchUrlEnum {
+    static root_search: string;
+    static e_root_search: string;
+    static e_root_search_retail_point: string;
+}

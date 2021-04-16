@@ -88,3 +88,13 @@ export class ApiPaymentIntentUrlEnum {
     public static root_payment_intent = AbstractApiUrlEnum.root + "/payment_intent";
     public static e_root_payment_intent = ApiPaymentIntentUrlEnum.root_payment_intent + "/{0}";
 }
+
+/**
+ * Search
+ */
+export class ApiSearchUrlEnum {
+    public static root_search = AbstractApiUrlEnum.root + "/search";
+    public static e_root_search = ApiSearchUrlEnum.root_search + "/{0}";
+
+    public static e_root_search_retail_point = ApiSearchUrlEnum.root_search + "/retailpoint";
+}
