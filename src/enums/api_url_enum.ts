@@ -69,6 +69,7 @@ export class ApiUserUrlEnum {
     public static root_user = AbstractApiUrlEnum.root + "/user";
     public static e_root_user = ApiUserUrlEnum.root_user + "/{0}";
 
+    public static e_root_user_send_verification_code = ApiUserUrlEnum.e_root_user + "/phone/send_verification_code";
     public static e_root_user_confirm_subscription = ApiUserUrlEnum.e_root_user + "/phone/verify";
 }
 
