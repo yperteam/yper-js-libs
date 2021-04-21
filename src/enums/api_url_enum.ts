@@ -39,6 +39,7 @@ export class ApiParcelUrlEnum {
     public static e_root_parcel = ApiParcelUrlEnum.root_parcel + "/{0}";
 
     public static endpoint_post_parcel_refuse = ApiParcelUrlEnum.e_root_parcel + "/refuse";
+    public static endpoint_post_parcel_ready = ApiParcelUrlEnum.e_root_parcel + "/ready";
 }
 
 /**
