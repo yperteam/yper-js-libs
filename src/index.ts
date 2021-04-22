@@ -47,6 +47,7 @@ import UserController from "./controller/user_controller";
 import UserPaymentMethodController from "./controller/user_payment_method_controller";
 import PaymentIntentController from "./controller/payment_intent_controller";
 import ParcelController from "./controller/parcel_controller";
+import SearchController from "./controller/search_controller";
 
 import PasswordChecker from "./component/password_checker/password_checker";
 
@@ -99,5 +100,6 @@ export {
     PaymentIntentController,
     ParcelController,
     UserController,
+    SearchController,
     PasswordChecker
 };

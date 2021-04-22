@@ -70,6 +70,7 @@ export class ApiUserUrlEnum {
     public static root_user = AbstractApiUrlEnum.root + "/user";
     public static e_root_user = ApiUserUrlEnum.root_user + "/{0}";
 
+    public static e_root_user_send_verification_code = ApiUserUrlEnum.e_root_user + "/phone/send_verification_code";
     public static e_root_user_confirm_subscription = ApiUserUrlEnum.e_root_user + "/phone/verify";
 }
 
@@ -88,4 +89,14 @@ export class ApiUserPaymentMethodUrlEnum {
 export class ApiPaymentIntentUrlEnum {
     public static root_payment_intent = AbstractApiUrlEnum.root + "/payment_intent";
     public static e_root_payment_intent = ApiPaymentIntentUrlEnum.root_payment_intent + "/{0}";
+}
+
+/**
+ * Search
+ */
+export class ApiSearchUrlEnum {
+    public static root_search = AbstractApiUrlEnum.root + "/search";
+    public static e_root_search = ApiSearchUrlEnum.root_search + "/{0}";
+
+    public static e_root_search_retail_point = ApiSearchUrlEnum.root_search + "/retailpoint";
 }

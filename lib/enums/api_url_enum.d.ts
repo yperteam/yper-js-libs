@@ -58,6 +58,7 @@ export declare class ApiOrderUrlEnum {
 export declare class ApiUserUrlEnum {
     static root_user: string;
     static e_root_user: string;
+    static e_root_user_send_verification_code: string;
     static e_root_user_confirm_subscription: string;
 }
 /**
@@ -74,4 +75,12 @@ export declare class ApiUserPaymentMethodUrlEnum {
 export declare class ApiPaymentIntentUrlEnum {
     static root_payment_intent: string;
     static e_root_payment_intent: string;
+}
+/**
+ * Search
+ */
+export declare class ApiSearchUrlEnum {
+    static root_search: string;
+    static e_root_search: string;
+    static e_root_search_retail_point: string;
 }
