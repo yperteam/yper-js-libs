@@ -32,6 +32,7 @@ export declare class ApiParcelUrlEnum {
     static root_parcel: string;
     static e_root_parcel: string;
     static endpoint_post_parcel_refuse: string;
+    static endpoint_post_parcel_ready: string;
 }
 /**
  * RetailPoint

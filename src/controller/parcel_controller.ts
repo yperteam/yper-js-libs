@@ -20,4 +20,11 @@ export default class ParcelController extends AbstractLib {
     public async refuseParcel(): Promise<any> {
         return this._postPromise(ApiParcelUrlEnum.endpoint_post_parcel_refuse);
     }
+
+    /**
+     * Parcel is ready
+     */
+    public async readyParcel(): Promise<any> {
+        return this._postPromise(ApiParcelUrlEnum.endpoint_post_parcel_ready);
+    }
 }

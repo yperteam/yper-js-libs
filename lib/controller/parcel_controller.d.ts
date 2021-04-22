@@ -13,4 +13,8 @@ export default class ParcelController extends AbstractLib {
      * Refuse a unique parcel
      */
     refuseParcel(): Promise<any>;
+    /**
+     * Parcel is ready
+     */
+    readyParcel(): Promise<any>;
 }
