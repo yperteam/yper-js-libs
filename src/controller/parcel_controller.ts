@@ -27,4 +27,11 @@ export default class ParcelController extends AbstractLib {
     public async readyParcel(): Promise<any> {
         return this._postPromise(ApiParcelUrlEnum.endpoint_post_parcel_ready);
     }
+
+    /**
+     * Remove bag parcel
+     */
+    public async removeBagParcel(): Promise<any> {
+        return this._patchPromise(ApiParcelUrlEnum.endpoint_post_remove_bag_parcel);
+    }
 }
