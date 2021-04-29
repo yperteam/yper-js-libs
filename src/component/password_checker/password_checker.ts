@@ -263,7 +263,7 @@ export default class PasswordChecker {
             .removeClass("invalid")
             .removeClass("valid")
             .addClass("basic-check");
-        $case.find("i:not(i.cf-information-circle)").html("fiber_manual_record");
+        $case.find("i").not("i.cf-information-circle").html("fiber_manual_record");
     }
 
     /**
@@ -276,7 +276,7 @@ export default class PasswordChecker {
             .removeClass("invalid")
             .removeClass("basic-check")
             .addClass("valid");
-        $case.find("i:not(i.cf-information-circle)").html("check");
+        $case.find("i").not("i.cf-information-circle").html("check");
     }
 
     /**
@@ -289,6 +289,6 @@ export default class PasswordChecker {
             .removeClass("valid")
             .removeClass("basic-check")
             .addClass("invalid");
-        $case.find("i:not(i.cf-information-circle)").html("close");
+        $case.find("i").not("i.cf-information-circle").html("close");
     }
 }
