@@ -276,7 +276,6 @@ export default class PasswordChecker {
             .removeClass("invalid")
             .removeClass("basic-check")
             .addClass("valid");
-        console.log($case.find("i").not("i.cf-information-circle"));
         $case.find("i").not("i.cf-information-circle").html("check");
     }
 
