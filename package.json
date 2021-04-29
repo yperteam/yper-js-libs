@@ -11,7 +11,8 @@
   "main": "./lib/index.js",
   "types": "./lib/index.d.ts",
   "scripts": {
-    "build": "webpack"
+    "build": "webpack",
+    "bcp": "webpack; git add lib; git commit -am 'generic commit'; git push origin head"
   },
   "dependencies": {
     "@stripe/stripe-js": "^1.13.0",

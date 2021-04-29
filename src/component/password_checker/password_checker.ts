@@ -240,7 +240,8 @@ export default class PasswordChecker {
                       <div>
                           <p class="check-one-special-char basic-check mb-0">
                                 <i class="material-icons">fiber_manual_record</i>
-                                <span>1 caractère spécial (ex : !?/$€%#) <i class="cf-information-circle popover--password ml-3" data-toggle="popover" title="<i class='cf-information-circle-full'></i> Caractères spéciaux acceptés :" data-placement="bottom" data-content="'_ + - . , ! @ # $ % ^ & * ( ) ; / | < > “ ’ £ ?"> </i></span>
+                                <span>1 caractère spécial (ex : !?/$€%#)</span>
+                                <i class="cf-information-circle popover--password ml-3" data-toggle="popover" title="<i class='cf-information-circle-full'></i> Caractères spéciaux acceptés :" data-placement="bottom" data-content="'_ + - . , ! @ # $ % ^ & * ( ) ; / | < > “ ’ £ ?"></i>
                           </p>
                           <p class="check-one-number basic-check mb-0">
                               <i class="material-icons">fiber_manual_record</i>
@@ -262,7 +263,7 @@ export default class PasswordChecker {
             .removeClass("invalid")
             .removeClass("valid")
             .addClass("basic-check");
-        $case.find("i").html("fiber_manual_record");
+        $case.find("i.material-icons").html("fiber_manual_record");
     }
 
     /**
@@ -275,7 +276,7 @@ export default class PasswordChecker {
             .removeClass("invalid")
             .removeClass("basic-check")
             .addClass("valid");
-        $case.find("i").html("check");
+        $case.find("i.material-icons").html("check");
     }
 
     /**
@@ -288,6 +289,6 @@ export default class PasswordChecker {
             .removeClass("valid")
             .removeClass("basic-check")
             .addClass("invalid");
-        $case.find("i").html("close");
+        $case.find("i.material-icons").html("close");
     }
 }
