@@ -14,6 +14,13 @@ export default class DeliveryController extends AbstractLib {
     }
 
     /**
+     * Delete the shopper of the delivery
+     */
+    public async deleteShopper(): Promise<any> {
+        return this._deletePromise(ApiDeliveryUrlEnum.delete_shopper);
+    }
+
+    /**
      * Patch delivery data
      */
     public async patchDelivery(): Promise<any> {

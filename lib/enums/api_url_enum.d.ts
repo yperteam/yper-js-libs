@@ -19,6 +19,7 @@ export declare class ApiDeliveryUrlEnum {
     static e_root_delivery: string;
     static patch_delivery: string;
     static shift_delivery: string;
+    static delete_shopper: string;
     static delivery_timeslot: string;
     static transfer_journey: string;
     static root_delivery_parcel: string;

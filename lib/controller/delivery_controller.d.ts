@@ -10,6 +10,10 @@ export default class DeliveryController extends AbstractLib {
      */
     constructor($elem?: JQuery<HTMLElement> | null);
     /**
+     * Delete the shopper of the delivery
+     */
+    deleteShopper(): Promise<any>;
+    /**
      * Patch delivery data
      */
     patchDelivery(): Promise<any>;
