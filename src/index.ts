@@ -17,7 +17,7 @@ import {
     OrderStatusEnum,
     OrderItemTypeEnum
 } from "./enums/order_enum";
-
+import {ParcelRefuseReasonEnum} from "./enums/parcel_refuse_reason_enum";
 import {YperException} from "./error/yper_exception";
 
 import * as Entity from "./entity/Entity";
@@ -101,5 +101,6 @@ export {
     ParcelController,
     UserController,
     SearchController,
+    ParcelRefuseReasonEnum,
     PasswordChecker
 };
