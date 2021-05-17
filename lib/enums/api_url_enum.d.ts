@@ -27,6 +27,14 @@ export declare class ApiDeliveryUrlEnum {
     static endpoint_post_pending_hub_customer_handover: string;
 }
 /**
+ * Journey
+ */
+export declare class ApiJourneyUrlEnum {
+    static root_journey: string;
+    static e_root_journey: string;
+    static endpoint_post_parcel_refuse: string;
+}
+/**
  * Parcel
  */
 export declare class ApiParcelUrlEnum {
