@@ -55,6 +55,17 @@ export class ApiRetailPointUrlEnum {
 }
 
 /**
+ * Invoice
+ */
+export class ApiInvoiceUrlEnum {
+    public static root_invoice = AbstractApiUrlEnum.root + "/invoice";
+    public static e_root_invoice = ApiInvoiceUrlEnum.root_invoice + "/{0}";
+
+    public static root_item = ApiInvoiceUrlEnum.e_root_invoice + "/item";
+    public static e_root_item = ApiInvoiceUrlEnum.root_item + "/{1}";
+}
+
+/**
  * Order
  */
 export class ApiOrderUrlEnum {

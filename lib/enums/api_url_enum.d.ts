@@ -45,6 +45,15 @@ export declare class ApiRetailPointUrlEnum {
     static get_retail_point_search: string;
 }
 /**
+ * Invoice
+ */
+export declare class ApiInvoiceUrlEnum {
+    static root_invoice: string;
+    static e_root_invoice: string;
+    static root_item: string;
+    static e_root_item: string;
+}
+/**
  * Order
  */
 export declare class ApiOrderUrlEnum {
