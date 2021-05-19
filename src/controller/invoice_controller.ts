@@ -1,7 +1,7 @@
 import {AbstractLib} from "../libs/abstract_lib";
 import {ApiInvoiceUrlEnum} from "../enums/api_url_enum";
 
-export default class OrderController extends AbstractLib {
+export default class InvoiceController extends AbstractLib {
     /**
      *
      * @param $elem

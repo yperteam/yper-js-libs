@@ -3,7 +3,7 @@
 /// <reference types="jqueryui" />
 /// <reference types="bootstrap" />
 import { AbstractLib } from "../libs/abstract_lib";
-export default class OrderController extends AbstractLib {
+export default class InvoiceController extends AbstractLib {
     /**
      *
      * @param $elem
