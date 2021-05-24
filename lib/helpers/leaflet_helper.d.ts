@@ -1,4 +1,4 @@
-import L from "leaflet";
+import L, { LatLngExpression, Polyline, PolylineOptions } from "leaflet";
 /**
  * LeafletHelper
  */
@@ -121,4 +121,10 @@ export declare class LeafletHelper {
         };
         markerOpts?: L.MarkerOptions;
     }[]): L.Marker<any>[];
+    /**
+     *
+     * @param latlngs
+     * @param options
+     */
+    setPolyline(latlngs: LatLngExpression[] | LatLngExpression[][], options?: PolylineOptions): Polyline;
 }

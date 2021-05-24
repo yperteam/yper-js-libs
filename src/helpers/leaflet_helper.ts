@@ -1,4 +1,4 @@
-import L from "leaflet";
+import L, {LatLngExpression, Polyline, PolylineOptions} from "leaflet";
 
 /**
  * LeafletHelper
@@ -221,5 +221,14 @@ export class LeafletHelper {
         });
 
         return markerListCreated;
+    }
+
+    /**
+     *
+     * @param latlngs
+     * @param options
+     */
+    public setPolyline(latlngs: LatLngExpression[] | LatLngExpression[][], options?: PolylineOptions): Polyline {
+        return L.polyline(latlngs, options).addTo(this.map);
     }
 }
