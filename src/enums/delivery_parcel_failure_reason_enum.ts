@@ -14,5 +14,6 @@ export enum DeliveryParcelFailureReasonEnum {
     bad_street = "bad_street",
     delivery_weight_too_high = "delivery_weight_too_high",
     deliverer_workload_too_high = "deliverer_workload_too_high",
+    out_of_business_hours = "out_of_business_hours",
     hub_customer_handover = "hub_customer_handover",
 }
