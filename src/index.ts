@@ -17,7 +17,7 @@ import {
     OrderStatusEnum,
     OrderItemTypeEnum
 } from "./enums/order_enum";
-
+import {ParcelRefuseReasonEnum} from "./enums/parcel_refuse_reason_enum";
 import {YperException} from "./error/yper_exception";
 
 import * as Entity from "./entity/Entity";
@@ -42,7 +42,11 @@ import StripeHelper from "./helpers/stripe_helper";
 import RetailPointController from "./controller/retail_point_controller";
 import AdminDeliveryController from "./controller/admin_delivery_controller";
 import DeliveryController from "./controller/delivery_controller";
+<<<<<<< HEAD
 import JourneyController from "./controller/journey_controller";
+=======
+import InvoiceController from "./controller/invoice_controller";
+>>>>>>> ceaadeb4d314da7e663fa3b0628ea927efdc2109
 import OrderController from "./controller/order_controller";
 import UserController from "./controller/user_controller";
 import UserPaymentMethodController from "./controller/user_payment_method_controller";
@@ -96,12 +100,17 @@ export {
     RetailPointController,
     AdminDeliveryController,
     DeliveryController,
+<<<<<<< HEAD
     JourneyController,
+=======
+    InvoiceController,
+>>>>>>> ceaadeb4d314da7e663fa3b0628ea927efdc2109
     OrderController,
     UserPaymentMethodController,
     PaymentIntentController,
     ParcelController,
     UserController,
     SearchController,
+    ParcelRefuseReasonEnum,
     PasswordChecker
 };
