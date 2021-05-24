@@ -14,6 +14,20 @@ export default class InvoiceController extends AbstractLib {
     }
 
     /**
+     * Update an invoice
+     */
+    public async invoiceUpdate(): Promise<any> {
+        return this._putPromise(ApiInvoiceUrlEnum.e_root_invoice);
+    }
+
+    /**
+     * Create an item
+     */
+    public async itemCreate(): Promise<any> {
+        return this._postPromise(ApiInvoiceUrlEnum.e_root_item);
+    }
+
+    /**
      * Update an item
      */
     public async itemUpdate(): Promise<any> {
