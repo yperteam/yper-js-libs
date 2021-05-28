@@ -94,6 +94,7 @@ export declare enum UrlAjax {
     getUserFinancialWallet = "/ajax/v2/user/{0}/financial_wallet",
     postGenerateJourney = "/ajax/hub/{0}/generate_journey",
     postJourneyDeliverer = "/ajax/journey/{0}/deliverer",
+    getJourney = "/ajax/journey/{0}",
     deleteJourneyDeliverer = "/ajax/journey/{0}/deliverer",
     getKycPending = "/ajax/document/kyc_pending",
     getKycStats = "/ajax/document/stats",
