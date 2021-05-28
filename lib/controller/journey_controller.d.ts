@@ -10,7 +10,11 @@ export default class JourneyController extends AbstractLib {
      */
     constructor($elem?: JQuery<HTMLElement> | null);
     /**
-     * Get missions' journey
+     * Get journey
+     */
+    getJourney(): Promise<any>;
+    /**
+     * Get missions journey
      */
     getMission(): Promise<any>;
 }
