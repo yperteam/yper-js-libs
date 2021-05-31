@@ -42,6 +42,7 @@ import StripeHelper from "./helpers/stripe_helper";
 import RetailPointController from "./controller/retail_point_controller";
 import AdminDeliveryController from "./controller/admin_delivery_controller";
 import DeliveryController from "./controller/delivery_controller";
+import HubController from "./controller/hub_controller";
 import JourneyController from "./controller/journey_controller";
 import InvoiceController from "./controller/invoice_controller";
 import OrderController from "./controller/order_controller";
@@ -97,6 +98,7 @@ export {
     RetailPointController,
     AdminDeliveryController,
     DeliveryController,
+    HubController,
     JourneyController,
     InvoiceController,
     OrderController,

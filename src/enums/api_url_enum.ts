@@ -35,6 +35,17 @@ export class ApiDeliveryUrlEnum {
 /**
  * Journey
  */
+export class ApiHubUrlEnum {
+    public static root_hub = AbstractApiUrlEnum.root + "/hub";
+    public static e_root_hub = ApiHubUrlEnum.root_hub + "/{0}";
+
+    public static root_journey = ApiHubUrlEnum.e_root_hub + "/journey";
+    public static endpoint_post_journey_rain = ApiHubUrlEnum.root_journey + "/rain";
+}
+
+/**
+ * Journey
+ */
 export class ApiJourneyUrlEnum {
     public static root_journey = AbstractApiUrlEnum.root + "/journey";
     public static e_root_journey = ApiJourneyUrlEnum.root_journey + "/{0}";

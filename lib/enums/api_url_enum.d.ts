@@ -29,6 +29,15 @@ export declare class ApiDeliveryUrlEnum {
 /**
  * Journey
  */
+export declare class ApiHubUrlEnum {
+    static root_hub: string;
+    static e_root_hub: string;
+    static root_journey: string;
+    static endpoint_post_journey_rain: string;
+}
+/**
+ * Journey
+ */
 export declare class ApiJourneyUrlEnum {
     static root_journey: string;
     static e_root_journey: string;
