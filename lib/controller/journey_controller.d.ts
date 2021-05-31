@@ -17,4 +17,8 @@ export default class JourneyController extends AbstractLib {
      * Get missions journey
      */
     getMission(): Promise<any>;
+    /**
+     * Apply rain on journeys
+     */
+    postJourneyRain(): Promise<any>;
 }

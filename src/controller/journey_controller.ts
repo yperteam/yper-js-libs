@@ -26,4 +26,11 @@ export default class JourneyController extends AbstractLib {
     public async getMission(): Promise<any> {
         return this._getPromise(ApiJourneyUrlEnum.endpoint_post_parcel_refuse);
     }
+
+    /**
+     * Apply rain on journeys
+     */
+    public async postJourneyRain(): Promise<any> {
+        return this._postPromise(ApiJourneyUrlEnum.endpoint_post_rain);
+    }
 }

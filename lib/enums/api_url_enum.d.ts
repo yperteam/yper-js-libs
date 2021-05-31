@@ -42,6 +42,7 @@ export declare class ApiJourneyUrlEnum {
     static root_journey: string;
     static e_root_journey: string;
     static endpoint_post_parcel_refuse: string;
+    static endpoint_post_rain: string;
 }
 /**
  * Parcel
