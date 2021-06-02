@@ -10,6 +10,10 @@ export default class ParcelController extends AbstractLib {
      */
     constructor($elem?: JQuery<HTMLElement> | null);
     /**
+     * Create a delivery for a parcel (or append it in existing delivery)
+     */
+    createDelivery(): Promise<any>;
+    /**
      * Refuse a unique parcel
      */
     refuseParcel(): Promise<any>;

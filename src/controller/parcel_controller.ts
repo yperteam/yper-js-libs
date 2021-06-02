@@ -15,6 +15,13 @@ export default class ParcelController extends AbstractLib {
     }
 
     /**
+     * Create a delivery for a parcel (or append it in existing delivery)
+     */
+    public async createDelivery(): Promise<any> {
+        return this._postPromise(ApiParcelUrlEnum.endpoint_post_create_delivery);
+    }
+
+    /**
      * Refuse a unique parcel
      */
     public async refuseParcel(): Promise<any> {
