@@ -136,3 +136,15 @@ export class ApiSearchUrlEnum {
 
     public static e_root_search_retail_point = ApiSearchUrlEnum.root_search + "/retailpoint";
 }
+
+/**
+ * Target
+ */
+export class ApiTargetEnum {
+    public static root_target = AbstractApiUrlEnum.root + "/target";
+    public static e_root_target = ApiTargetEnum.root_target + "/{0}";
+    public static target_category = AbstractApiUrlEnum.root + "/target_category";
+
+    public static e_root_target_execute = ApiTargetEnum.e_root_target + '/execute';
+    public static e_root_target_preview = ApiTargetEnum.e_root_target + '/preview';
+}
