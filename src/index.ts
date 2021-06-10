@@ -51,6 +51,7 @@ import UserPaymentMethodController from "./controller/user_payment_method_contro
 import PaymentIntentController from "./controller/payment_intent_controller";
 import ParcelController from "./controller/parcel_controller";
 import SearchController from "./controller/search_controller";
+import TargetController from "./controller/target_controller";
 
 import PasswordChecker from "./component/password_checker/password_checker";
 
@@ -107,6 +108,7 @@ export {
     ParcelController,
     UserController,
     SearchController,
+    TargetController,
     ParcelRefuseReasonEnum,
     PasswordChecker
 };

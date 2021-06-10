@@ -114,3 +114,13 @@ export declare class ApiSearchUrlEnum {
     static e_root_search: string;
     static e_root_search_retail_point: string;
 }
+/**
+ * Target
+ */
+export declare class ApiTargetEnum {
+    static root_target: string;
+    static e_root_target: string;
+    static target_category: string;
+    static e_root_target_execute: string;
+    static e_root_target_preview: string;
+}
