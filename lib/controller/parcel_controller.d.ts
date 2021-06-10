@@ -25,4 +25,8 @@ export default class ParcelController extends AbstractLib {
      * Remove bag parcel
      */
     removeBagParcel(): Promise<any>;
+    /**
+     * return parcel
+     */
+    returnParcel(): Promise<any>;
 }
