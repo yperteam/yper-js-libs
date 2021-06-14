@@ -2,6 +2,13 @@ export declare class AbstractApiUrlEnum {
     static root: string;
 }
 /**
+ * Admin
+ */
+export declare class ApiAdminEnum {
+    static root_admin: string;
+    static send_admin_message: string;
+}
+/**
  * Admin Delivery
  */
 export declare class ApiAdminDeliveryUrlEnum {
