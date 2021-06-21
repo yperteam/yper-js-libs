@@ -54,7 +54,8 @@ export declare class ApiParcelUrlEnum {
     static endpoint_post_parcel_refuse: string;
     static endpoint_post_parcel_ready: string;
     static endpoint_put_remove_bag_parcel: string;
-    static endpoint_post_return_parcel: string;
+    static endpoint_post_return_parcel_to_provider: string;
+    static endpoint_post_return_parcel_to_hub: string;
 }
 /**
  * RetailPoint
