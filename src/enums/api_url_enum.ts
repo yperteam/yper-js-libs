@@ -3,6 +3,14 @@ export class AbstractApiUrlEnum {
 }
 
 /**
+ * Admin
+ */
+export class ApiAdminEnum {
+    public static root_admin = AbstractApiUrlEnum.root + "/admin";
+    public static send_admin_message = ApiAdminEnum.root_admin + "/message";
+}
+
+/**
  * Admin Delivery
  */
 export class ApiAdminDeliveryUrlEnum {

@@ -41,6 +41,7 @@ import StripeHelper from "./helpers/stripe_helper";
 
 import RetailPointController from "./controller/retail_point_controller";
 import AdminDeliveryController from "./controller/admin_delivery_controller";
+import AdminController from "./controller/admin_controller";
 import DeliveryController from "./controller/delivery_controller";
 import HubController from "./controller/hub_controller";
 import JourneyController from "./controller/journey_controller";
@@ -110,5 +111,6 @@ export {
     SearchController,
     TargetController,
     ParcelRefuseReasonEnum,
-    PasswordChecker
+    PasswordChecker,
+    AdminController
 };
