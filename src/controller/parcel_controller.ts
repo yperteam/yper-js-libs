@@ -43,9 +43,16 @@ export default class ParcelController extends AbstractLib {
     }
 
     /**
-     * return parcel
+     * return parcel to provider
      */
-    public async returnParcel(): Promise<any> {
-        return this._postPromise(ApiParcelUrlEnum.endpoint_post_return_parcel);
+    public async returnParcelToProvider(): Promise<any> {
+        return this._postPromise(ApiParcelUrlEnum.endpoint_post_return_parcel_to_provider);
+    }
+
+    /**
+     * return parcel to hub
+     */
+    public async returnParcelToHub(): Promise<any> {
+        return this._postPromise(ApiParcelUrlEnum.endpoint_post_return_parcel_to_hub);
     }
 }
