@@ -19,4 +19,11 @@ export default class RetailPointController extends AbstractLib {
     public async search(): Promise<any> {
         return this._getPromise(ApiRetailPointUrlEnum.get_retail_point_search);
     }
+
+    /**
+     * Get RetailPoint
+     */
+    public async getRetailPoint(): Promise<any> {
+        return this._getPromise(ApiRetailPointUrlEnum.e_root_retail_point);
+    }
 }
