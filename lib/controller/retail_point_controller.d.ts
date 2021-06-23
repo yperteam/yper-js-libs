@@ -13,4 +13,8 @@ export default class RetailPointController extends AbstractLib {
      * search retail point
      */
     search(): Promise<any>;
+    /**
+     * Get RetailPoint
+     */
+    getRetailPoint(): Promise<any>;
 }
