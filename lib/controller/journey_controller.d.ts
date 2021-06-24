@@ -21,4 +21,8 @@ export default class JourneyController extends AbstractLib {
      * Apply rain on journeys
      */
     postJourneyRain(): Promise<any>;
+    /**
+     * Delete Journey
+     */
+    deleteJourney(): Promise<any>;
 }

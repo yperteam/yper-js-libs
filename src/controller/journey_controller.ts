@@ -33,4 +33,11 @@ export default class JourneyController extends AbstractLib {
     public async postJourneyRain(): Promise<any> {
         return this._postPromise(ApiJourneyUrlEnum.endpoint_post_rain);
     }
+
+    /**
+     * Delete Journey
+     */
+    public async deleteJourney(): Promise<any> {
+        return this._deletePromise(ApiJourneyUrlEnum.e_root_journey);
+    }
 }
