@@ -75,4 +75,11 @@ export default class DeliveryController extends AbstractLib {
     public async pendingHubCustomerHandover(): Promise<any> {
         return this._postPromise(ApiDeliveryUrlEnum.endpoint_post_pending_hub_customer_handover);
     }
+
+    /**
+     * defray delivery's shopper
+     */
+    public async defrayShopper(): Promise<any> {
+        return this._postPromise(ApiDeliveryUrlEnum.endpoint_post_defray_shopper);
+    }
 }
