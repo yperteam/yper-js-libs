@@ -45,4 +45,8 @@ export default class DeliveryController extends AbstractLib {
      * Mark all parcels of a delivery as pending hub customer handover
      */
     pendingHubCustomerHandover(): Promise<any>;
+    /**
+     * defray delivery's shopper
+     */
+    defrayShopper(): Promise<any>;
 }
