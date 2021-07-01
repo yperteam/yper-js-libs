@@ -33,4 +33,8 @@ export default class ParcelController extends AbstractLib {
      * return parcel to hub
      */
     returnParcelToHub(): Promise<any>;
+    /**
+     * patch parcel
+     */
+    patchParcel(): Promise<any>;
 }
