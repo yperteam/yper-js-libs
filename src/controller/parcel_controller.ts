@@ -39,7 +39,7 @@ export default class ParcelController extends AbstractLib {
      * Remove bag parcel
      */
     public async removeBagParcel(): Promise<any> {
-        return this._putPromise(ApiParcelUrlEnum.endpoint_put_remove_bag_parcel);
+        return this._putPromise(ApiParcelUrlEnum.e_root_parcel);
     }
 
     /**
@@ -54,5 +54,12 @@ export default class ParcelController extends AbstractLib {
      */
     public async returnParcelToHub(): Promise<any> {
         return this._postPromise(ApiParcelUrlEnum.endpoint_post_return_parcel_to_hub);
+    }
+
+    /**
+     * patch parcel
+     */
+    public async patchParcel(): Promise<any> {
+        return this._putPromise(ApiParcelUrlEnum.e_root_parcel);
     }
 }
