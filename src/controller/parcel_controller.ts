@@ -64,7 +64,7 @@ export default class ParcelController extends AbstractLib {
     }
 
     /**
-     * Get parcel events history journey
+     * Get parcel events history
      */
     public async getParcelEventHistory(): Promise<any> {
         return this._getPromise(ApiParcelUrlEnum.endpoint_get_parcel_event_history);

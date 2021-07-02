@@ -35,7 +35,7 @@ export default class UserController extends AbstractLib {
     }
 
     /**
-     * get user info
+     * Get user infos
      */
     public async getUser(): Promise<any> {
         return this._getPromise(ApiUserUrlEnum.e_root_user);

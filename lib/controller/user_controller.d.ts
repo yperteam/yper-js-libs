@@ -22,7 +22,7 @@ export default class UserController extends AbstractLib {
      */
     sendVerificationCode(): Promise<any>;
     /**
-     * get user info
+     * Get user infos
      */
     getUser(): Promise<any>;
 }
