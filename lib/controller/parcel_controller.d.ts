@@ -37,4 +37,8 @@ export default class ParcelController extends AbstractLib {
      * patch parcel
      */
     patchParcel(): Promise<any>;
+    /**
+     * Get parcel events history journey
+     */
+    getParcelEventHistory(): Promise<any>;
 }

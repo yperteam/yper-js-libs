@@ -33,4 +33,11 @@ export default class UserController extends AbstractLib {
     public async sendVerificationCode(): Promise<any> {
         return this._postPromise(ApiUserUrlEnum.e_root_user_send_verification_code);
     }
+
+    /**
+     * get user info
+     */
+    public async getUser(): Promise<any> {
+        return this._getPromise(ApiUserUrlEnum.e_root_user);
+    }
 }
