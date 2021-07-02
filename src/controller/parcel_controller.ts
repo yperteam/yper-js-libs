@@ -62,4 +62,11 @@ export default class ParcelController extends AbstractLib {
     public async patchParcel(): Promise<any> {
         return this._putPromise(ApiParcelUrlEnum.e_root_parcel);
     }
+
+    /**
+     * Get parcel events history
+     */
+    public async getParcelEventHistory(): Promise<any> {
+        return this._getPromise(ApiParcelUrlEnum.endpoint_get_parcel_event_history);
+    }
 }
