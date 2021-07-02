@@ -77,9 +77,16 @@ export default class DeliveryController extends AbstractLib {
     }
 
     /**
-     * defray delivery's shopper
+     * Defray delivery's shopper
      */
     public async defrayShopper(): Promise<any> {
         return this._postPromise(ApiDeliveryUrlEnum.endpoint_post_defray_shopper);
+    }
+
+    /**
+     * Get Neighbour Infos on delivery
+     */
+    public async getNeighbourInfos(): Promise<any> {
+        return this._getPromise(ApiDeliveryUrlEnum.neighbour_deposit);
     }
 }
