@@ -46,7 +46,11 @@ export default class DeliveryController extends AbstractLib {
      */
     pendingHubCustomerHandover(): Promise<any>;
     /**
-     * defray delivery's shopper
+     * Defray delivery's shopper
      */
     defrayShopper(): Promise<any>;
+    /**
+     * Get Neighbour Infos on delivery
+     */
+    getNeighbourInfos(): Promise<any>;
 }
