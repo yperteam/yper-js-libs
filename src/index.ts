@@ -18,6 +18,7 @@ import {
     OrderItemTypeEnum
 } from "./enums/order_enum";
 import {ParcelRefuseReasonEnum} from "./enums/parcel_refuse_reason_enum";
+import {DeliveryStatusEnum} from "./enums/delivery_status_enum"
 import {YperException} from "./error/yper_exception";
 
 import * as Entity from "./entity/Entity";
@@ -82,6 +83,7 @@ export {
     StatusEnum,
     ScreenSizeEnum,
     DeliverySourceEnum,
+    DeliveryStatusEnum,
     DeliveryParcelFailureReasonEnum,
     PostUser,
     CssClass,
