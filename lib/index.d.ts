@@ -29,7 +29,9 @@ import StatusHistoryHelper from "./helpers/status_history_helper";
 import StripeHelper from "./helpers/stripe_helper";
 import RetailPointController from "./controller/retail_point_controller";
 import AdminDeliveryController from "./controller/admin_delivery_controller";
+import AdminController from "./controller/admin_controller";
 import DeliveryController from "./controller/delivery_controller";
+import HubController from "./controller/hub_controller";
 import JourneyController from "./controller/journey_controller";
 import InvoiceController from "./controller/invoice_controller";
 import OrderController from "./controller/order_controller";
@@ -38,6 +40,7 @@ import UserPaymentMethodController from "./controller/user_payment_method_contro
 import PaymentIntentController from "./controller/payment_intent_controller";
 import ParcelController from "./controller/parcel_controller";
 import SearchController from "./controller/search_controller";
+import TargetController from "./controller/target_controller";
 import PasswordChecker from "./component/password_checker/password_checker";
 import * as Error from "./error/yper_exception";
-export { translationHelper, Error, Entity, DeliveryAddressEntity, DeliveryEntity, UserDeliveryEntity, GoogleAddressEntity, RetailPointAddressEntity, RetailPointEntity, OrderEntity, AutocompletionAddressHelper, CallbackHelper, FlatpickrHelper, LoaderHelper, StripeHelper, AddressChoice, PictoChoice, DeliveryChoiceEnum, OrderStatusEnum, OrderItemTypeEnum, StatusEnum, ScreenSizeEnum, DeliverySourceEnum, DeliveryStatusEnum, DeliveryParcelFailureReasonEnum, PostUser, CssClass, MessageType, ProposalAnswer, ProposalReason, UrlAjax, ReloadingTimeInterval, YperException, QueryHelper, LottieHelper, StatusHelper, StatusHistoryHelper, LeafletHelper, GenericHelper, RetailPointController, AdminDeliveryController, DeliveryController, JourneyController, InvoiceController, OrderController, UserPaymentMethodController, PaymentIntentController, ParcelController, UserController, SearchController, ParcelRefuseReasonEnum, PasswordChecker };
+export { translationHelper, Error, Entity, DeliveryAddressEntity, DeliveryEntity, UserDeliveryEntity, GoogleAddressEntity, RetailPointAddressEntity, RetailPointEntity, OrderEntity, AutocompletionAddressHelper, CallbackHelper, FlatpickrHelper, LoaderHelper, StripeHelper, AddressChoice, PictoChoice, DeliveryChoiceEnum, OrderStatusEnum, OrderItemTypeEnum, StatusEnum, ScreenSizeEnum, DeliverySourceEnum, DeliveryStatusEnum, DeliveryParcelFailureReasonEnum, PostUser, CssClass, MessageType, ProposalAnswer, ProposalReason, UrlAjax, ReloadingTimeInterval, YperException, QueryHelper, LottieHelper, StatusHelper, StatusHistoryHelper, LeafletHelper, GenericHelper, RetailPointController, AdminDeliveryController, DeliveryController, HubController, JourneyController, InvoiceController, OrderController, UserPaymentMethodController, PaymentIntentController, ParcelController, UserController, SearchController, TargetController, ParcelRefuseReasonEnum, PasswordChecker, AdminController };

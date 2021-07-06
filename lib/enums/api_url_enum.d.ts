@@ -2,6 +2,13 @@ export declare class AbstractApiUrlEnum {
     static root: string;
 }
 /**
+ * Admin
+ */
+export declare class ApiAdminEnum {
+    static root_admin: string;
+    static send_admin_message: string;
+}
+/**
  * Admin Delivery
  */
 export declare class ApiAdminDeliveryUrlEnum {
@@ -22,9 +29,20 @@ export declare class ApiDeliveryUrlEnum {
     static delete_shopper: string;
     static delivery_timeslot: string;
     static transfer_journey: string;
+    static neighbour_deposit: string;
     static root_delivery_parcel: string;
     static endpoint_post_parcel_refuse: string;
     static endpoint_post_pending_hub_customer_handover: string;
+    static endpoint_post_defray_shopper: string;
+}
+/**
+ * Journey
+ */
+export declare class ApiHubUrlEnum {
+    static root_hub: string;
+    static e_root_hub: string;
+    static root_journey: string;
+    static endpoint_post_journey_rain: string;
 }
 /**
  * Journey
@@ -33,6 +51,7 @@ export declare class ApiJourneyUrlEnum {
     static root_journey: string;
     static e_root_journey: string;
     static endpoint_post_parcel_refuse: string;
+    static endpoint_post_rain: string;
 }
 /**
  * Parcel
@@ -40,9 +59,13 @@ export declare class ApiJourneyUrlEnum {
 export declare class ApiParcelUrlEnum {
     static root_parcel: string;
     static e_root_parcel: string;
+    static endpoint_post_create_delivery: string;
     static endpoint_post_parcel_refuse: string;
     static endpoint_post_parcel_ready: string;
     static endpoint_put_remove_bag_parcel: string;
+    static endpoint_post_return_parcel_to_provider: string;
+    static endpoint_post_return_parcel_to_hub: string;
+    static endpoint_get_parcel_event_history: string;
 }
 /**
  * RetailPoint
@@ -102,4 +125,14 @@ export declare class ApiSearchUrlEnum {
     static root_search: string;
     static e_root_search: string;
     static e_root_search_retail_point: string;
+}
+/**
+ * Target
+ */
+export declare class ApiTargetEnum {
+    static root_target: string;
+    static e_root_target: string;
+    static target_category: string;
+    static e_root_target_execute: string;
+    static e_root_target_preview: string;
 }

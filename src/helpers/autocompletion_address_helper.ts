@@ -1,16 +1,16 @@
 import {
     isDef,
     isIEbrowser,
-    isSet, get
+    isSet
 } from "./generic_helper";
 import {GoogleMapError} from "../error/yper_exception";
 import {GoogleAddressEntity} from "../entity/google_address_entity";
-import Circle = google.maps.Circle;
+
 
 export class AutocompletionAddressHelper {
+    private readonly inputSelector: JQuery;
     private googleAutocomplete: google.maps.places.Autocomplete;
     private onChangeCallback: Function | null = null;
-    private readonly inputSelector: JQuery;
     private googleAddress: GoogleAddressEntity = new GoogleAddressEntity({
         formattedAddress: null,
         street: null,
@@ -22,6 +22,7 @@ export class AutocompletionAddressHelper {
         lat: null,
     });
     private readonly formInputs?: FormInputInterface;
+    private impreciseAddress: boolean = false;
 
     /** Required data */
     private readonly streetNb = "street_number";
@@ -171,6 +172,14 @@ export class AutocompletionAddressHelper {
     }
 
     /**
+     * Set to true if you do not need precise address (as example without street_number)
+     * @param authorization
+     */
+    public setImpreciseAddress(authorization: boolean) {
+        this.impreciseAddress = authorization;
+    }
+
+    /**
      * Bind the autocompletion to an input
      */
     private bindAddressAutocomplete() {
@@ -221,8 +230,7 @@ export class AutocompletionAddressHelper {
             });
         });
 
-        // TODO: devons-nous restreindres s'il n'y a pas de nom de rue ?
-        if (!isStreetNumber || !place.geometry) {
+        if (!this.impreciseAddress && (!isStreetNumber || !place.geometry)) {
             if (this.onChangeCallback instanceof Function) {
                 const gError = new GoogleMapError(
                     "Missing street number or geometry place",

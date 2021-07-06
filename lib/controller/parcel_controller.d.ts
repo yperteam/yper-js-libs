@@ -10,6 +10,10 @@ export default class ParcelController extends AbstractLib {
      */
     constructor($elem?: JQuery<HTMLElement> | null);
     /**
+     * Create a delivery for a parcel (or append it in existing delivery)
+     */
+    createDelivery(): Promise<any>;
+    /**
      * Refuse a unique parcel
      */
     refuseParcel(): Promise<any>;
@@ -21,4 +25,20 @@ export default class ParcelController extends AbstractLib {
      * Remove bag parcel
      */
     removeBagParcel(): Promise<any>;
+    /**
+     * return parcel to provider
+     */
+    returnParcelToProvider(): Promise<any>;
+    /**
+     * return parcel to hub
+     */
+    returnParcelToHub(): Promise<any>;
+    /**
+     * patch parcel
+     */
+    patchParcel(): Promise<any>;
+    /**
+     * Get parcel events history
+     */
+    getParcelEventHistory(): Promise<any>;
 }

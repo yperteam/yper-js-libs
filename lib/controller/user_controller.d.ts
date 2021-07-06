@@ -21,4 +21,8 @@ export default class UserController extends AbstractLib {
      * Confirm User Phone
      */
     sendVerificationCode(): Promise<any>;
+    /**
+     * Get user infos
+     */
+    getUser(): Promise<any>;
 }

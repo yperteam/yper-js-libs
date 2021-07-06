@@ -14,9 +14,30 @@ export default class JourneyController extends AbstractLib {
     }
 
     /**
-     * Get missions' journey
+     * Get journey
+     */
+    public async getJourney(): Promise<any> {
+        return this._getPromise(ApiJourneyUrlEnum.e_root_journey);
+    }
+
+    /**
+     * Get missions journey
      */
     public async getMission(): Promise<any> {
         return this._getPromise(ApiJourneyUrlEnum.endpoint_post_parcel_refuse);
+    }
+
+    /**
+     * Apply rain on journeys
+     */
+    public async postJourneyRain(): Promise<any> {
+        return this._postPromise(ApiJourneyUrlEnum.endpoint_post_rain);
+    }
+
+    /**
+     * Delete Journey
+     */
+    public async deleteJourney(): Promise<any> {
+        return this._deletePromise(ApiJourneyUrlEnum.e_root_journey);
     }
 }

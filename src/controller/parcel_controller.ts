@@ -15,6 +15,13 @@ export default class ParcelController extends AbstractLib {
     }
 
     /**
+     * Create a delivery for a parcel (or append it in existing delivery)
+     */
+    public async createDelivery(): Promise<any> {
+        return this._postPromise(ApiParcelUrlEnum.endpoint_post_create_delivery);
+    }
+
+    /**
      * Refuse a unique parcel
      */
     public async refuseParcel(): Promise<any> {
@@ -33,5 +40,33 @@ export default class ParcelController extends AbstractLib {
      */
     public async removeBagParcel(): Promise<any> {
         return this._putPromise(ApiParcelUrlEnum.endpoint_put_remove_bag_parcel);
+    }
+
+    /**
+     * return parcel to provider
+     */
+    public async returnParcelToProvider(): Promise<any> {
+        return this._postPromise(ApiParcelUrlEnum.endpoint_post_return_parcel_to_provider);
+    }
+
+    /**
+     * return parcel to hub
+     */
+    public async returnParcelToHub(): Promise<any> {
+        return this._postPromise(ApiParcelUrlEnum.endpoint_post_return_parcel_to_hub);
+    }
+
+    /**
+     * patch parcel
+     */
+    public async patchParcel(): Promise<any> {
+        return this._putPromise(ApiParcelUrlEnum.e_root_parcel);
+    }
+
+    /**
+     * Get parcel events history
+     */
+    public async getParcelEventHistory(): Promise<any> {
+        return this._getPromise(ApiParcelUrlEnum.endpoint_get_parcel_event_history);
     }
 }
