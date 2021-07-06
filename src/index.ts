@@ -39,6 +39,7 @@ import CallbackHelper from "./helpers/callback_helper";
 import StatusHistoryHelper from "./helpers/status_history_helper";
 import StripeHelper from "./helpers/stripe_helper";
 
+/*
 import RetailPointController from "./controller/retail_point_controller";
 import AdminDeliveryController from "./controller/admin_delivery_controller";
 import AdminController from "./controller/admin_controller";
@@ -53,6 +54,7 @@ import PaymentIntentController from "./controller/payment_intent_controller";
 import ParcelController from "./controller/parcel_controller";
 import SearchController from "./controller/search_controller";
 import TargetController from "./controller/target_controller";
+*/
 
 import PasswordChecker from "./component/password_checker/password_checker";
 
@@ -97,6 +99,7 @@ export {
     StatusHistoryHelper,
     LeafletHelper,
     GenericHelper,
+    /*AdminController,
     RetailPointController,
     AdminDeliveryController,
     DeliveryController,
@@ -109,8 +112,7 @@ export {
     ParcelController,
     UserController,
     SearchController,
-    TargetController,
+    TargetController,*/
     ParcelRefuseReasonEnum,
     PasswordChecker,
-    AdminController
 };

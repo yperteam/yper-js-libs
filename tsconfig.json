@@ -1,7 +1,21 @@
 {
   // Change this to match your project
   "include": [
-    "src/index.ts"
+    "src/index.ts",
+    "src/controller/retail_point_controller.ts",
+    "src/controller/admin_delivery_controller.ts",
+    "src/controller/admin_controller.ts",
+    "src/controller/delivery_controller.ts",
+    "src/controller/hub_controller.ts",
+    "src/controller/journey_controller.ts",
+    "src/controller/invoice_controller.ts",
+    "src/controller/order_controller.ts",
+    "src/controller/user_controller.ts",
+    "src/controller/user_payment_method_controller.ts",
+    "src/controller/payment_intent_controller.ts",
+    "src/controller/parcel_controller.ts",
+    "src/controller/search_controller.ts",
+    "src/controller/target_controller.ts"
   ],
   "compilerOptions": {
     "declaration": true,
