@@ -4,11 +4,12 @@
 /// <reference types="bootstrap" />
 import { GoogleAddressEntity } from "../entity/google_address_entity";
 export declare class AutocompletionAddressHelper {
+    private readonly inputSelector;
     private googleAutocomplete;
     private onChangeCallback;
-    private readonly inputSelector;
     private googleAddress;
     private readonly formInputs?;
+    private impreciseAddress;
     /** Required data */
     private readonly streetNb;
     private readonly route;
@@ -79,6 +80,11 @@ export declare class AutocompletionAddressHelper {
         };
         radius: number;
     }): void;
+    /**
+     * Set to true if you do not need precise address (as example without street_number)
+     * @param authorization
+     */
+    setImpreciseAddress(authorization: boolean): void;
     /**
      * Bind the autocompletion to an input
      */
