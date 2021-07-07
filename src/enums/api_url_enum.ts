@@ -113,6 +113,22 @@ export class ApiOrderUrlEnum {
 }
 
 /**
+ * Pro
+ */
+export class ApiProUrlEnum {
+    public static root_pro = AbstractApiUrlEnum.root + "/pro";
+    public static e_root_pro = ApiProUrlEnum.root_pro + "/{0}";
+}
+
+/**
+ * Society
+ */
+export class ApiSocietyUrlEnum {
+    public static root_society = AbstractApiUrlEnum.root + "/society";
+    public static e_root_society = ApiSocietyUrlEnum.root_society + "/{0}";
+}
+
+/**
  * User
  */
 export class ApiUserUrlEnum {
