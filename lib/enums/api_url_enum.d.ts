@@ -95,6 +95,20 @@ export declare class ApiOrderUrlEnum {
     static e_root_order_validate: string;
 }
 /**
+ * Pro
+ */
+export declare class ApiProUrlEnum {
+    static root_pro: string;
+    static e_root_pro: string;
+}
+/**
+ * Society
+ */
+export declare class ApiSocietyUrlEnum {
+    static root_society: string;
+    static e_root_society: string;
+}
+/**
  * User
  */
 export declare class ApiUserUrlEnum {

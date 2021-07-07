@@ -49,6 +49,8 @@ import JourneyController from "./controller/journey_controller";
 import InvoiceController from "./controller/invoice_controller";
 import OrderController from "./controller/order_controller";
 import UserController from "./controller/user_controller";
+import ProController from "./controller/pro_controller";
+import SocietyController from "./controller/society_controller";
 import UserPaymentMethodController from "./controller/user_payment_method_controller";
 import PaymentIntentController from "./controller/payment_intent_controller";
 import ParcelController from "./controller/parcel_controller";
@@ -109,6 +111,8 @@ export {
     UserPaymentMethodController,
     PaymentIntentController,
     ParcelController,
+    ProController,
+    SocietyController,
     UserController,
     SearchController,
     TargetController,
