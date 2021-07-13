@@ -41,4 +41,5 @@ export interface RetailPointEntity {
         last_delivery_date: string;
     };
     type: string;
+    order_id_type?: string;
 }
