@@ -59,8 +59,9 @@ export declare abstract class AbstractLib {
     /**
      *
      * @param $elem
+     * @param text
      */
-    setLoader($elem: JQuery<HTMLElement> | null): void;
+    setLoader($elem: JQuery<HTMLElement> | null, text?: string): void;
     /**
      *
      * @param toasterTitle

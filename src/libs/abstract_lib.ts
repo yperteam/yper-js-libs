@@ -91,10 +91,11 @@ export abstract class AbstractLib {
     /**
      *
      * @param $elem
+     * @param text
      */
-    public setLoader($elem: JQuery<HTMLElement> | null) {
+    public setLoader($elem: JQuery<HTMLElement> | null, text: string = "Chargement en cours") {
         if ($elem) {
-            this.loader = new LoaderHelper($elem);
+            this.loader = new LoaderHelper($elem, text);
         }
     }
 
