@@ -25,4 +25,8 @@ export default class UserController extends AbstractLib {
      * Get user infos
      */
     getUser(): Promise<any>;
+    /**
+     * Put user/shopper TransportType
+     */
+    putShopperTransportType(): Promise<any>;
 }

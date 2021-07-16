@@ -114,8 +114,10 @@ export declare class ApiSocietyUrlEnum {
 export declare class ApiUserUrlEnum {
     static root_user: string;
     static e_root_user: string;
+    static e_root_shopper: string;
     static e_root_user_send_verification_code: string;
     static e_root_user_confirm_subscription: string;
+    static e_root_user_shopper_transport_type: string;
 }
 /**
  * UserPaymentMethod
