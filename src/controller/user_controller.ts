@@ -40,4 +40,11 @@ export default class UserController extends AbstractLib {
     public async getUser(): Promise<any> {
         return this._getPromise(ApiUserUrlEnum.e_root_user);
     }
+
+    /**
+     * Put user/shopper TransportType
+     */
+    public async putShopperTransportType(): Promise<any> {
+        return this._putPromise(ApiUserUrlEnum.e_root_user_shopper_transport_type);
+    }
 }
