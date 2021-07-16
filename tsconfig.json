@@ -15,7 +15,9 @@
     "src/controller/payment_intent_controller.ts",
     "src/controller/parcel_controller.ts",
     "src/controller/search_controller.ts",
-    "src/controller/target_controller.ts"
+    "src/controller/target_controller.ts",
+
+    "src/src/component/password_checker/password_checker.ts"
   ],
   "compilerOptions": {
     "declaration": true,

@@ -19,6 +19,8 @@ module.exports = {
         parcel_controller: "./src/controller/parcel_controller",
         search_controller: "./src/controller/search_controller",
         target_controller: "./src/controller/target_controller",
+
+        password_checker: "./src/component/password_checker/password_checker",
     },
     devtool: 'inline-source-map',
     module: {

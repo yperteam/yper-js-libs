@@ -56,7 +56,7 @@ import SearchController from "./controller/search_controller";
 import TargetController from "./controller/target_controller";
 */
 
-import PasswordChecker from "./component/password_checker/password_checker";
+// import PasswordChecker from "./component/password_checker/password_checker";
 
 import * as Error from "./error/yper_exception";
 
@@ -114,5 +114,5 @@ export {
     SearchController,
     TargetController,*/
     ParcelRefuseReasonEnum,
-    PasswordChecker,
+    // PasswordChecker,
 };
