@@ -25,4 +25,8 @@ export default class JourneyController extends AbstractLib {
      * Delete Journey
      */
     deleteJourney(): Promise<any>;
+    /**
+     * Get journey Event
+     */
+    getJourneyEvents(): Promise<any>;
 }

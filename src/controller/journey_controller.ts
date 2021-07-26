@@ -40,4 +40,11 @@ export default class JourneyController extends AbstractLib {
     public async deleteJourney(): Promise<any> {
         return this._deletePromise(ApiJourneyUrlEnum.e_root_journey);
     }
+
+    /**
+     * Get journey Event
+     */
+    public async getJourneyEvents(): Promise<any> {
+        return this._getPromise(ApiJourneyUrlEnum.endpoint_get_journey_events);
+    }
 }
