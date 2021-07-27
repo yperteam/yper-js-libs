@@ -121,6 +121,18 @@ export class ApiProUrlEnum {
 }
 
 /**
+ * Provider
+ */
+export class ApiProviderUrlEnum {
+    public static root_provider = AbstractApiUrlEnum.root + "/provider";
+    public static e_root_provider = ApiProviderUrlEnum.root_provider + "/{0}";
+    public static e_root_provider_stats = ApiProviderUrlEnum.e_root_provider + "/stats";
+    public static root_provider_hub = ApiProviderUrlEnum.e_root_provider + "/hub";
+    public static e_root_provider_hub = ApiProviderUrlEnum.root_provider_hub + "/{1}";
+    public static e_root_provider_hub_stats = ApiProviderUrlEnum.e_root_provider_hub + "/stats";
+}
+
+/**
  * Society
  */
 export class ApiSocietyUrlEnum {
