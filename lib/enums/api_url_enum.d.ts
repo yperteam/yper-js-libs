@@ -102,6 +102,17 @@ export declare class ApiProUrlEnum {
     static e_root_pro: string;
 }
 /**
+ * Provider
+ */
+export declare class ApiProviderUrlEnum {
+    static root_provider: string;
+    static e_root_provider: string;
+    static e_root_provider_stats: string;
+    static root_provider_hub: string;
+    static e_root_provider_hub: string;
+    static e_root_provider_hub_stats: string;
+}
+/**
  * Society
  */
 export declare class ApiSocietyUrlEnum {
