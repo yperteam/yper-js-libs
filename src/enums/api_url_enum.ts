@@ -62,6 +62,7 @@ export class ApiJourneyUrlEnum {
 
     public static endpoint_post_parcel_refuse = ApiJourneyUrlEnum.e_root_journey + "/mission";
     public static endpoint_post_rain = ApiJourneyUrlEnum.e_root_journey + "/rain";
+    public static endpoint_get_journey_events = ApiJourneyUrlEnum.e_root_journey + "/event";
 }
 
 /**
