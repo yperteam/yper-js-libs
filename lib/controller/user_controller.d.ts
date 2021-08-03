@@ -29,4 +29,8 @@ export default class UserController extends AbstractLib {
      * Put user/shopper TransportType
      */
     putShopperTransportType(): Promise<any>;
+    /**
+     * Delete User
+     */
+    deleteUser(): Promise<any>;
 }

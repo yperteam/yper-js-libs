@@ -47,4 +47,11 @@ export default class UserController extends AbstractLib {
     public async putShopperTransportType(): Promise<any> {
         return this._putPromise(ApiUserUrlEnum.e_root_user_shopper_transport_type);
     }
+
+    /**
+     * Delete User
+     */
+    public async deleteUser(): Promise<any> {
+        return this._deletePromise(ApiUserUrlEnum.e_root_user);
+    }
 }
