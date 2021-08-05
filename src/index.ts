@@ -55,6 +55,7 @@ import SocietyController from "./controller/society_controller";
 import UserPaymentMethodController from "./controller/user_payment_method_controller";
 import PaymentIntentController from "./controller/payment_intent_controller";
 import ParcelController from "./controller/parcel_controller";
+import RackController from "./controller/rack_controller";
 import SearchController from "./controller/search_controller";
 import TargetController from "./controller/target_controller";
 
@@ -112,6 +113,7 @@ export {
     UserPaymentMethodController,
     PaymentIntentController,
     ParcelController,
+    RackController,
     ProController,
     ProviderController,
     SocietyController,

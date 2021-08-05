@@ -55,6 +55,15 @@ export declare class ApiJourneyUrlEnum {
     static endpoint_get_journey_events: string;
 }
 /**
+ * Rack
+ */
+export declare class ApiRackUrlEnum {
+    static root_rack: string;
+    static e_root_rack: string;
+    static root_rack_position: string;
+    static e_root_rack_position: string;
+}
+/**
  * Parcel
  */
 export declare class ApiParcelUrlEnum {

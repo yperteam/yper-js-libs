@@ -66,6 +66,17 @@ export class ApiJourneyUrlEnum {
 }
 
 /**
+ * Rack
+ */
+export class ApiRackUrlEnum {
+    public static root_rack = AbstractApiUrlEnum.root + "/rack";
+    public static e_root_rack = ApiRackUrlEnum.root_rack + "/{0}";
+
+    public static root_rack_position = AbstractApiUrlEnum.root + "/rack_position";
+    public static e_root_rack_position = ApiRackUrlEnum.root_rack_position + "/{0}";
+}
+
+/**
  * Parcel
  */
 export class ApiParcelUrlEnum {
