@@ -15,6 +15,13 @@ export default class ProviderController extends AbstractLib {
     }
 
     /**
+     * Get provider list
+     */
+    public async getProviderList(): Promise<any> {
+        return this._getPromise(ApiProviderUrlEnum.root_provider);
+    }
+
+    /**
      * Get provider stats
      */
     public async getProviderStats(): Promise<any> {

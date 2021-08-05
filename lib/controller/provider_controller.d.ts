@@ -11,6 +11,10 @@ export default class ProviderController extends AbstractLib {
      */
     constructor($elem?: JQuery<HTMLElement> | null);
     /**
+     * Get provider list
+     */
+    getProviderList(): Promise<any>;
+    /**
      * Get provider stats
      */
     getProviderStats(): Promise<any>;
