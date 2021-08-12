@@ -10,6 +10,10 @@ export default class InvoiceController extends AbstractLib {
      */
     constructor($elem?: JQuery<HTMLElement> | null);
     /**
+     * Create an invoice
+     */
+    invoiceCreate(): Promise<any>;
+    /**
      * Update an invoice
      */
     invoiceUpdate(): Promise<any>;
