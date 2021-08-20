@@ -58,6 +58,7 @@ import ParcelController from "./controller/parcel_controller";
 import RackController from "./controller/rack_controller";
 import SearchController from "./controller/search_controller";
 import TargetController from "./controller/target_controller";
+import DmpController from "./controller/dmp_controller";
 
 import PasswordChecker from "./component/password_checker/password_checker";
 
@@ -122,5 +123,6 @@ export {
     TargetController,
     ParcelRefuseReasonEnum,
     PasswordChecker,
-    AdminController
+    AdminController,
+    DmpController
 };

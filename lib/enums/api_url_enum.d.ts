@@ -36,6 +36,12 @@ export declare class ApiDeliveryUrlEnum {
     static endpoint_post_defray_shopper: string;
 }
 /**
+ * DMP
+ */
+export declare class ApiDmpUrlEnum {
+    static availability_color: string;
+}
+/**
  * Journey
  */
 export declare class ApiHubUrlEnum {

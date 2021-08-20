@@ -43,6 +43,13 @@ export class ApiDeliveryUrlEnum {
 }
 
 /**
+ * DMP
+ */
+export class ApiDmpUrlEnum {
+    public static availability_color = AbstractApiUrlEnum.root + "/availability_color";
+}
+
+/**
  * Journey
  */
 export class ApiHubUrlEnum {
