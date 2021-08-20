@@ -1,7 +1,7 @@
 import { AbstractLib } from "../libs/abstract_lib";
 import { ApiDmpUrlEnum } from "../enums/api_url_enum";
 
-export default class DMPController extends AbstractLib {
+export default class DmpController extends AbstractLib {
     /**
      *
      * @param $elem
