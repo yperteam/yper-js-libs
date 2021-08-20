@@ -3,7 +3,7 @@
 /// <reference types="jqueryui" />
 /// <reference types="bootstrap" />
 import { AbstractLib } from "../libs/abstract_lib";
-export default class DMPController extends AbstractLib {
+export default class DmpController extends AbstractLib {
     /**
      *
      * @param $elem
