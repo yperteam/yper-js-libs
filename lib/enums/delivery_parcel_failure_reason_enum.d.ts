@@ -16,6 +16,5 @@ export declare enum DeliveryParcelFailureReasonEnum {
     deliverer_workload_too_high = "deliverer_workload_too_high",
     out_of_business_hours = "out_of_business_hours",
     hub_customer_handover = "hub_customer_handover",
-    delivery_postponed = "delivery_postponed",
-    out_of_zone = "out_of_zone"
+    delivery_postponed = "delivery_postponed"
 }
