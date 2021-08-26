@@ -35,6 +35,7 @@ export class ApiDeliveryUrlEnum {
     public static delivery_timeslot = ApiDeliveryUrlEnum.e_root_delivery + "/delivery_timeslot";
     public static transfer_journey = ApiDeliveryUrlEnum.e_root_delivery + "/transfer_journey";
     public static neighbour_deposit = ApiDeliveryUrlEnum.e_root_delivery + "/neighbor_deposit";
+    public static get_events = ApiDeliveryUrlEnum.e_root_delivery + "/event";
 
     public static root_delivery_parcel = ApiDeliveryUrlEnum.e_root_delivery + "/parcel";
     public static endpoint_post_parcel_refuse = ApiDeliveryUrlEnum.root_delivery_parcel + "/refuse";

@@ -63,6 +63,13 @@ export default class DeliveryController extends AbstractLib {
     }
 
     /**
+     * Get delivery events
+     */
+    public async getEvents(): Promise<any> {
+        return this._getPromise(ApiDeliveryUrlEnum.get_events);
+    }
+
+    /**
      * Transfer journey
      */
     public async transferJourney(): Promise<any> {
