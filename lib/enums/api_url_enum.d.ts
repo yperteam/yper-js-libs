@@ -30,6 +30,7 @@ export declare class ApiDeliveryUrlEnum {
     static delivery_timeslot: string;
     static transfer_journey: string;
     static neighbour_deposit: string;
+    static get_events: string;
     static root_delivery_parcel: string;
     static endpoint_post_parcel_refuse: string;
     static endpoint_post_pending_hub_customer_handover: string;
