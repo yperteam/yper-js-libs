@@ -69,4 +69,11 @@ export default class ParcelController extends AbstractLib {
     public async getParcelEventHistory(): Promise<any> {
         return this._getPromise(ApiParcelUrlEnum.endpoint_get_parcel_event_history);
     }
+
+    /**
+     * Handover to a customer for a parcel
+     */
+    public async customerHandover(): Promise<any> {
+        return this._postPromise(ApiParcelUrlEnum.endpoint_customer_handover);
+    }
 }

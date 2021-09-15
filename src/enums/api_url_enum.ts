@@ -98,6 +98,7 @@ export class ApiParcelUrlEnum {
     public static endpoint_post_return_parcel_to_provider = ApiParcelUrlEnum.e_root_parcel + "/provider_return";
     public static endpoint_post_return_parcel_to_hub = ApiParcelUrlEnum.e_root_parcel + "/hub_return";
     public static endpoint_get_parcel_event_history = ApiParcelUrlEnum.e_root_parcel + "/event";
+    public static endpoint_customer_handover = ApiParcelUrlEnum.e_root_parcel + "/customer_handover";
 }
 
 /**
