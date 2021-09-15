@@ -41,4 +41,8 @@ export default class ParcelController extends AbstractLib {
      * Get parcel events history
      */
     getParcelEventHistory(): Promise<any>;
+    /**
+     * Handover to a customer for a parcel
+     */
+    customerHandover(): Promise<any>;
 }

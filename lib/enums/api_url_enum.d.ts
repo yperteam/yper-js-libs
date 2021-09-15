@@ -83,6 +83,7 @@ export declare class ApiParcelUrlEnum {
     static endpoint_post_return_parcel_to_provider: string;
     static endpoint_post_return_parcel_to_hub: string;
     static endpoint_get_parcel_event_history: string;
+    static endpoint_customer_handover: string;
 }
 /**
  * RetailPoint
