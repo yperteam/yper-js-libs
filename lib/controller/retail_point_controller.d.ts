@@ -17,4 +17,8 @@ export default class RetailPointController extends AbstractLib {
      * Get RetailPoint
      */
     getRetailPoint(): Promise<any>;
+    /**
+     * Get RetailPoint
+     */
+    createRetailpoint(): Promise<any>;
 }
