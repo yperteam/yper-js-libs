@@ -51,6 +51,14 @@ export class ApiDmpUrlEnum {
 }
 
 /**
+ * Legal Document
+ */
+export class ApiLegalDocsUrlEnum {
+    public static root_legal_document = AbstractApiUrlEnum.root + "/legal_document";
+    public static e_root_legal_document = AbstractApiUrlEnum.root + "/{0}";
+}
+
+/**
  * Journey
  */
 export class ApiHubUrlEnum {
