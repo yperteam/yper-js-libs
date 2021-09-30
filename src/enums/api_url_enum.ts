@@ -51,15 +51,15 @@ export class ApiDmpUrlEnum {
 }
 
 /**
- * Legal Document
+ * Document
  */
-export class ApiLegalDocsUrlEnum {
-    public static root_legal_document = AbstractApiUrlEnum.root + "/legal_document";
-    public static e_root_legal_document = ApiLegalDocsUrlEnum.root_legal_document + "/{0}";
+export class ApiDocumentUrlEnum {
+    public static root_document = AbstractApiUrlEnum.root + "/document";
+    public static e_root_document = ApiDocumentUrlEnum.root_document + "/{0}";
 }
 
 /**
- * Journey
+ * Hub
  */
 export class ApiHubUrlEnum {
     public static root_hub = AbstractApiUrlEnum.root + "/hub";
