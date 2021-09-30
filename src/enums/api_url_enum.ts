@@ -55,7 +55,7 @@ export class ApiDmpUrlEnum {
  */
 export class ApiLegalDocsUrlEnum {
     public static root_legal_document = AbstractApiUrlEnum.root + "/legal_document";
-    public static e_root_legal_document = AbstractApiUrlEnum.root + "/{0}";
+    public static e_root_legal_document = ApiLegalDocsUrlEnum.root_legal_document + "/{0}";
 }
 
 /**
