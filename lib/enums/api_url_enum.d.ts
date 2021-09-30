@@ -43,6 +43,13 @@ export declare class ApiDmpUrlEnum {
     static availability_color: string;
 }
 /**
+ * Legal Document
+ */
+export declare class ApiLegalDocsUrlEnum {
+    static root_legal_document: string;
+    static e_root_legal_document: string;
+}
+/**
  * Journey
  */
 export declare class ApiHubUrlEnum {
