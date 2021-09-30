@@ -12,5 +12,5 @@ export default class LegalDocumentController extends AbstractLib {
     /**
      * Get Availability Color
      */
-    getAvailabilityColor(): Promise<any>;
+    deleteDocument(): Promise<any>;
 }

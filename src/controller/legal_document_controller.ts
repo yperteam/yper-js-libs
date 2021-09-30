@@ -16,7 +16,7 @@ export default class LegalDocumentController extends AbstractLib {
     /**
      * Get Availability Color
      */
-    public async getAvailabilityColor(): Promise<any> {
+    public async deleteDocument(): Promise<any> {
         return this._deletePromise(ApiLegalDocsUrlEnum.e_root_legal_document);
     }
 }
