@@ -11,4 +11,5 @@ export enum ParcelRefuseReasonEnum {
     other = "other",
     out_of_zone = "out_of_zone",
     provider_request = "provider_request",
+    odd_too_far = "odd_too_far"
 }
