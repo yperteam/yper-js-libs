@@ -59,7 +59,7 @@ import RackController from "./controller/rack_controller";
 import SearchController from "./controller/search_controller";
 import TargetController from "./controller/target_controller";
 import DmpController from "./controller/dmp_controller";
-import LegalDocumentController from "./controller/legal_document_controller";
+import DocumentController from "./controller/document_controller";
 
 import PasswordChecker from "./component/password_checker/password_checker";
 
@@ -126,5 +126,5 @@ export {
     PasswordChecker,
     AdminController,
     DmpController,
-    LegalDocumentController
+    DocumentController
 };

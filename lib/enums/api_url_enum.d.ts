@@ -43,14 +43,14 @@ export declare class ApiDmpUrlEnum {
     static availability_color: string;
 }
 /**
- * Legal Document
+ * Document
  */
-export declare class ApiLegalDocsUrlEnum {
-    static root_legal_document: string;
-    static e_root_legal_document: string;
+export declare class ApiDocumentUrlEnum {
+    static root_document: string;
+    static e_root_document: string;
 }
 /**
- * Journey
+ * Hub
  */
 export declare class ApiHubUrlEnum {
     static root_hub: string;
