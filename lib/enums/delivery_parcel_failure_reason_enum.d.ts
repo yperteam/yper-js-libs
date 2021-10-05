@@ -18,5 +18,5 @@ export declare enum DeliveryParcelFailureReasonEnum {
     hub_customer_handover = "hub_customer_handover",
     delivery_postponed = "delivery_postponed",
     out_of_zone = "out_of_zone",
-    odd_too_far = "ODD trop \u00E9loign\u00E9"
+    odd_too_far = "odd_too_far"
 }
