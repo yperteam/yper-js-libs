@@ -51,6 +51,14 @@ export class ApiDmpUrlEnum {
 }
 
 /**
+ * Voucher
+ */
+export class ApiVoucherUrlEnum {
+    public static root_voucher = AbstractApiUrlEnum.root + "/voucher";
+    public static e_root_voucher = AbstractApiUrlEnum.root + "/{0}";
+}
+
+/**
  * Document
  */
 export class ApiDocumentUrlEnum {

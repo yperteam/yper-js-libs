@@ -60,6 +60,7 @@ import SearchController from "./controller/search_controller";
 import TargetController from "./controller/target_controller";
 import DmpController from "./controller/dmp_controller";
 import DocumentController from "./controller/document_controller";
+import VoucherController from "./controller/voucher_controller";
 
 import PasswordChecker from "./component/password_checker/password_checker";
 
@@ -126,5 +127,6 @@ export {
     PasswordChecker,
     AdminController,
     DmpController,
-    DocumentController
+    DocumentController,
+    VoucherController
 };

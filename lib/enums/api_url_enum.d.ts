@@ -43,6 +43,13 @@ export declare class ApiDmpUrlEnum {
     static availability_color: string;
 }
 /**
+ * Voucher
+ */
+export declare class ApiVoucherUrlEnum {
+    static root_voucher: string;
+    static e_root_voucher: string;
+}
+/**
  * Document
  */
 export declare class ApiDocumentUrlEnum {
