@@ -55,7 +55,8 @@ export class ApiDmpUrlEnum {
  */
 export class ApiVoucherUrlEnum {
     public static root_voucher = AbstractApiUrlEnum.root + "/voucher";
-    public static e_root_voucher = AbstractApiUrlEnum.root + "/{0}";
+    public static e_root_voucher = ApiVoucherUrlEnum.root_voucher + "/{0}";
+    public static endpoint_post_deactivate = ApiVoucherUrlEnum.e_root_voucher + "/deactivate";
 }
 
 /**

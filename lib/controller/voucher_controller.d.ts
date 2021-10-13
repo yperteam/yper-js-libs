@@ -21,4 +21,8 @@ export default class VoucherController extends AbstractLib {
      * Get a Voucher
      */
     get(): Promise<any>;
+    /**
+     * Deactivate a Voucher
+     */
+    deactivate(): Promise<any>;
 }
