@@ -33,4 +33,11 @@ export default class VoucherController extends AbstractLib {
     public async get(): Promise<any> {
         return this._getPromise(ApiVoucherUrlEnum.e_root_voucher);
     }
+
+    /**
+     * Deactivate a Voucher
+     */
+    public async deactivate(): Promise<any> {
+        return this._postPromise(ApiVoucherUrlEnum.endpoint_post_deactivate);
+    }
 }
