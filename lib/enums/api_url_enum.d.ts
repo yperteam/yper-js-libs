@@ -48,6 +48,7 @@ export declare class ApiDmpUrlEnum {
 export declare class ApiVoucherUrlEnum {
     static root_voucher: string;
     static e_root_voucher: string;
+    static endpoint_post_deactivate: string;
 }
 /**
  * Document
