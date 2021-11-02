@@ -29,4 +29,12 @@ export default class JourneyController extends AbstractLib {
      * Get journey Event
      */
     getJourneyEvents(): Promise<any>;
+    /**
+     * Add Ambassador
+     */
+    addAmbassador(): Promise<any>;
+    /**
+     * Remove Ambassador
+     */
+    removeAmbassador(): Promise<any>;
 }
