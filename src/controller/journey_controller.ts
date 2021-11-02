@@ -47,4 +47,18 @@ export default class JourneyController extends AbstractLib {
     public async getJourneyEvents(): Promise<any> {
         return this._getPromise(ApiJourneyUrlEnum.endpoint_get_journey_events);
     }
+
+    /**
+     * Add Ambassador
+     */
+    public async addAmbassador(): Promise<any> {
+        return this._postPromise(ApiJourneyUrlEnum.e_root_ambassador);
+    }
+
+    /**
+     * Remove Ambassador
+     */
+    public async removeAmbassador(): Promise<any> {
+        return this._deletePromise(ApiJourneyUrlEnum.root_ambassador);
+    }
 }
