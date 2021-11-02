@@ -72,11 +72,10 @@ export declare class ApiHubUrlEnum {
 export declare class ApiJourneyUrlEnum {
     static root_journey: string;
     static e_root_journey: string;
-    static root_ambassador: string;
-    static e_root_ambassador: string;
     static endpoint_post_parcel_refuse: string;
     static endpoint_post_rain: string;
     static endpoint_get_journey_events: string;
+    static endpoint_ambassador: string;
 }
 /**
  * Rack
