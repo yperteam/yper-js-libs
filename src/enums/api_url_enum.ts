@@ -84,6 +84,8 @@ export class ApiHubUrlEnum {
 export class ApiJourneyUrlEnum {
     public static root_journey = AbstractApiUrlEnum.root + "/journey";
     public static e_root_journey = ApiJourneyUrlEnum.root_journey + "/{0}";
+    public static root_ambassador = ApiJourneyUrlEnum.e_root_journey + "/ambassador";
+    public static e_root_ambassador = ApiJourneyUrlEnum.root_ambassador + "/{1}";
 
     public static endpoint_post_parcel_refuse = ApiJourneyUrlEnum.e_root_journey + "/mission";
     public static endpoint_post_rain = ApiJourneyUrlEnum.e_root_journey + "/rain";
