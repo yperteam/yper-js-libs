@@ -8,6 +8,7 @@ export class AbstractApiUrlEnum {
 export class ApiAdminEnum {
     public static root_admin = AbstractApiUrlEnum.root + "/admin";
     public static send_admin_message = ApiAdminEnum.root_admin + "/message";
+    public static endpoint_user_reactivate =  ApiAdminEnum.root_admin + "/user/{0}/reactivate";
 }
 
 /**
