@@ -19,4 +19,11 @@ export default class AdminController extends AbstractLib {
     public async postMessage(): Promise<any> {
         return this._postPromise(ApiAdminEnum.send_admin_message);
     }
+
+    /**
+     * Reactivate User
+     */
+    public async reactivateUser(): Promise<any> {
+        return this._postPromise(ApiAdminEnum.endpoint_user_reactivate);
+    }
 }

@@ -7,6 +7,7 @@ export declare class AbstractApiUrlEnum {
 export declare class ApiAdminEnum {
     static root_admin: string;
     static send_admin_message: string;
+    static endpoint_user_reactivate: string;
 }
 /**
  * Admin Delivery
