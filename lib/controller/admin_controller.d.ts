@@ -13,4 +13,8 @@ export default class AdminController extends AbstractLib {
      * Send Message to user(s)
      */
     postMessage(): Promise<any>;
+    /**
+     * Reactivate User
+     */
+    reactivateUser(): Promise<any>;
 }
