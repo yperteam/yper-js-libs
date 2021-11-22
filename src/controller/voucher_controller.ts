@@ -40,4 +40,18 @@ export default class VoucherController extends AbstractLib {
     public async deactivate(): Promise<any> {
         return this._postPromise(ApiVoucherUrlEnum.endpoint_post_deactivate);
     }
+
+    /**
+     * Validate a Sponsorship
+     */
+    public async validateSponsorship(): Promise<any> {
+        return this._postPromise(ApiVoucherUrlEnum.endpoint_validate_sponsorship);
+    }
+
+    /**
+     * Refuse a sponsorship
+     */
+    public async refuseSponsorship(): Promise<any> {
+        return this._postPromise(ApiVoucherUrlEnum.endpoint_refuse_sponsorship);
+    }
 }
