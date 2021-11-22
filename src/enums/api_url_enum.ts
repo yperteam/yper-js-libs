@@ -56,12 +56,17 @@ export class ApiDmpUrlEnum {
  */
 export class ApiVoucherUrlEnum {
     public static root_voucher = AbstractApiUrlEnum.root + "/voucher";
-    public static root_sponsorship = AbstractApiUrlEnum.root + "/sponsorship";
     public static e_root_voucher = ApiVoucherUrlEnum.root_voucher + "/{0}";
+
+    public static root_sponsorship = AbstractApiUrlEnum.root + "/sponsorship";
     public static e_root_sponsorship = ApiVoucherUrlEnum.root_sponsorship + "/{0}";
+
+    public static root_admin_sponsorship = AbstractApiUrlEnum.root + ApiAdminEnum.root_admin + "/sponsorship";
+    public static e_root_admin_sponsorship = ApiVoucherUrlEnum.root_admin_sponsorship + "/{0}";
+
     public static endpoint_post_deactivate = ApiVoucherUrlEnum.e_root_voucher + "/deactivate";
-    public static endpoint_validate_sponsorship = ApiAdminEnum.root_admin + ApiVoucherUrlEnum.e_root_voucher + "/validate";
-    public static endpoint_refuse_sponsorship = ApiAdminEnum.root_admin + ApiVoucherUrlEnum.e_root_voucher + "/refuse";
+    public static endpoint_validate_sponsorship = ApiVoucherUrlEnum.e_root_admin_sponsorship + "/validate";
+    public static endpoint_refuse_sponsorship = ApiVoucherUrlEnum.e_root_admin_sponsorship + "/refuse";
 }
 
 /**
