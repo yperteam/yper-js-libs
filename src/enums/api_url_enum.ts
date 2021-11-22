@@ -61,7 +61,7 @@ export class ApiVoucherUrlEnum {
     public static root_sponsorship = AbstractApiUrlEnum.root + "/sponsorship";
     public static e_root_sponsorship = ApiVoucherUrlEnum.root_sponsorship + "/{0}";
 
-    public static root_admin_sponsorship = AbstractApiUrlEnum.root + ApiAdminEnum.root_admin + "/sponsorship";
+    public static root_admin_sponsorship = ApiAdminEnum.root_admin + "/sponsorship";
     public static e_root_admin_sponsorship = ApiVoucherUrlEnum.root_admin_sponsorship + "/{0}";
 
     public static endpoint_post_deactivate = ApiVoucherUrlEnum.e_root_voucher + "/deactivate";
