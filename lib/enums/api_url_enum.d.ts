@@ -48,8 +48,12 @@ export declare class ApiDmpUrlEnum {
  */
 export declare class ApiVoucherUrlEnum {
     static root_voucher: string;
+    static root_sponsorship: string;
     static e_root_voucher: string;
+    static e_root_sponsorship: string;
     static endpoint_post_deactivate: string;
+    static endpoint_validate_sponsorship: string;
+    static endpoint_refuse_sponsorship: string;
 }
 /**
  * Document

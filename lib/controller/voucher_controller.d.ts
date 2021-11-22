@@ -25,4 +25,12 @@ export default class VoucherController extends AbstractLib {
      * Deactivate a Voucher
      */
     deactivate(): Promise<any>;
+    /**
+     * Validate a Sponsorship
+     */
+    validateSponsorship(): Promise<any>;
+    /**
+     * Refuse a sponsorship
+     */
+    refuseSponsorship(): Promise<any>;
 }
