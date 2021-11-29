@@ -19,4 +19,11 @@ export default class HubController extends AbstractLib {
     public async postJourneyRain(): Promise<any> {
         return this._postPromise(ApiHubUrlEnum.endpoint_post_journey_rain);
     }
+
+    /**
+     * Generate Journey for a Hub
+     */
+    public async generateJourney(): Promise<any> {
+        return this._postPromise(ApiHubUrlEnum.endpoint_generate_journey);
+    }
 }
