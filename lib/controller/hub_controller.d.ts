@@ -13,4 +13,8 @@ export default class HubController extends AbstractLib {
      * Apply rain on journeys' hub
      */
     postJourneyRain(): Promise<any>;
+    /**
+     * Generate Journey for a Hub
+     */
+    generateJourney(): Promise<any>;
 }

@@ -72,6 +72,7 @@ export declare class ApiHubUrlEnum {
     static e_root_hub: string;
     static root_journey: string;
     static endpoint_post_journey_rain: string;
+    static endpoint_generate_journey: string;
 }
 /**
  * Journey
