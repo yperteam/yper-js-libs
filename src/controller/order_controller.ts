@@ -47,4 +47,18 @@ export default class OrderController extends AbstractLib {
     public async payOrder(): Promise<any> {
         return this._postPromise(ApiOrderUrlEnum.e_root_order_pay);
     }
+
+    /**
+     * Apply Voucher on Order
+     */
+    public async applyVoucher(): Promise<any> {
+        return this._postPromise(ApiOrderUrlEnum.e_root_order_voucher);
+    }
+
+    /**
+     * Delete Voucher from Order
+     */
+    public async deleteVoucher(): Promise<any> {
+        return this._deletePromise(ApiOrderUrlEnum.e_root_order_voucher);
+    }
 }

@@ -160,6 +160,7 @@ export class ApiOrderUrlEnum {
     public static e_root_order_add_items = ApiOrderUrlEnum.e_root_order + "/add_items";
     public static e_root_order_pay = ApiOrderUrlEnum.e_root_order + "/pay";
     public static e_root_order_validate = ApiOrderUrlEnum.e_root_order + "/validate";
+    public static e_root_order_voucher = ApiOrderUrlEnum.e_root_order + "/voucher";
 }
 
 /**
