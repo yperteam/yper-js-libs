@@ -135,6 +135,7 @@ export declare class ApiOrderUrlEnum {
     static e_root_order_add_items: string;
     static e_root_order_pay: string;
     static e_root_order_validate: string;
+    static e_root_order_voucher: string;
 }
 /**
  * Pro
