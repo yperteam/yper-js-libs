@@ -29,4 +29,12 @@ export default class OrderController extends AbstractLib {
      * Pay Order
      */
     payOrder(): Promise<any>;
+    /**
+     * Apply Voucher on Order
+     */
+    applyVoucher(): Promise<any>;
+    /**
+     * Delete Voucher from Order
+     */
+    deleteVoucher(): Promise<any>;
 }
