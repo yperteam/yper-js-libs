@@ -8,7 +8,7 @@ export class LeafletHelper {
     public static defaultLat = 42.348778;
     public static defaultLng = 8.853407;
     public static defaultZoomValue = 8;
-    private static urlTemplate: string = "https://osm.yper.org/osm_tiles_light/{z}/{x}/{y}.png?keyId=3P783r3MFhDAekx";
+    private static urlTemplate: string = "https://tiles.yper.fr/default/{z}/{x}/{y}.png";
     public static defaultTileLayerOpts: L.TileLayerOptions = {
         attribution:
             '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMaps</a>',
