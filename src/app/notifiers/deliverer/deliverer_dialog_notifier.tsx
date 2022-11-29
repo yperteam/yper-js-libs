@@ -1,5 +1,11 @@
 import { atom } from "recoil";
 
+export enum DelivererErrorEnum {
+  dislike = "dislike",
+  like = "like",
+  deprecate = "deprecate",
+}
+
 export class DelivererDialogProvider {
   static dialogDeprecatedProvider = atom({
     key: "deprecate-deliverer-dialog_provider",

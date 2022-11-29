@@ -1,7 +1,7 @@
 import { atomFamily, Loadable } from "recoil";
-import { CustomLoadable } from "../../../app/notifiers/custom_loadable";
+import { GetOrder } from "../../../domain/usecase/order/get_order";
 import { Order } from "../../../data/entity/order.entity";
-import { GetOrder } from "../../../domain/usecase/get_order";
+import { CustomLoadable } from "../custom_loadable";
 
 export class OrderNotifier {
   static provider = atomFamily<Loadable<Order>, string>({

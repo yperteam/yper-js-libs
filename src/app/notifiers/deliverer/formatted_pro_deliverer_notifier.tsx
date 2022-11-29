@@ -7,6 +7,7 @@ import {
   DelivererFilterEnum,
   DelivererFilterNotifier,
 } from "../../../app/notifiers/deliverer/deliverer_filter_notifier";
+import { BlockedDeliverer, ProFavoriteDeliverer } from "../../../data/entity/pro_deliverer.entity";
 
 export class FormattedProDelivererNotifier {
   static provider = selector({
@@ -16,26 +17,18 @@ export class FormattedProDelivererNotifier {
       let deliverers = get(ProDelivererNotifier.provider);
       let filter = get(DelivererFilterNotifier.provider);
       let blockedDeliverers = get(ProBlockedDelivererNotifier.provider);
-      if (
-        favorites.state != "hasValue" ||
-        blockedDeliverers.state != "hasValue"
-      )
+      if (favorites.state != "hasValue" || blockedDeliverers.state != "hasValue")
         return []; // TODO
-      let formattedDeliverers = [];
+      let formattedDeliverers: FormattedProDeliverer[] = [];
       deliverers.map(deliverer => {
-        formattedDeliverers.push(new FormattedProDeliverer(deliverer));
-      });
-      formattedDeliverers.forEach(deliverer => {
-        favorites.contents.forEach(favorite => {
-          if (favorite.recipient.shopper === deliverer.id) {
-            deliverer.favorite = true;
-            deliverer.favoriteId = favorite.id;
-          }
-        });
-        blockedDeliverers.contents.forEach(blockedInfos => {
-          if (blockedInfos.recipient.id === deliverer.id) {
-            deliverer.blocked = true;
-          }
+        let newDeliverer = new FormattedProDeliverer(deliverer);
+        let favorite = (favorites.contents as ProFavoriteDeliverer[]).find((f) => f.recipient.shopper == newDeliverer.id);
+        let blocked = (blockedDeliverers.contents as BlockedDeliverer[]).find((f) => f.recipient.id == newDeliverer.id);
+        formattedDeliverers.push({
+          ...newDeliverer,
+          favorite: favorite != null,
+          favoriteId: favorite?.id,
+          blocked: blocked != null,
         });
       });
 

@@ -410,7 +410,7 @@ export class Api extends Singleton {
           k,
           v && typeof v === "object" ? this.removeEmpty(v) : v,
         ])
-        .reduce((a, [k, v]) => (v == null ? a : ((a[k] = v), a)), {});
+        .reduce((a: any, [k, v]) => (v == null ? a : ((a[k] = v), a)), {});
     }
   }
 

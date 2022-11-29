@@ -1,9 +1,8 @@
 import { atomFamily, CallbackInterface } from "recoil";
-import { ProLikeShopper } from "../../../domain/usecase/deliverer/pro_like_shopper";
-import { DelivererDialogProvider } from "../../../app/notifiers/deliverer/deliverer_dialog_notifier";
-import { CustomLoadable } from "../../../app/notifiers/custom_loadable";
-import { DelivererErrorEnum } from "../../../app/screen/deliverer/modal/error_modal";
 import { FormattedProDeliverer } from "../../../domain/model/formated_deliverer.model";
+import { ProLikeShopper } from "../../../domain/usecase/deliverer/pro_like_shopper";
+import { CustomLoadable } from "../custom_loadable";
+import { DelivererDialogProvider, DelivererErrorEnum } from "./deliverer_dialog_notifier";
 
 export class LikeDelivererNotifier {
   static provider = atomFamily<any, any>({

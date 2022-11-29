@@ -1,9 +1,8 @@
 import { atomFamily, CallbackInterface } from "recoil";
 import { ProDislikeShopper } from "../../../domain/usecase/deliverer/pro_dislike_shopper";
-import { DelivererDialogProvider } from "../../../app/notifiers/deliverer/deliverer_dialog_notifier";
+import { DelivererDialogProvider, DelivererErrorEnum } from "./deliverer_dialog_notifier";
 import { CustomLoadable } from "../../../app/notifiers/custom_loadable";
-import { ProFavoriteDeliverersNotifier } from "../../../app/notifiers/deliverer/pro_favorite_deliverers_notifier";
-import { DelivererErrorEnum } from "../../../app/screen/deliverer/modal/error_modal";
+import { ProFavoriteDeliverersNotifier } from "./pro_favorite_deliverers_notifier";
 import { FormattedProDeliverer } from "../../../domain/model/formated_deliverer.model";
 
 export class DislikeDelivererFamilyNotifier {

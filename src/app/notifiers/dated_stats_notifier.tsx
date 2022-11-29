@@ -1,6 +1,6 @@
-import { DateRangeInterface } from "../../../app/notifiers/stats_range_notifier";
-import DatedStatNumber from "../../../domain/model/dated_stat_number";
-import { StatsInterval } from "../../../data/entity/stats_interval.enum";
+import { DateRangeInterface } from "./stats_range_notifier";
+import DatedStatNumber from "../../domain/model/dated_stat_number";
+import { StatsInterval } from "../../data/entity/stats_interval.enum";
 import moment from "moment";
 
 export default class DatedStatsNotifier {
@@ -40,7 +40,7 @@ export default class DatedStatsNotifier {
     startDate: Date,
     endDate: Date
   ): Date[] {
-    let dates = [];
+    let dates: Date[] = [];
     const date = new Date(startDate);
     while (date < endDate) {
       dates = [...dates, new Date(date.getTime())];

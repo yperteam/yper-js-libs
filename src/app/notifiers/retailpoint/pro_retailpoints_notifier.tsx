@@ -5,11 +5,8 @@ import {
   selector,
   selectorFamily,
 } from "recoil";
-import { GetProRetailpoints } from "../../../domain/usecase/get_pro_retailpoints";
-import {
-  ProRetailpointList,
-  Retailpoint,
-} from "../../../data/entity/retailpoint.entity";
+import { ProRetailpointList } from "src/data/entity/retailpoint.entity";
+import { GetProRetailpoints } from "../../../domain/usecase/pro/get_pro_retailpoints";
 import { StreamNotifier } from "../stream_notifier";
 
 export class ProRetailpointsNotifier {
@@ -22,7 +19,7 @@ export class ProRetailpointsNotifier {
     key: "pro_retailpoints_ids",
     get: ({ get }) => {
       let retailpoints = get(ProRetailpointsNotifier.provider);
-      return retailpoints.contents?.data.map(r => r.id);
+      return (retailpoints.contents as ProRetailpointList)?.data.map(r => r.id);
     },
     set: ({ set }, newValue) => {
       set(ProRetailpointsNotifier.retailpointListProvider, [newValue]);

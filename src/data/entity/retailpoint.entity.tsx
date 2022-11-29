@@ -1,7 +1,7 @@
-import { Address } from "../../../data/entity/address.entity";
-import { DeliveryHours } from "../../../data/entity/delivery_hours.entity";
-import { Rating } from "../../../data/entity/rating_details.entity";
-import { RetailPointStats } from "../../../data/entity/retailpoint_stats";
+import { Address } from "../../data/entity/address.entity";
+import { DeliveryHours } from "../../data/entity/delivery_hours.entity";
+import { Rating } from "../../data/entity/rating_details.entity";
+import { RetailPointStats } from "../../data/entity/retailpoint_stats";
 
 export interface ProRetailpointList {
   count: {

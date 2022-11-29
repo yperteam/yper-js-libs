@@ -1,10 +1,10 @@
-import { atom, Loadable, SetterOrUpdater } from "recoil";
+import { atom, AtomEffect, Loadable, SetterOrUpdater } from "recoil";
 import { CustomLoadable } from "../custom_loadable";
 import { OrderInvoices } from "../../../domain/usecase/invoice/order_invoices";
 import { Order } from "../../../data/entity/order.entity";
 
-const redirectEffect = key => ({ onSet }) => {
-  onSet(newValue => {
+const redirectEffect: (key: string) => AtomEffect<Loadable<Order>> = (key) => ({ onSet }) => {
+  onSet((newValue) => {
     if (newValue?.state === "hasValue") {
       // TODO remove this when we create the react page
       window.location.pathname = "/order/pay/" + newValue.contents.id;

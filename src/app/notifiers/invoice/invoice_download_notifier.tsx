@@ -1,9 +1,9 @@
-import { atom, atomFamily, Loadable, SetterOrUpdater } from "recoil";
+import { atom, AtomEffect, atomFamily, Loadable, SetterOrUpdater } from "recoil";
 import { CustomLoadable } from "../../../app/notifiers/custom_loadable";
 import { GetDownloadInvoices } from "../../../domain/usecase/invoice/get_download_invoices";
 import { GetDownloadInvoice } from "../../../domain/usecase/invoice/get_download_invoice";
 
-const redirectEffect = key => ({ setSelf, onSet }) => {
+const redirectEffect: (key: string) => AtomEffect<Loadable<Object>> = key => ({ onSet }) => {
   onSet(newValue => {
     if (newValue?.state === "hasValue") {
       window.open(String(newValue.contents));

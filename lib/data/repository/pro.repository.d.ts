@@ -1,0 +1,34 @@
+import { Observable } from "rxjs";
+import { ProRetailpointStats, ProStats } from "../entity/pro_retailpoint_stats.entity";
+import { StatsInterval } from "../entity/stats_interval.enum";
+import DatedStatNumber from "../../domain/model/dated_stat_number";
+import { ProRetailpointList } from "../entity/retailpoint.entity";
+import { PaginatedResult } from "../provider/http/paginated_result";
+import { Invoice } from "../entity/invoice.entity";
+import { Pro } from "../entity/pro.entity";
+import { BlockedDeliverer, ProDeliverer, ProFavoriteDeliverer } from "../entity/pro_deliverer.entity";
+import { MissionTemplate } from "../entity/mission_template.entity";
+import { ProLimit } from "../entity/pro_limit.entity";
+export declare class ProRepository {
+    private api;
+    private proStorage;
+    getCurrentProId(): Observable<string>;
+    getPro(id: string): Promise<Pro>;
+    getRetailPointStats(proId: string, rpId: string, begin: Date, end: Date): Promise<ProRetailpointStats>;
+    getProStats(proId: string, begin: Date, end: Date, retailpointsIds: string[]): Promise<ProRetailpointStats>;
+    getRetailPointCatchmentsArea(proId: string, rpId: string, begin: Date, end: Date, distanceInterval: number, min: number, max: number): Promise<number[]>;
+    getRetailPointDeliveryDistribution(proId: string, rpId: string, begin: Date, end: Date, interval: StatsInterval): Promise<DatedStatNumber[]>;
+    getRetailPointCartPrice(proId: string, rpId: string, begin: Date, end: Date, interval: StatsInterval): Promise<DatedStatNumber[]>;
+    getProRetailpoints(proId: string): Promise<ProRetailpointList>;
+    getProRetailpoinsStats(proId: string, retailpointsIds: string[], begin: Date, end: Date): Promise<ProStats[]>;
+    getInvoices(proId: string, startDate: Date, endDate: Date): Promise<PaginatedResult<Invoice>>;
+    getProLimit(proId: string): Promise<ProLimit>;
+    getDeliverer(id: string, filter: string): Promise<ProDeliverer[]>;
+    getFavoriteDeliverers(proId: string, rpId: string): Observable<ProFavoriteDeliverer[]>;
+    getBlockedDeliverers(proId: string): Observable<BlockedDeliverer[]>;
+    deprecateShopper(proId: string, delivererId: string): Promise<BlockedDeliverer>;
+    dislikeShopper(proId: string, retailPointId: string, likeId: string): Promise<void>;
+    likeShopper(proId: string, retailPointId: string, delivererId: string, delivererType: string): Promise<ProFavoriteDeliverer>;
+    getMissionTemplates(proId: string): Promise<MissionTemplate[]>;
+    resetSecret(proId: string): Promise<Object>;
+}

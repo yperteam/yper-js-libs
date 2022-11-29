@@ -1,10 +1,7 @@
 import { selector } from "recoil";
-import { StatsInterval } from "../../../data/entity/stats_interval.enum";
-import {
-  DateRangeInterface,
-  StatsRangeNotifier,
-} from "../../../app/notifiers/stats_range_notifier";
 import moment from "moment";
+import { StatsInterval } from "../../data/entity/stats_interval.enum";
+import { DateRangeInterface, StatsRangeNotifier } from "./stats_range_notifier";
 
 export class StatsDeliveriesIntervalNotifier {
   static provider = selector<StatsInterval>({
