@@ -1,12 +1,12 @@
 import styled, { css } from "styled-components";
-import { TextInterface } from "@yper-script/react/app/widget/mixins";
+import { TextInterface } from "./mixins";
 import {
   Col,
   SpacingProps,
   SpacingStyle,
-} from "@yper-script/react/app/widget/generic";
+} from "./generic";
 
-export const FormContainer = styled(Col)<{ bgColor?: string }>`
+export const FormContainer = styled(Col) <{ bgColor?: string }>`
   padding: 24px 28px 32px;
   width: 50%;
   ${props =>
@@ -52,33 +52,33 @@ export const Textarea = styled.textarea`
 export const Label = styled.label<TextInterface>`
   margin: 0;
   font-family: ${(props: TextInterface) =>
-      props.textStyle
-        ? props.textStyle.font.family
-        : props.theme.textTheme.body.medium.font.family},
+    props.textStyle
+      ? props.textStyle.font.family
+      : props.theme?.textTheme.body.medium.font.family},
     ${(props: TextInterface) =>
-      props.textStyle
-        ? props.textStyle.font.generic
-        : props.theme.textTheme.body.medium.font.generic};
+    props.textStyle
+      ? props.textStyle.font.generic
+      : props.theme?.textTheme.body.medium.font.generic};
   font-weight: ${(props: TextInterface) =>
     props.textStyle
       ? props.textStyle.font.weight
-      : props.theme.textTheme.body.medium.font.weight};
+      : props.theme?.textTheme.body.medium.font.weight};
   font-size: ${(props: TextInterface) =>
     props.textStyle
       ? props.textStyle.font.size
-      : props.theme.textTheme.body.medium.font.size};
+      : props.theme?.textTheme.body.medium.font.size};
   line-height: ${(props: TextInterface) =>
     props.textStyle
       ? props.textStyle.lineHeight
-      : props.theme.textTheme.body.medium.lineHeight};
+      : props.theme?.textTheme.body.medium.lineHeight};
   letter-spacing: ${(props: TextInterface) =>
     props.textStyle
       ? props.textStyle.letterSpacing
-      : props.theme.textTheme.body.medium.letterSpacing};
+      : props.theme?.textTheme.body.medium.letterSpacing};
   color: ${(props: TextInterface) =>
     props.textStyle
       ? props.textStyle.color
-      : props.theme.textTheme.body.medium.color};
+      : props.theme?.textTheme.body.medium.color};
   text-transform: lowercase;
   &:first-letter {
     text-transform: uppercase;

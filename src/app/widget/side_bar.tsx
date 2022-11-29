@@ -6,15 +6,15 @@ import {
   useRecoilState,
 } from "recoil";
 import NotificationCenter from "./notification/notification_center";
-import HelpCenter from "../screen/help/help_center";
+import HelpCenter from "./help/help_center";
 import { MainCard } from "./card";
-import CallHelpScreen from "../screen/help/call_help_center";
-import CancelCallScreen from "../screen/help/cancel_call";
-import RegisterHelpScreen from "../screen/help/register_help_center";
-import LoginHelpScreen from "../screen/help/login_help_center";
+import CallHelpScreen from "./help/call_help_center";
+import CancelCallScreen from "./help/cancel_call";
+import RegisterHelpScreen from "./help/register_help_center";
+import LoginHelpScreen from "./help/login_help_center";
 import RequiresAuth from "./requires_auth";
 
-export const sideBarProvider = atom<boolean>({
+export const sideBarProvider = atom<boolean | null>({
   key: "side-bar-opened",
   default: false,
 });
@@ -23,7 +23,7 @@ export default function SideBar() {
   let [opened, setOpened] = useRecoilState(sideBarProvider);
 
   return (
-    <SideCard isOpened={opened}>
+    <SideCard isOpened={opened == true}>
       <Routes>
         <Route path="/" element={<div />} />
         <Route path="/login" element={<LoginHelpScreen />} />

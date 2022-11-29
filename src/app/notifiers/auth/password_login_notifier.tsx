@@ -1,9 +1,9 @@
 import { atom, CallbackInterface, Loadable } from "recoil";
-import { CustomLoadable } from "@yper-script/react/app/notifiers/custom_loadable";
-import { PasswordLogin } from "@yper-script/react/domain/usecase/auth/password_login";
+import { CustomLoadable } from "../../../app/notifiers/custom_loadable";
+import { PasswordLogin } from "../../../domain/usecase/auth/password_login";
 
 export class PasswordLoginNotifier {
-  static provider = atom<Loadable<string>>({
+  static provider = atom<Loadable<string> | null>({
     key: "password_login_provider",
     default: null,
   });

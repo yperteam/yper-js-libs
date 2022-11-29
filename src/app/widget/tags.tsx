@@ -1,7 +1,7 @@
 import React from "react";
 import styled, { useTheme } from "styled-components";
 import { Row, Spacing } from "./generic";
-import { Text } from "@yper-script/react/app/widget/mixins";
+import { Text } from "./mixins";
 
 export function PrimaryTag(props: { children: React.ReactChild }) {
   const theme = useTheme();

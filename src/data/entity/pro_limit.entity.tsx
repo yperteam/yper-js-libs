@@ -1,4 +1,4 @@
-interface ProLimit {
+export interface ProLimit {
   monthlyDeliveryLimit: number;
   totalMonthlyDeliveries: number;
   monthlyDeliveryOverchargeThreshold: number;

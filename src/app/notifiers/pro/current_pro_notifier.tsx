@@ -1,11 +1,11 @@
-import { GetCurrentPro } from "@yper-script/react/domain/usecase/get_current_pro";
+import { GetCurrentPro } from "../../../domain/usecase/pro/get_current_pro";
 import { selector } from "recoil";
-import { Pro } from "@yper-script/react/data/entity/pro.entity";
+import { Pro } from "../../../data/entity/pro.entity";
 
 export class CurrentProNotifier {
   static provider = selector<Pro>({
     key: "current_pro_provider",
-    get: async ({}) => {
+    get: async ({ }) => {
       return await new GetCurrentPro().call();
     },
     //Todo: To change cache handle policy update

@@ -1,9 +1,9 @@
 import { selector } from "recoil";
-import { StatsInterval } from "@yper-script/react/data/entity/stats_interval.enum";
+import { StatsInterval } from "../../../data/entity/stats_interval.enum";
 import {
   DateRangeInterface,
   StatsRangeNotifier,
-} from "@yper-script/react/app/notifiers/stats_range_notifier";
+} from "../../../app/notifiers/stats_range_notifier";
 import moment from "moment";
 
 export class StatsDeliveriesIntervalNotifier {

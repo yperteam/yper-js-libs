@@ -1,11 +1,10 @@
 import {
-  ProSubscription,
   SubscriptionBillingPeriod,
   SubscriptionName,
-} from "@yper-script/react/data/entity/subscription.entity";
+} from "../../../data/entity/subscription.entity";
 import { CustomError } from "ts-custom-error";
-import { ProSubscriptionRepository } from "@yper-script/react/data/repository/pro_subscription.repository";
-import { GetCurrentProId } from "@yper-script/react/domain/usecase/get_current_pro_id";
+import { ProSubscriptionRepository } from "../../../data/repository/pro_subscription.repository";
+import { GetCurrentProId } from "../pro/get_current_pro_id";
 import { firstValueFrom } from "rxjs";
 import { GetPaymentMethods } from "../payment_methods/get_payment_methods";
 import { GetProSubscriptions } from "./get_pro_subscriptions";

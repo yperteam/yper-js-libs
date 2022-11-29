@@ -2,7 +2,7 @@ import CallableInstance from "callable-instance";
 import {
   RegisterUserProps,
   UserRepository,
-} from "@yper-script/react/data/repository/user.repository";
+} from "../../../data/repository/user.repository";
 import { PasswordLogin } from "../auth/password_login";
 import { SignTerm } from "../terms/sign_term";
 

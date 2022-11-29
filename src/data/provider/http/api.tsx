@@ -1,29 +1,29 @@
-import { ProSubscription } from "@yper-script/react/data/entity/subscription.entity";
-import { AuthStorage } from "@yper-script/react/data/provider/local/auth_storage";
+import { ProSubscription } from "../../../data/entity/subscription.entity";
+import { AuthStorage } from "../../../data/provider/local/auth_storage";
 import axios from "axios";
 import applyCaseMiddleware from "axios-case-converter";
 import {
   ProRetailpointStats,
   ProStats,
-} from "@yper-script/react/data/entity/pro_retailpoint_stats.entity";
-import { StatsInterval } from "@yper-script/react/data/entity/stats_interval.enum";
-import DatedStatNumber from "@yper-script/react/domain/model/dated_stat_number";
-import { ProRetailpointList } from "@yper-script/react/data/entity/retailpoint.entity";
+} from "../../../data/entity/pro_retailpoint_stats.entity";
+import { StatsInterval } from "../../../data/entity/stats_interval.enum";
+import DatedStatNumber from "../../../domain/model/dated_stat_number";
+import { ProRetailpointList } from "../../../data/entity/retailpoint.entity";
 import { PaginatedResult } from "./paginated_result";
-import { Invoice } from "@yper-script/react/data/entity/invoice.entity";
-import { OrderItem } from "@yper-script/react/data/entity/order_item";
-import { Order } from "@yper-script/react/data/entity/order.entity";
-import { MissionTemplate } from "@yper-script/react/data/entity/mission_template.entity";
-import { Address } from "@yper-script/react/data/entity/address.entity";
-import { SubscriptionPreview } from "@yper-script/react/data/entity/subscription_preview.entity";
-import { PaymentMethod } from "@yper-script/react/data/entity/payment_method.entity";
-import { Pro } from "@yper-script/react/data/entity/pro.entity";
+import { Invoice } from "../../../data/entity/invoice.entity";
+import { OrderItem } from "../../../data/entity/order_item";
+import { Order } from "../../../data/entity/order.entity";
+import { MissionTemplate } from "../../../data/entity/mission_template.entity";
+import { Address } from "../../../data/entity/address.entity";
+import { SubscriptionPreview } from "../../../data/entity/subscription_preview.entity";
+import { PaymentMethod } from "../../../data/entity/payment_method.entity";
+import { Pro } from "../../../data/entity/pro.entity";
 import {
   BlockedDeliverer,
   ProBlockedDeliverer,
   ProDeliverer,
   ProFavoriteDeliverer,
-} from "@yper-script/react/data/entity/pro_deliverer.entity";
+} from "../../../data/entity/pro_deliverer.entity";
 import {
   MissionAddress,
   MissionClient,
@@ -32,20 +32,21 @@ import {
   MissionPrice,
   ReturnPolicy,
   TransportType,
-} from "@yper-script/react/data/entity/mission.entity";
-import { SocietyRegistry } from "@yper-script/react/data/entity/society_registry.entity";
-import { Society } from "@yper-script/react/data/entity/society.entity";
+} from "../../../data/entity/mission.entity";
+import { SocietyRegistry } from "../../../data/entity/society_registry.entity";
+import { Society } from "../../../data/entity/society.entity";
 import { SocietyRequestParams } from "../../repository/society.repository";
 import {
   NotificationResponse,
   NotificationUnreadResponse,
-} from "@yper-script/react/data/entity/notification.entity";
+} from "../../../data/entity/notification.entity";
 import { FavoriteAddress } from "../../entity/favorite_address";
 import { ContactReasonEntity } from "../../entity/contact_reason.entity";
 import { PhoneCallRequest } from "../../entity/phone_call_request.entity";
 import { firstValueFrom } from "rxjs";
 import { UserSex } from "../../entity/user.entity";
-import Term from "../../entity/term.entity";
+import Term from "../../../data/entity/term.entity";
+import { ProLimit } from "../../../data/entity/pro_limit.entity";
 
 export abstract class Singleton {
   private static instance: Singleton;
@@ -398,7 +399,7 @@ export class Api extends Singleton {
     return res.data.result;
   }
 
-  removeEmpty(obj) {
+  private removeEmpty(obj: Object): Object {
     if (Array.isArray(obj)) {
       return obj
         .map(v => (v && typeof v === "object" ? this.removeEmpty(v) : v))

@@ -1,5 +1,5 @@
 import CallableInstance from "callable-instance";
-import { AuthRepository } from "@yper-script/react/data/repository/auth.repository";
+import { AuthRepository } from "../../../data/repository/auth.repository";
 
 export class PasswordLogin extends CallableInstance<
   [string, string],

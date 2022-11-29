@@ -1,11 +1,10 @@
 import styled, { DefaultTheme } from "styled-components";
-import { TextStyleClass } from "@yper-script/react/app/widget/theme";
+import { TextStyleClass } from "./theme";
 import SVG from "react-inlinesvg";
 import {
-  Spacing,
   SpacingProps,
   SpacingStyle,
-} from "@yper-script/react/app/widget/generic";
+} from "./generic";
 
 export interface TextInterface extends SpacingProps {
   textStyle?: TextStyleClass;
@@ -25,64 +24,64 @@ export const Text = styled.p<TextInterface>`
   font-family: ${(props: TextInterface) =>
     props.textStyle
       ? props.textStyle.font.family
-      : props.theme.textTheme.body.medium.font.family},
+      : props.theme?.textTheme.body.medium.font.family},
     ${(props: TextInterface) =>
-      props.textStyle
-        ? props.textStyle.font.generic
-        : props.theme.textTheme.body.medium.font.generic};
+    props.textStyle
+      ? props.textStyle.font.generic
+      : props.theme?.textTheme.body.medium.font.generic};
   font-weight: ${(props: TextInterface) =>
     props.textStyle
       ? props.textStyle.font.weight
-      : props.theme.textTheme.body.medium.font.weight};
+      : props.theme?.textTheme.body.medium.font.weight};
   font-size: ${(props: TextInterface) =>
     props.textStyle
       ? props.textStyle.font.size
-      : props.theme.textTheme.body.medium.font.size};
+      : props.theme?.textTheme.body.medium.font.size};
   line-height: ${(props: TextInterface) =>
     props.textStyle
       ? props.textStyle.lineHeight
-      : props.theme.textTheme.body.medium.lineHeight};
+      : props.theme?.textTheme.body.medium.lineHeight};
   letter-spacing: ${(props: TextInterface) =>
     props.textStyle
       ? props.textStyle.letterSpacing
-      : props.theme.textTheme.body.medium.letterSpacing};
+      : props.theme?.textTheme.body.medium.letterSpacing};
   color: ${(props: TextInterface) =>
     props.textStyle
       ? props.textStyle.color
-      : props.theme.textTheme.body.medium.color};
+      : props.theme?.textTheme.body.medium.color};
 `;
 
 export const Label = styled.label<LabelInterface>`
   margin: 0;
   height: auto !important;
   font-family: ${(props: TextInterface) =>
-      props.textStyle
-        ? props.textStyle.font.family
-        : props.theme.textTheme.label.small.font.family},
+    props.textStyle
+      ? props.textStyle.font.family
+      : props.theme?.textTheme.label.small.font.family},
     ${(props: TextInterface) =>
-      props.textStyle
-        ? props.textStyle.font.generic
-        : props.theme.textTheme.label.small.font.generic};
+    props.textStyle
+      ? props.textStyle.font.generic
+      : props.theme?.textTheme.label.small.font.generic};
   font-weight: ${(props: TextInterface) =>
     props.textStyle
       ? props.textStyle.font.weight
-      : props.theme.textTheme.label.small.font.weight};
+      : props.theme?.textTheme.label.small.font.weight};
   font-size: ${(props: TextInterface) =>
     props.textStyle
       ? props.textStyle.font.size
-      : props.theme.textTheme.label.small.font.size};
+      : props.theme?.textTheme.label.small.font.size};
   line-height: ${(props: TextInterface) =>
     props.textStyle
       ? props.textStyle.lineHeight
-      : props.theme.textTheme.label.small.lineHeight};
+      : props.theme?.textTheme.label.small.lineHeight};
   letter-spacing: ${(props: TextInterface) =>
     props.textStyle
       ? props.textStyle.letterSpacing
-      : props.theme.textTheme.label.small.letterSpacing};
+      : props.theme?.textTheme.label.small.letterSpacing};
   color: ${(props: TextInterface) =>
     props.textStyle
       ? props.textStyle.color
-      : props.theme.textTheme.label.small.color};
+      : props.theme?.textTheme.label.small.color};
   text-transform: initial; // TODO remove this when we disable current css rules
 `;
 
@@ -95,9 +94,9 @@ export const Icon = styled.i<TextInterface>`
 // TODO use svg instead of this
 export const MaterialIcon = styled.i.attrs(props => ({
   className: "material-icons",
-}))<{ name: string; color?: string }>`
+})) <{ name: string; color?: string }>`
   font-size: 20px;
-  color: ${props => props.color ?? props.theme.color.primary[400]};
+  color: ${props => props.color ?? props.theme?.color.primary[400]};
   &:before {
     content: '${props => props.name}';
   }
@@ -109,7 +108,7 @@ type SvgPictureProps = SpacingProps & {
   height?: string;
 };
 
-export const SvgPicture = styled(SVG)<SvgPictureProps>`
+export const SvgPicture = styled(SVG) <SvgPictureProps>`
   ${(props: SpacingProps) => SpacingStyle(props)}
   width: ${({ width }) => width};
   height: ${({ height }) => height};

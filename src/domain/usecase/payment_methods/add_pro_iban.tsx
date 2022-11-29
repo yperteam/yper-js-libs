@@ -1,7 +1,7 @@
 import { firstValueFrom, filter } from "rxjs";
-import { ClientDetails } from "@yper-script/react/data/provider/http/api";
-import { PaymentMethodRepository } from "@yper-script/react/data/repository/payment_method.repository";
-import { GetCurrentProId } from "@yper-script/react/domain/usecase/get_current_pro_id";
+import { ClientDetails } from "../../../data/provider/http/api";
+import { PaymentMethodRepository } from "../../../data/repository/payment_method.repository";
+import { GetCurrentProId } from "../../../domain/usecase/pro/get_current_pro_id";
 
 export class AddProIban {
   private repository: PaymentMethodRepository = new PaymentMethodRepository();

@@ -1,5 +1,5 @@
 import styled, { css } from "styled-components";
-import { RowProps, SpacingStyle } from "@yper-script/react/app/widget/generic";
+import { RowProps, SpacingStyle } from "./generic";
 
 const Button = () => css`
   ${(props: RowProps) => {

@@ -1,7 +1,7 @@
 import React from "react";
 import styled, { css, useTheme } from "styled-components";
-import { Col, Spacing } from "@yper-script/react/app/widget/generic";
-import { Text } from "@yper-script/react/app/widget/mixins";
+import { Col, Spacing } from "./generic";
+import { Text } from "./mixins";
 
 /** Images */
 const paginationLastIcon = "/img/react/pagination/pagination-last-button.svg";

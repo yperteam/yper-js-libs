@@ -1,6 +1,6 @@
-import { DateRangeInterface } from "@yper-script/react/app/notifiers/stats_range_notifier";
-import DatedStatNumber from "@yper-script/react/domain/model/dated_stat_number";
-import { StatsInterval } from "@yper-script/react/data/entity/stats_interval.enum";
+import { DateRangeInterface } from "../../../app/notifiers/stats_range_notifier";
+import DatedStatNumber from "../../../domain/model/dated_stat_number";
+import { StatsInterval } from "../../../data/entity/stats_interval.enum";
 import moment from "moment";
 
 export default class DatedStatsNotifier {

@@ -1,8 +1,8 @@
 import CallableInstance from "callable-instance";
-import { SupportRepository } from "@yper-script/react/data/repository/support.repository";
+import { SupportRepository } from "../../../data/repository/support.repository";
 import { from, Observable, switchMap } from "rxjs";
-import { PhoneCallRequest } from "@yper-script/react/data/entity/phone_call_request.entity";
-import { UserRepository } from "@yper-script/react/data/repository/user.repository";
+import { PhoneCallRequest } from "../../../data/entity/phone_call_request.entity";
+import { UserRepository } from "../../../data/repository/user.repository";
 
 export class GetPhoneCallRequest extends CallableInstance<
   [],

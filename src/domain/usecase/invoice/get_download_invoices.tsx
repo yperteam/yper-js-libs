@@ -1,4 +1,4 @@
-import { InvoiceRepository } from "@yper-script/react/data/repository/invoice.repository";
+import { InvoiceRepository } from "../../../data/repository/invoice.repository";
 
 export class GetDownloadInvoices {
   private repository: InvoiceRepository = new InvoiceRepository();

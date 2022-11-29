@@ -1,10 +1,10 @@
 import CallableInstance from "callable-instance";
-import { SupportRepository } from "@yper-script/react/data/repository/support.repository";
+import { SupportRepository } from "../../../data/repository/support.repository";
 import {
   ContactReasonBase,
   FaqArticle,
   MeanOfContact,
-} from "@yper-script/react/data/entity/contact_reason.entity";
+} from "../../../data/entity/contact_reason.entity";
 import { from, map, Observable } from "rxjs";
 
 export class GetProContactReasons extends CallableInstance<

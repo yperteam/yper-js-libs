@@ -1,9 +1,9 @@
-import { Society } from "@yper-script/react/data/entity/society.entity";
-import { ProRepository } from "@yper-script/react/data/repository/pro.repository";
+import { Society } from "../../../data/entity/society.entity";
+import { ProRepository } from "../../../data/repository/pro.repository";
 import {
   SocietyRepository,
   SocietyRequestParams,
-} from "@yper-script/react/data/repository/society.repository";
+} from "../../../data/repository/society.repository";
 import { firstValueFrom } from "rxjs";
 
 export class EditSociety {

@@ -1,11 +1,10 @@
 import React from "react";
 import Modal, { ModalProvider } from "styled-react-modal";
-import { Column, Row, Spacing } from "@yper-script/react/app/widget/generic";
-import { Text } from "@yper-script/react/app/widget/mixins";
-import { ButtonPrimary } from "@yper-script/react/app/widget/button";
+import { Column, Row, Spacing } from "./generic";
+import { Text } from "./mixins";
+import { ButtonPrimary } from "./button";
 import { useRecoilState } from "recoil";
-import { ModalBackground } from "@yper-script/react/app/screen/deliverer/modal/deprecate_shopper_modal";
-import { ErrorModalNotifier } from "@yper-script/react/app/notifiers/error_modal_notifier";
+import { ErrorModalNotifier } from "../notifiers/error_modal_notifier";
 import styled, { useTheme } from "styled-components";
 
 /** Images */
@@ -102,4 +101,19 @@ const ButtonRow = styled(Row)`
 const Close = styled.img`
   cursor: pointer;
   width: 16px;
+`;
+
+const ModalBackground = styled.div`
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  padding: 16px;
+  z-index: 30;
+  background-color: rgba(54, 80, 108, 0.1);
+  justify-content: center;
+  align-items: center;
+  overflow-y: auto;
 `;

@@ -1,4 +1,4 @@
-import { GetProBlockedDeliverers } from "@yper-script/react/domain/usecase/deliverer/get_pro_blocked_deliverers";
+import { GetProBlockedDeliverers } from "../../../domain/usecase/deliverer/get_pro_blocked_deliverers";
 import { StreamNotifier } from "../stream_notifier";
 
 export class ProBlockedDelivererNotifier {

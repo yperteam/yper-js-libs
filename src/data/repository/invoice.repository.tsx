@@ -1,4 +1,4 @@
-import { Api } from "@yper-script/react/data/provider/http/api";
+import { Api } from "../provider/http/api";
 
 export class InvoiceRepository {
   private api = new Api();

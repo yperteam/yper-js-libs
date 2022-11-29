@@ -2,9 +2,9 @@ import {
   ProSubscription,
   SubscriptionBillingPeriod,
   SubscriptionName,
-} from "@yper-script/react/data/entity/subscription.entity";
-import { Api } from "@yper-script/react/data/provider/http/api";
-import { stringFromEnum } from "@yper-script/react/utils";
+} from "../entity/subscription.entity";
+import { Api } from "../provider/http/api";
+import { stringFromEnum } from "../../utils";
 
 export class ProSubscriptionRepository {
   private api = new Api();

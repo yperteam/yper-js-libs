@@ -1,8 +1,8 @@
 import React, { useEffect } from "react";
 import styled, { useTheme } from "styled-components";
-import { Column } from "@yper-script/react/app/widget/generic";
-import { Label, Text } from "@yper-script/react/app/widget/mixins";
-import CustomLoader from "@yper-script/react/app/widget/loader";
+import { Column } from "../../../app/widget/generic";
+import { Label, Text } from "../../../app/widget/mixins";
+import CustomLoader from "../../../app/widget/loader";
 import { useFormContext } from "react-hook-form";
 import {
   Elements,
@@ -54,7 +54,7 @@ export function IbanField() {
       stripe={loadable.contents.stripe}
       options={{ clientSecret: loadable.contents.clientSecret }}
     >
-      <form onSubmit={handleSubmit(_ => {})}>
+      <form onSubmit={handleSubmit(_ => { })}>
         <Label
           textStyle={theme.textTheme.body.small.copyWith({
             color: theme.color.primary["300"],

@@ -1,4 +1,4 @@
-import { AuthStorage } from "@yper-script/react/data/provider/local/auth_storage";
+import { AuthStorage } from "../provider/local/auth_storage";
 import { Observable } from "rxjs";
 import { Api } from "../provider/http/api";
 

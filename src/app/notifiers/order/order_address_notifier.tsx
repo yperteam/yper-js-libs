@@ -1,11 +1,11 @@
 import { atomFamily, CallbackInterface, Loadable } from "recoil";
-import { CustomLoadable } from "@yper-script/react/app/notifiers/custom_loadable";
-import { EditPrebookAddress } from "@yper-script/react/domain/usecase/order/edit_prebook_address";
+import { CustomLoadable } from "../../../app/notifiers/custom_loadable";
+import { EditPrebookAddress } from "../../../domain/usecase/order/edit_prebook_address";
 import {
   MissionClient,
   MissionClientType,
-} from "@yper-script/react/data/entity/mission.entity";
-import { AddFavoriteAddress } from "@yper-script/react/domain/usecase/favorite_address/add_favorite_address";
+} from "../../../data/entity/mission.entity";
+import { AddFavoriteAddress } from "../../../domain/usecase/favorite_address/add_favorite_address";
 
 export class OrderAddressNotifier {
   static provider = atomFamily<Loadable<void>, string>({

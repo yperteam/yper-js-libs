@@ -6,7 +6,7 @@ import {
   SerializableParam,
 } from "recoil";
 import { concat, Observable, of, switchMap } from "rxjs";
-import { CustomLoadable } from "@yper-script/react/app/notifiers/custom_loadable";
+import { CustomLoadable } from "../../../app/notifiers/custom_loadable";
 
 export class StreamNotifier {
   static provider<T>(props: {

@@ -1,9 +1,9 @@
 import { selector } from "recoil";
-import { ProRetailpointStats } from "@yper-script/react/data/entity/pro_retailpoint_stats.entity";
-import { StatsRangeNotifier } from "@yper-script/react/app/notifiers/stats_range_notifier";
-import { GetProStats } from "@yper-script/react/domain/usecase/get_pro_stats";
-import { ProRetailpointsStatsNotifier } from "@yper-script/react/app/notifiers/retailpoint/pro_retailpoints_stats_notifier";
-import { ProRetailpointsNotifier } from "@yper-script/react/app/notifiers/retailpoint/pro_retailpoints_notifier";
+import { ProRetailpointStats } from "../../../data/entity/pro_retailpoint_stats.entity";
+import { StatsRangeNotifier } from "../../../app/notifiers/stats_range_notifier";
+import { GetProStats } from "../../../domain/usecase/get_pro_stats";
+import { ProRetailpointsStatsNotifier } from "../../../app/notifiers/retailpoint/pro_retailpoints_stats_notifier";
+import { ProRetailpointsNotifier } from "../../../app/notifiers/retailpoint/pro_retailpoints_notifier";
 
 export class ProStatsNotifier {
   static provider = selector<ProRetailpointStats>({

@@ -1,12 +1,9 @@
 import CallableInstance from "callable-instance";
-import { SupportRepository } from "@yper-script/react/data/repository/support.repository";
+import { SupportRepository } from "../../../data/repository/support.repository";
 import { firstValueFrom } from "rxjs";
-import { UserRepository } from "@yper-script/react/data/repository/user.repository";
-import { PhoneCallRequest } from "@yper-script/react/data/entity/phone_call_request.entity";
-import { ProRepository } from "@yper-script/react/data/repository/pro.repository";
-import { GetCurrentPro } from "../get_current_pro";
-import { GetCurrentProId } from "../get_current_pro_id";
-import { GetCurrentUserId } from "../get_current_user_id";
+import { PhoneCallRequest } from "../../../data/entity/phone_call_request.entity";
+import { GetCurrentProId } from "../pro/get_current_pro_id";
+import { GetCurrentUserId } from "../user/get_current_user_id";
 
 export class RequestPhoneCall extends CallableInstance<
   [string, string, string],

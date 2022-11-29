@@ -1,11 +1,10 @@
 import {
   SubscriptionBillingPeriod,
   SubscriptionName,
-} from "@yper-script/react/data/entity/subscription.entity";
-import { SubscriptionPreview } from "@yper-script/react/data/entity/subscription_preview.entity";
-import { ProSubscriptionRepository } from "@yper-script/react/data/repository/pro_subscription.repository";
-import { GetCurrentProId } from "@yper-script/react/domain/usecase/get_current_pro_id";
-import moment from "moment";
+} from "../../../data/entity/subscription.entity";
+import { SubscriptionPreview } from "../../../data/entity/subscription_preview.entity";
+import { ProSubscriptionRepository } from "../../../data/repository/pro_subscription.repository";
+import { GetCurrentProId } from "../pro/get_current_pro_id";
 import { firstValueFrom } from "rxjs";
 
 export class PreviewSubscriptionChange {
@@ -43,8 +42,8 @@ export class PreviewSubscriptionChange {
       amount:
         preview.amount ??
         PreviewSubscriptionChange.basePrices[subscription] *
-          rpQuantity *
-          (billingPeriod == SubscriptionBillingPeriod.annually ? 10 : 1),
+        rpQuantity *
+        (billingPeriod == SubscriptionBillingPeriod.annually ? 10 : 1),
       dueDate: preview.dueDate ?? new Date(),
     };
   }

@@ -1,6 +1,6 @@
 import { atom, CallbackInterface, Loadable } from "recoil";
-import { CustomLoadable } from "@yper-script/react/app/notifiers/custom_loadable";
-import { CancelPhoneCall } from "@yper-script/react/domain/usecase/support/cancel_phone_call";
+import { CustomLoadable } from "../../../app/notifiers/custom_loadable";
+import { CancelPhoneCall } from "../../../domain/usecase/support/cancel_phone_call";
 
 export class CancelPhoneCallNotifier {
   static provider = atom<Loadable<void>>({

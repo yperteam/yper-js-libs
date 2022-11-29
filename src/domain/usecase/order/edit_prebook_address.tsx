@@ -1,11 +1,10 @@
-import { GetCurrentProId } from "@yper-script/react/domain/usecase/get_current_pro_id";
-import { OrderRepository } from "@yper-script/react/data/repository/order.repository";
-import { Address } from "@yper-script/react/data/entity/address.entity";
+import { GetCurrentProId } from "../pro/get_current_pro_id";
+import { OrderRepository } from "../../../data/repository/order.repository";
 import { firstValueFrom } from "rxjs";
 import {
   MissionClient,
   MissionAddress,
-} from "@yper-script/react/data/entity/mission.entity";
+} from "../../../data/entity/mission.entity";
 
 export class EditPrebookAddress {
   /** Repository */

@@ -8,12 +8,12 @@ import {
   useMap,
 } from "@monsonjeremy/react-leaflet";
 import Leaflet, { LatLngBoundsExpression, LatLngExpression } from "leaflet";
-import { Retailpoint } from "@yper-script/react/data/entity/retailpoint.entity";
+import { Retailpoint } from "../../data/entity/retailpoint.entity";
 import styled, { useTheme } from "styled-components";
-import { GeoJsonDirections } from "@yper-script/react/data/entity/mission.entity";
+import { GeoJsonDirections } from "../../data/entity/mission.entity";
 import { atom, useRecoilValue } from "recoil";
-import CustomLoader from "@yper-script/react/app/widget/loader";
-import { SvgPicture, Text } from "@yper-script/react/app/widget/mixins";
+import CustomLoader from "./loader";
+import { SvgPicture, Text } from "../../app/widget/mixins";
 import { Row } from "./generic";
 
 const infoIcon = "/img/react/icon/ic_information_circle.svg";
@@ -36,8 +36,8 @@ export const reloadItineraryMapState = atom<Boolean>({
 export default function Map(props: {
   retailPointList: Retailpoint[];
   enableScrollZoom?: boolean;
-  icon?: string[];
-  height?: string;
+  icon: string[];
+  height: string;
 }) {
   const bounds = props.retailPointList.map(rp => [
     rp.address.location.coordinates[1],
@@ -78,22 +78,22 @@ export default function Map(props: {
 }
 
 export function ItineraryMap(props: {
-  fromCoordinates: [number, number] | null;
-  toCoordinates: [number, number] | null;
+  fromCoordinates: [number, number];
+  toCoordinates: [number, number];
   isLoading: boolean;
-  itinerary?: GeoJsonDirections | null;
+  itinerary: GeoJsonDirections;
   enableScrollZoom?: boolean;
-  height?: string;
+  height: string;
 }) {
   const theme = useTheme();
   const bounds = (props.toCoordinates
     ? [
-        [props.fromCoordinates[1], props.fromCoordinates[0]],
-        [props.toCoordinates[1], props.toCoordinates[0]],
-      ]
+      [props.fromCoordinates[1], props.fromCoordinates[0]],
+      [props.toCoordinates[1], props.toCoordinates[0]],
+    ]
     : [
-        [props.fromCoordinates[1], props.fromCoordinates[0]],
-      ]) as LatLngBoundsExpression;
+      [props.fromCoordinates[1], props.fromCoordinates[0]],
+    ]) as LatLngBoundsExpression;
 
   /** We need to call this method in <MapContainer> on "whenCreated" prop
    * Leaflet have an issue on size validation
@@ -158,14 +158,14 @@ export function ItineraryMap(props: {
 function ItineraryMapContent(props: {
   fromCoordinates: [number, number] | null;
   toCoordinates: [number, number] | null;
-  bounds: LatLngBoundsExpression | null;
-  itinerary?: GeoJsonDirections | null;
+  bounds: LatLngBoundsExpression;
+  itinerary: GeoJsonDirections;
 }) {
   const theme = useTheme();
   const map = useMap();
   const isReloaded = useRecoilValue(reloadItineraryMapState);
   // <GeoJSON> need ref to refresh
-  const geoJsonLayer = useRef(null);
+  const geoJsonLayer = useRef<any>(null);
 
   const pickupIcon = Leaflet.icon({
     iconUrl: pinMapIcon["pickup"],
@@ -181,7 +181,7 @@ function ItineraryMapContent(props: {
     type: "Feature",
     geometry: {
       type: "LineString",
-      coordinates: props.itinerary?.coordinates,
+      coordinates: props.itinerary!.coordinates,
     },
     properties: {},
   };
@@ -206,7 +206,7 @@ function ItineraryMapContent(props: {
       properties: {},
     };
     if (geoJsonLayer.current) {
-      geoJsonLayer.current.clearLayers().addData(geoJsonData);
+      geoJsonLayer.current?.clearLayers().addData(geoJsonData);
       map.fitBounds(props.bounds, { paddingTopLeft: [50, 50] });
     }
   }, [props.itinerary]);

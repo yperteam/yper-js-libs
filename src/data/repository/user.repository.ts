@@ -1,5 +1,5 @@
 import { Observable } from "rxjs";
-import { CurrentUserStorage } from "@yper-script/react/data/provider/local/current_user_storage";
+import { CurrentUserStorage } from "../provider/local/current_user_storage";
 import { UserSex } from "../entity/user.entity";
 import { Api } from "../provider/http/api";
 

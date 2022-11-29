@@ -1264,7 +1264,7 @@
   dependencies:
     prop-types "^15.7.2"
 
-"@stripe/stripe-js@^1.13.0", "@stripe/stripe-js@^1.23.0":
+"@stripe/stripe-js@^1.23.0":
   version "1.44.1"
   resolved "https://registry.yarnpkg.com/@stripe/stripe-js/-/stripe-js-1.44.1.tgz#376fdbed2b394c84deaa2041b8029b97e7eab3a7"
   integrity sha512-DKj3U6tS+sCNsSXsoZbOl5gDrAVD3cAZ9QCiVSykLC3iJo085kkmw/3BAACRH54Bq2bN34yySuH6G1SLh2xHXA==
@@ -1431,7 +1431,7 @@
   dependencies:
     "@types/jquery" "*"
 
-"@types/jquery@*", "@types/jquery@^3.3.29":
+"@types/jquery@*", "@types/jquery@^3.3.29", "@types/jquery@^3.5.5":
   version "3.5.14"
   resolved "https://registry.yarnpkg.com/@types/jquery/-/jquery-3.5.14.tgz#ac8e11ee591e94d4d58da602cb3a5a8320dee577"
   integrity sha512-X1gtMRMbziVQkErhTQmSe2jFwwENA/Zr+PprCkF63vFq+Yt5PZ4AlKqgmeNlwgn7dhsXEK888eIW2520EpC+xg==
@@ -1450,7 +1450,7 @@
   resolved "https://registry.yarnpkg.com/@types/json-schema/-/json-schema-7.0.11.tgz#d421b6c527a3037f7c84433fd2c4229e016863d3"
   integrity sha512-wOuvG1SN4Us4rez+tylwwwCV1psiNVOkJeM3AUWUNWg/jDQY2+HE/444y5gc+jBmRqASOm2Oeh5c1axHobwRKQ==
 
-"@types/leaflet@^1.4.3":
+"@types/leaflet@^1.4.3", "@types/leaflet@^1.5.21":
   version "1.9.0"
   resolved "https://registry.yarnpkg.com/@types/leaflet/-/leaflet-1.9.0.tgz#8caf452255e16cb15e0eabcb0d2a26793da0a6a2"
   integrity sha512-7LeOSj7EloC5UcyOMo+1kc3S1UT3MjJxwqsMT1d2PTyvQz53w0Y0oSSk9nwZnOZubCmBvpSNGceucxiq+ZPEUw==
@@ -1523,6 +1523,13 @@
   dependencies:
     "@types/react" "^17"
 
+"@types/react-tooltip@^4.2.4":
+  version "4.2.4"
+  resolved "https://registry.yarnpkg.com/@types/react-tooltip/-/react-tooltip-4.2.4.tgz#d0acad2a3061806e10aab91dd26a95a77fd35125"
+  integrity sha512-UzjzmgY/VH3Str6DcAGTLMA1mVVhGOyARNTANExrirtp+JgxhaIOVDxq4TIRmpSi4voLv+w4HA9CC5GvhhCA0A==
+  dependencies:
+    react-tooltip "*"
+
 "@types/react-transition-group@^4.4.0":
   version "4.4.5"
   resolved "https://registry.yarnpkg.com/@types/react-transition-group/-/react-transition-group-4.4.5.tgz#aae20dcf773c5aa275d5b9f7cdbca638abc5e416"
@@ -1530,16 +1537,7 @@
   dependencies:
     "@types/react" "*"
 
-"@types/react@*", "@types/react@>=16.9.11":
-  version "18.0.25"
-  resolved "https://registry.yarnpkg.com/@types/react/-/react-18.0.25.tgz#8b1dcd7e56fe7315535a4af25435e0bb55c8ae44"
-  integrity sha512-xD6c0KDT4m7n9uD4ZHi02lzskaiqcBxf4zi+tXZY98a04wvc0hi/TcCPC2FOESZi51Nd7tlUeOJY8RofL799/g==
-  dependencies:
-    "@types/prop-types" "*"
-    "@types/scheduler" "*"
-    csstype "^3.0.2"
-
-"@types/react@^17", "@types/react@^17.0.35":
+"@types/react@*", "@types/react@>=16.9.11", "@types/react@^17", "@types/react@^17.0.35":
   version "17.0.52"
   resolved "https://registry.yarnpkg.com/@types/react/-/react-17.0.52.tgz#10d8b907b5c563ac014a541f289ae8eaa9bf2e9b"
   integrity sha512-vwk8QqVODi0VaZZpDXQCmEmiOuyjEFPY7Ttaw5vjM112LOq37yz1CDJGrRJwA1fYEq4Iitd5rnjd1yWAc/bT+A==
@@ -1948,16 +1946,100 @@
 
 "@yperteam/yper-js-libs@yperteam/yper-js-libs#v2.0":
   version "1.0.33"
-  resolved "https://codeload.github.com/yperteam/yper-js-libs/tar.gz/41f8bdeef49eaec504e6084c14fc87df16862c86"
+  resolved "https://codeload.github.com/yperteam/yper-js-libs/tar.gz/61bb84827749cffe853def2ebb723d2e3eee225c"
   dependencies:
-    "@stripe/stripe-js" "^1.13.0"
+    "@babel/plugin-proposal-class-properties" "^7.16.0"
+    "@babel/plugin-transform-runtime" "^7.16.0"
+    "@fullcalendar/core" "^4.3.1"
+    "@fullcalendar/daygrid" "^4.3.0"
+    "@fullcalendar/list" "^4.3.0"
+    "@fullcalendar/timegrid" "^4.3.0"
+    "@hookform/error-message" "^2.0.0"
+    "@hookform/resolvers" "^2.8.4"
+    "@joi/date" "^2.1.0"
+    "@monsonjeremy/react-leaflet" "^3.2.2"
+    "@stripe/react-stripe-js" "^1.7.0"
+    "@stripe/stripe-js" "^1.23.0"
+    "@tepez/joi-phone-number-extensions" "^1.2.0"
+    "@types/bootstrap" "^4.3.0"
+    "@types/datatables.net" "^1.10.19"
+    "@types/datatables.net-rowgroup" "^1.0.2"
+    "@types/googlemaps" "^3.30.19"
+    "@types/jest" "^27.0.2"
+    "@types/jquery" "^3.3.29"
+    "@types/jquery.blockui" "^0.0.28"
+    "@types/jqueryui" "^1.12.7"
+    "@types/leaflet" "^1.4.3"
+    "@types/moment" "^2.13.0"
+    "@types/node" "^16.11.7"
+    "@types/react" "^17.0.35"
+    "@types/react-dom" "^17.0.11"
+    "@types/select2" "^4.0.49"
+    "@types/stripe-checkout" "^1.0.3"
+    "@types/stripe-v3" "^3.1.6"
+    "@types/styled-components" "^5.1.18"
+    "@wojtekmaj/react-daterange-picker" "^3.3.2"
+    axios-case-converter "^0.9.0"
+    callable-instance "^2.0.0"
+    chart.js "^3.7.0"
+    chrono-node "^2.3.8"
+    clockpicker "^0.0.7"
+    core-js "^3.1.3"
+    datatables.net "^1.10.21"
+    datatables.net-bs4 "^1.10.19"
+    datatables.net-select-bs4 "^1.3.1"
+    dotenv-webpack "^7.1.0"
     flatpickr "^4.6.9"
-    jquery "^3.5.1"
+    holdon.js "^1.0.1"
+    html-react-parser "^1.4.8"
+    husky "^3.1.0"
+    i18next "^21.5.6"
+    i18next-browser-languagedetector "^6.1.2"
+    i18next-http-backend "^1.3.1"
+    joi "^17.5.0"
+    jquery "^3.4.0"
     jquery-blockui "^2.7.0"
     jquery-ui "^1.12.1"
-    leaflet "^1.7.1"
-    lottie-web "^5.7.6"
+    jqueryui "^1.11.1"
+    js-cookie "^2.2.0"
+    leaflet "^1.6.0"
+    lodash "^4.17.21"
+    lottie-web "^5.5.10"
+    material-design-icons "^3.0.1"
     moment "^2.29.1"
+    prettier "1.19.1"
+    pretty-quick "^2.0.1"
+    react-bootstrap-typeahead "^6.0.0-alpha.6"
+    react-chartjs-2 "^4.0.0"
+    react-date-picker "^8.4.0"
+    react-datepicker "^4.7.0"
+    react-google-autocomplete "^2.6.1"
+    react-hook-form "^7.37.0"
+    react-i18next "^11.14.3"
+    react-infinite-scroller "^1.2.6"
+    react-inlinesvg "^3.0.0"
+    react-is "^17.0.2"
+    react-number-format "^4.7.3"
+    react-router-dom "^6.4.3"
+    react-select "^5.6.0"
+    react-spinners "^0.11.0"
+    react-switch "^6.0.0"
+    react-table "^7.7.0"
+    react-time-picker "^4.5.0"
+    react-tooltip "^4.2.21"
+    recoil "^0.7.6"
+    rxjs "^7.5.5"
+    select2 "^4.0.13"
+    styled-components "^5.3.3"
+    styled-dropdown-component "^4.0.0"
+    styled-react-modal "^2.1.0"
+    tempusdominus-bootstrap-4 "^5.1.2"
+    ts-custom-error "^3.2.0"
+    ts-loader "^5.3.0"
+    ts-retrofit "^1.14.0"
+    tslint "^5.12.1"
+    typescript "^4.5.2"
+    typings "^2.1.1"
 
 abbrev@1:
   version "1.1.1"
@@ -3123,10 +3205,10 @@ compression@^1.7.4:
     safe-buffer "5.1.2"
     vary "~1.1.2"
 
-compute-scroll-into-view@^1.0.17:
-  version "1.0.17"
-  resolved "https://registry.yarnpkg.com/compute-scroll-into-view/-/compute-scroll-into-view-1.0.17.tgz#6a88f18acd9d42e9cf4baa6bec7e0522607ab7ab"
-  integrity sha512-j4dx+Fb0URmzbwwMUrhqWM2BEWHdFGx+qZ9qqASHRPqvTYdqvWnHg0H1hIbcyLnvgnoNAVMlwkepyqM3DaIFUg==
+compute-scroll-into-view@^1.0.20:
+  version "1.0.20"
+  resolved "https://registry.yarnpkg.com/compute-scroll-into-view/-/compute-scroll-into-view-1.0.20.tgz#1768b5522d1172754f5d0c9b02de3af6be506a43"
+  integrity sha512-UCB0ioiyj8CRjtrvaceBLqqhZCVP+1B8+NWQhmdsm0VXOJtobBCf1dBQmebCCo34qZmUwZfIH2MZLqNHazrfjg==
 
 concat-map@0.0.1:
   version "0.0.1"
@@ -5984,7 +6066,7 @@ jquery-ui@^1.12.1:
   dependencies:
     jquery ">=1.8.0 <4.0.0"
 
-jquery@>=1.7, "jquery@>=1.8.0 <4.0.0", jquery@^3.4.0, jquery@^3.5.1, jquery@^3.6.0:
+jquery@>=1.7, "jquery@>=1.8.0 <4.0.0", jquery@^3.4.0, jquery@^3.6.0:
   version "3.6.1"
   resolved "https://registry.yarnpkg.com/jquery/-/jquery-3.6.1.tgz#fab0408f8b45fc19f956205773b62b292c147a16"
   integrity sha512-opJeO4nCucVnsjiXOE+/PcCgYw9Gwpvs/a6B1LL/lQhwWwpbVEVYDZ1FokFr8PRc7ghYlrFPuyHuiiDNTQxmcw==
@@ -6152,7 +6234,7 @@ latest-version@^3.0.0:
   dependencies:
     package-json "^4.0.0"
 
-leaflet@^1.6.0, leaflet@^1.7.1:
+leaflet@^1.6.0:
   version "1.9.3"
   resolved "https://registry.yarnpkg.com/leaflet/-/leaflet-1.9.3.tgz#52ec436954964e2d3d39e0d433da4b2500d74414"
   integrity sha512-iB2cR9vAkDOu5l3HAay2obcUHZ7xwUBBjph8+PGtmW/2lYhbLizWtG7nTeYht36WfOslixQF9D/uSIzhZgGMfQ==
@@ -6282,7 +6364,7 @@ loose-envify@^1.0.0, loose-envify@^1.1.0, loose-envify@^1.4.0:
   dependencies:
     js-tokens "^3.0.0 || ^4.0.0"
 
-lottie-web@^5.5.10, lottie-web@^5.7.6:
+lottie-web@^5.5.10:
   version "5.10.0"
   resolved "https://registry.yarnpkg.com/lottie-web/-/lottie-web-5.10.0.tgz#72563f22efdcf2b8f7e8359743514930ebaf5f8c"
   integrity sha512-q2hfqKrGXNkwjSSZjKxf3fWMi0e3ZBc03qBkVWoGbwUJ7BcG+9YXjMPtmmhitzk8Nc6VQ5PRnh9yInPdfq0PZg==
@@ -8138,6 +8220,13 @@ react-lifecycles-compat@^3.0.4:
   resolved "https://registry.yarnpkg.com/react-lifecycles-compat/-/react-lifecycles-compat-3.0.4.tgz#4f1a273afdfc8f3488a8c516bfda78f872352362"
   integrity sha512-fBASbA6LnOU9dOU2eW7aQ8xmYBSXUIWr+UmF9b1efZBazGNO+rcXT/icdKnYm2pTwcRylVUYwW7H1PHfLekVzA==
 
+react-number-format@4.7.3:
+  version "4.7.3"
+  resolved "https://registry.yarnpkg.com/react-number-format/-/react-number-format-4.7.3.tgz#e1706204a23c40fa17365a19f5059aabfca1886f"
+  integrity sha512-4EvcANjstypQ5anhanmdEioGc49qbnErfS+yqbhatC0vzQ1okplkWNb0DIY7ABu4RhaxzttEz6pypEy8KsqgBQ==
+  dependencies:
+    prop-types "^15.7.2"
+
 react-number-format@^4.7.3:
   version "4.9.4"
   resolved "https://registry.yarnpkg.com/react-number-format/-/react-number-format-4.9.4.tgz#013ae526000e676e491763ce14da66fb330a9bd8"
@@ -8241,12 +8330,20 @@ react-time-picker@^4.5.0:
     react-fit "^1.4.0"
     update-input-width "^1.2.2"
 
-react-tooltip@^4.2.21:
+react-tooltip@*, react-tooltip@^4.2.21:
   version "4.5.1"
   resolved "https://registry.yarnpkg.com/react-tooltip/-/react-tooltip-4.5.1.tgz#77eccccdf16adec804132e558ec20ca5783b866a"
   integrity sha512-Zo+CSFUGXar1uV+bgXFFDe7VeS2iByeIp5rTgTcc2HqtuOS5D76QapejNNfx320MCY91TlhTQat36KGFTqgcvw==
   dependencies:
     prop-types "^15.8.1"
+    uuid "^7.0.3"
+
+react-tooltip@4.2.21:
+  version "4.2.21"
+  resolved "https://registry.yarnpkg.com/react-tooltip/-/react-tooltip-4.2.21.tgz#840123ed86cf33d50ddde8ec8813b2960bfded7f"
+  integrity sha512-zSLprMymBDowknr0KVDiJ05IjZn9mQhhg4PRsqln0OZtURAJ1snt1xi5daZfagsh6vfsziZrc9pErPTDY1ACig==
+  dependencies:
+    prop-types "^15.7.2"
     uuid "^7.0.3"
 
 react-transition-group@^4.3.0:
@@ -8770,11 +8867,11 @@ schema-utils@^3.0.0, schema-utils@^3.1.0, schema-utils@^3.1.1:
     ajv-keywords "^3.5.2"
 
 scroll-into-view-if-needed@^2.2.20:
-  version "2.2.29"
-  resolved "https://registry.yarnpkg.com/scroll-into-view-if-needed/-/scroll-into-view-if-needed-2.2.29.tgz#551791a84b7e2287706511f8c68161e4990ab885"
-  integrity sha512-hxpAR6AN+Gh53AdAimHM6C8oTN1ppwVZITihix+WqalywBeFcQ6LdQP5ABNl26nX8GTEL7VT+b8lKpdqq65wXg==
+  version "2.2.31"
+  resolved "https://registry.yarnpkg.com/scroll-into-view-if-needed/-/scroll-into-view-if-needed-2.2.31.tgz#d3c482959dc483e37962d1521254e3295d0d1587"
+  integrity sha512-dGCXy99wZQivjmjIqihaBQNjryrz5rueJY7eHfTdyWEiR4ttYpsajb14rn9s5d4DY4EcY6+4+U/maARBXJedkA==
   dependencies:
-    compute-scroll-into-view "^1.0.17"
+    compute-scroll-into-view "^1.0.20"
 
 scss-tokenizer@^0.2.3:
   version "0.2.3"

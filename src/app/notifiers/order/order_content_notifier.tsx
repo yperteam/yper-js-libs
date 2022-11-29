@@ -1,7 +1,7 @@
 import { atomFamily, CallbackInterface, Loadable } from "recoil";
-import { CustomLoadable } from "@yper-script/react/app/notifiers/custom_loadable";
-import { EditPrebookContent } from "@yper-script/react/domain/usecase/order/edit_prebook_content";
-import { MissionTemplateNotifier } from "@yper-script/react/app/notifiers/order/mission_template_notifier";
+import { CustomLoadable } from "../../../app/notifiers/custom_loadable";
+import { EditPrebookContent } from "../../../domain/usecase/order/edit_prebook_content";
+import { MissionTemplateNotifier } from "../../../app/notifiers/order/mission_template_notifier";
 
 export class OrderContentNotifier {
   static provider = atomFamily<Loadable<void>, string>({

@@ -1,6 +1,6 @@
-import { FavoriteAddress } from "@yper-script/react/data/entity/favorite_address";
-import { PaginatedResult } from "@yper-script/react/data/provider/http/paginated_result";
-import { GetFavoriteAddress } from "@yper-script/react/domain/usecase/favorite_address/get_favorite_address";
+import { FavoriteAddress } from "../../../data/entity/favorite_address";
+import { PaginatedResult } from "../../../data/provider/http/paginated_result";
+import { GetFavoriteAddress } from "../../../domain/usecase/favorite_address/get_favorite_address";
 import { atom, selector, selectorFamily } from "recoil";
 import { StreamNotifier } from "../stream_notifier";
 

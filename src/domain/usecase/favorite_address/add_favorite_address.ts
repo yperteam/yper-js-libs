@@ -1,9 +1,9 @@
-import { FavoriteAddress } from "@yper-script/react/data/entity/favorite_address";
-import { MissionClient } from "@yper-script/react/data/entity/mission.entity";
-import { FavoriteAddressRepository } from "@yper-script/react/data/repository/favorite_address.repository";
+import { FavoriteAddress } from "../../../data/entity/favorite_address";
+import { MissionClient } from "../../../data/entity/mission.entity";
+import { FavoriteAddressRepository } from "../../../data/repository/favorite_address.repository";
 import { firstValueFrom } from "rxjs";
-import { GetCurrentProId } from "../get_current_pro_id";
-import { GetCurrentRetailpointId } from "../get_current_retailpoint_id";
+import { GetCurrentProId } from "../pro/get_current_pro_id";
+import { GetCurrentRetailpointId } from "../retailpoint/get_current_retailpoint_id";
 
 export class AddFavoriteAddress {
   private repository = new FavoriteAddressRepository();

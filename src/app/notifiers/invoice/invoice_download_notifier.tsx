@@ -1,7 +1,7 @@
 import { atom, atomFamily, Loadable, SetterOrUpdater } from "recoil";
-import { CustomLoadable } from "@yper-script/react/app/notifiers/custom_loadable";
-import { GetDownloadInvoices } from "@yper-script/react/domain/usecase/invoice/get_download_invoices";
-import { GetDownloadInvoice } from "@yper-script/react/domain/usecase/invoice/get_download_invoice";
+import { CustomLoadable } from "../../../app/notifiers/custom_loadable";
+import { GetDownloadInvoices } from "../../../domain/usecase/invoice/get_download_invoices";
+import { GetDownloadInvoice } from "../../../domain/usecase/invoice/get_download_invoice";
 
 const redirectEffect = key => ({ setSelf, onSet }) => {
   onSet(newValue => {

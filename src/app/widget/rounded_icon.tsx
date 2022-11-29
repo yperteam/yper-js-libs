@@ -1,6 +1,6 @@
 import React from "react";
-import styled, { useTheme } from "styled-components";
-import { SvgPicture } from "@yper-script/react/app/widget/mixins";
+import styled from "styled-components";
+import { SvgPicture } from "./mixins";
 
 interface RoundIconStyledProps {
   background?: string;

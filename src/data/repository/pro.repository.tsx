@@ -1,24 +1,25 @@
 import { firstValueFrom, from, Observable, switchMap } from "rxjs";
-import { Api } from "@yper-script/react/data/provider/http/api";
-import { ProStorage } from "@yper-script/react/data/provider/local/pro_storage";
+import { Api } from "../provider/http/api";
+import { ProStorage } from "../provider/local/pro_storage";
 import {
   ProRetailpointStats,
   ProStats,
-} from "@yper-script/react/data/entity/pro_retailpoint_stats.entity";
-import { StatsInterval } from "@yper-script/react/data/entity/stats_interval.enum";
-import DatedStatNumber from "@yper-script/react/domain/model/dated_stat_number";
-import { ProRetailpointList } from "@yper-script/react/data/entity/retailpoint.entity";
-import { PaginatedResult } from "@yper-script/react/data/provider/http/paginated_result";
-import { Invoice } from "@yper-script/react/data/entity/invoice.entity";
-import { Pro } from "@yper-script/react/data/entity/pro.entity";
+} from "../entity/pro_retailpoint_stats.entity";
+import { StatsInterval } from "../entity/stats_interval.enum";
+import DatedStatNumber from "../../domain/model/dated_stat_number";
+import { ProRetailpointList } from "../entity/retailpoint.entity";
+import { PaginatedResult } from "../provider/http/paginated_result";
+import { Invoice } from "../entity/invoice.entity";
+import { Pro } from "../entity/pro.entity";
 import {
   BlockedDeliverer,
   ProDeliverer,
   ProFavoriteDeliverer,
-} from "@yper-script/react/data/entity/pro_deliverer.entity";
-import { BlockedDelivererStorage } from "@yper-script/react/data/provider/local/blocked_deliverer_storage";
-import { FavoriteDelivererStorage } from "@yper-script/react/data/provider/local/favorite_deliverer_storage";
-import { MissionTemplate } from "@yper-script/react/data/entity/mission_template.entity";
+} from "../entity/pro_deliverer.entity";
+import { BlockedDelivererStorage } from "../provider/local/blocked_deliverer_storage";
+import { FavoriteDelivererStorage } from "../provider/local/favorite_deliverer_storage";
+import { MissionTemplate } from "../entity/mission_template.entity";
+import { ProLimit } from "../entity/pro_limit.entity";
 
 export class ProRepository {
   private api = new Api();
@@ -236,7 +237,7 @@ export class ProRepository {
     return like;
   }
 
-  public async getMissionTemplates(proId): Promise<MissionTemplate[]> {
+  public async getMissionTemplates(proId: string): Promise<MissionTemplate[]> {
     return this.api.getProMissionTemplates(proId);
   }
 

@@ -2,15 +2,15 @@ import React, { useEffect, useRef } from "react";
 import styled, { useTheme } from "styled-components";
 import { Column, Row } from "./generic";
 import { MemoryRouter, useNavigate } from "react-router-dom";
-import { SvgPicture, Text } from "@yper-script/react/app/widget/mixins";
+import { SvgPicture, Text } from "./mixins";
 import { ButtonFullWidth } from "./button";
 import {
   useRecoilState,
   useRecoilValue,
   useSetRecoilState,
 } from "recoil";
-import { PhoneCallRequestNotifier } from "@yper-script/react/app/notifiers/support/phone_call_request_notifier";
-import { GetUnreadNotificationNotifier } from "@yper-script/react/app/notifiers/notification/get_unread_notification_notifier";
+import { PhoneCallRequestNotifier } from "../notifiers/support/phone_call_request_notifier";
+import { GetUnreadNotificationNotifier } from "../notifiers/notification/get_unread_notification_notifier";
 import { CurrentProNotifier } from "../notifiers/pro/current_pro_notifier";
 import { MainCard } from "./card";
 import { LoggedNotifier } from "../notifiers/auth/logged_notifier";

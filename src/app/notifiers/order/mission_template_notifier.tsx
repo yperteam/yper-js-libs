@@ -1,11 +1,11 @@
 import { selector, selectorFamily } from "recoil";
-import { GetMissionTemplates } from "@yper-script/react/domain/usecase/get_mission_templates";
-import { MissionTemplate } from "@yper-script/react/data/entity/mission_template.entity";
+import { GetMissionTemplates } from "../../../domain/usecase/mission/get_mission_templates";
+import { MissionTemplate } from "../../../data/entity/mission_template.entity";
 
 export class MissionTemplateNotifier {
   static provider = selector<MissionTemplate[]>({
     key: "mission_template_provider",
-    get: async ({}) => {
+    get: async ({ }) => {
       return await new GetMissionTemplates().call();
     },
     //Todo: To change cache handle policy update

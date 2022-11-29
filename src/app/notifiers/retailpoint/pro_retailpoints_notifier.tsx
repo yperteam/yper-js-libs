@@ -5,11 +5,11 @@ import {
   selector,
   selectorFamily,
 } from "recoil";
-import { GetProRetailpoints } from "@yper-script/react/domain/usecase/get_pro_retailpoints";
+import { GetProRetailpoints } from "../../../domain/usecase/get_pro_retailpoints";
 import {
   ProRetailpointList,
   Retailpoint,
-} from "@yper-script/react/data/entity/retailpoint.entity";
+} from "../../../data/entity/retailpoint.entity";
 import { StreamNotifier } from "../stream_notifier";
 
 export class ProRetailpointsNotifier {

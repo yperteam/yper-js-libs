@@ -2,7 +2,7 @@ import { StreamNotifier } from "../stream_notifier";
 import {
   ContactReason,
   GetProContactReasons,
-} from "@yper-script/react/domain/usecase/support/get_pro_contact_reasons";
+} from "../../../domain/usecase/support/get_pro_contact_reasons";
 import { Loadable, selector } from "recoil";
 
 export class ProContactReasonsNotifier {

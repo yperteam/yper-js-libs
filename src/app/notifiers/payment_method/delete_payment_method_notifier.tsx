@@ -1,6 +1,6 @@
 import { atomFamily, Loadable, CallbackInterface } from "recoil";
 import { CustomLoadable } from "../custom_loadable";
-import { DeletePaymentMethod } from "@yper-script/react/domain/usecase/payment_methods/delete_payment_method";
+import { DeletePaymentMethod } from "../../../domain/usecase/payment_methods/delete_payment_method";
 import { PaymentNotifier } from "../subscription/payment_notifier";
 
 export class DeletePaymentMethodNotifier {

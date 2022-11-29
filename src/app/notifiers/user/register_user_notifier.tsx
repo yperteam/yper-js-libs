@@ -1,11 +1,10 @@
 import { atom, CallbackInterface, Loadable } from "recoil";
-import { CustomLoadable } from "@yper-script/react/app/notifiers/custom_loadable";
-import { RegisterUser } from "@yper-script/react/domain/usecase/user/register_user";
-import { UserSex } from "@yper-script/react/data/entity/user.entity";
-import { RegisterUserProps } from "@yper-script/react/data/repository/user.repository";
+import { CustomLoadable } from "../../../app/notifiers/custom_loadable";
+import { RegisterUser } from "../../../domain/usecase/user/register_user";
+import { RegisterUserProps } from "../../../data/repository/user.repository";
 
 export class RegisterUserNotifier {
-    static provider = atom<Loadable<void>>({
+    static provider = atom<Loadable<void> | null>({
         key: "register_user_provider",
         default: null,
     });

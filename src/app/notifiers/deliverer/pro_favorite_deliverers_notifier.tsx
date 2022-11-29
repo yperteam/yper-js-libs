@@ -1,4 +1,4 @@
-import { GetProFavoriteDeliverers } from "@yper-script/react/domain/usecase/deliverer/get_pro_favorite_deliverers";
+import { GetProFavoriteDeliverers } from "../../../domain/usecase/deliverer/get_pro_favorite_deliverers";
 import { StreamNotifier } from "../stream_notifier";
 
 export class ProFavoriteDeliverersNotifier {

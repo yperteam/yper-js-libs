@@ -1,5 +1,5 @@
-import { Society } from "@yper-script/react/data/entity/society.entity";
-import { ResetProSecret } from "@yper-script/react/domain/usecase/reset_pro_secret";
+import { Society } from "../../../data/entity/society.entity";
+import { ResetProSecret } from "../../../domain/usecase/pro/reset_pro_secret";
 import { atom, CallbackInterface, Loadable, RecoilLoadable } from "recoil";
 import { CustomLoadable } from "../custom_loadable";
 import { CurrentProNotifier } from "../pro/current_pro_notifier";

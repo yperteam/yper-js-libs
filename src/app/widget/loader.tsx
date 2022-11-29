@@ -1,7 +1,7 @@
 import React from "react";
 import { ScaleLoader } from "react-spinners";
 import styled, { useTheme } from "styled-components";
-import { Expanded } from "@yper-script/react/app/widget/generic";
+import { Expanded } from "./generic";
 
 interface LoaderInterface {
   height?: string;

@@ -1,6 +1,6 @@
-import { GetPrebook } from "@yper-script/react/domain/usecase/order/get_prebook";
-import { StreamNotifier } from "@yper-script/react/app/notifiers/stream_notifier";
-import { Mission } from "@yper-script/react/data/entity/mission.entity";
+import { GetPrebook } from "../../../domain/usecase/order/get_prebook";
+import { StreamNotifier } from "../../../app/notifiers/stream_notifier";
+import { Mission } from "../../../data/entity/mission.entity";
 import { selectorFamily } from "recoil";
 import { MissionTemplateNotifier } from "./mission_template_notifier";
 

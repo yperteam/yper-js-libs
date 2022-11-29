@@ -1,5 +1,5 @@
 import { loadStripe } from "@stripe/stripe-js";
-import { OrderRepository } from "@yper-script/react/data/repository/order.repository";
+import { OrderRepository } from "../../../data/repository/order.repository";
 
 export class PayOrder {
   /** Repository */

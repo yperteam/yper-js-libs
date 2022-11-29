@@ -1,6 +1,6 @@
-import { PaymentMethod } from "@yper-script/react/data/entity/payment_method.entity";
-import { PaymentMethodRepository } from "@yper-script/react/data/repository/payment_method.repository";
-import { GetCurrentProId } from "@yper-script/react/domain/usecase/get_current_pro_id";
+import { PaymentMethod } from "../../../data/entity/payment_method.entity";
+import { PaymentMethodRepository } from "../../../data/repository/payment_method.repository";
+import { GetCurrentProId } from "../pro/get_current_pro_id";
 import { Observable, switchMap } from "rxjs";
 import CallableInstance from "callable-instance";
 

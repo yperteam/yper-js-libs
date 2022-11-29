@@ -1,7 +1,7 @@
-import { ProRepository } from "@yper-script/react/data/repository/pro.repository";
-import { GetCurrentRetailpointId } from "@yper-script/react/domain/usecase/get_current_retailpoint_id";
-import { ProFavoriteDeliverer } from "@yper-script/react/data/entity/pro_deliverer.entity";
-import { GetCurrentProId } from "@yper-script/react/domain/usecase/get_current_pro_id";
+import { ProRepository } from "../../../data/repository/pro.repository";
+import { GetCurrentRetailpointId } from "../../../domain/usecase/retailpoint/get_current_retailpoint_id";
+import { ProFavoriteDeliverer } from "../../../data/entity/pro_deliverer.entity";
+import { GetCurrentProId } from "../pro/get_current_pro_id";
 import { switchMap, Observable, combineLatest } from "rxjs";
 import CallableInstance from "callable-instance";
 

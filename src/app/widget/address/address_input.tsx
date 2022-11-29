@@ -1,14 +1,14 @@
 import React, { useEffect, useRef } from "react";
-import Joi from "@yper-script/react/app/widget/helper/extended_joi";
+import Joi from "../../../app/widget/helper/extended_joi";
 import { useFormContext } from "react-hook-form";
 import styled, { useTheme } from "styled-components";
 import usePlacesService from "react-google-autocomplete/lib/usePlacesAutocompleteService";
 import { Column, Row } from "../generic";
-import { Text, SvgPicture } from "@yper-script/react/app/widget/mixins";
+import { Text, SvgPicture } from "../../../app/widget/mixins";
 import { Typeahead } from "react-bootstrap-typeahead";
-import { Address } from "@yper-script/react/data/entity/address.entity";
-import { customMessage } from "../../screen/order/error_field";
-import CustomLoader from "@yper-script/react/app/widget/loader";
+import { Address } from "../../../data/entity/address.entity";
+import { customMessage } from "../error_field";
+import CustomLoader from "../../../app/widget/loader";
 
 // TODO here we do not make it a requirement to have street, streetNumber and city for special cases
 export const addressSchema = Joi.object({
@@ -61,12 +61,12 @@ function AddressInput(props: {
   const watchClient = watch(props.field);
 
   const setValues = (item: google.maps.places.AutocompletePrediction) => {
-    placesService.getDetails(
+    placesService?.getDetails(
       {
         placeId: item.place_id,
       },
       place => {
-        place.address_components.map(info => {
+        place.address_components?.map(info => {
           if (info.types.includes("street_number")) {
             setValue(props.field + ".streetNumber", info.short_name);
           }
@@ -87,8 +87,8 @@ function AddressInput(props: {
         setValue(`${props.field}.apartment`, null);
         setValue(`${props.field}.floor`, null);
         setValue(props.field + ".location.coordinates", [
-          place.geometry.location.lng(),
-          place.geometry.location.lat(),
+          place.geometry?.location.lng(),
+          place.geometry?.location.lat(),
         ]);
       }
     );

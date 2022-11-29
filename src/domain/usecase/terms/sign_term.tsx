@@ -1,6 +1,6 @@
 import CallableInstance from "callable-instance";
-import { RequestedActionsRepository } from "@yper-script/react/data/repository/requested_actions.repository";
-import { GetCurrentUserId } from "../get_current_user_id";
+import { RequestedActionsRepository } from "../../../data/repository/requested_actions.repository";
+import { GetCurrentUserId } from "../user/get_current_user_id";
 import { firstValueFrom } from "rxjs";
 
 export class SignTerm extends CallableInstance<[string], Promise<string>> {

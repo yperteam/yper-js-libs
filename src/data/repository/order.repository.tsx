@@ -1,7 +1,6 @@
-import { Api } from "@yper-script/react/data/provider/http/api";
-import { OrderItem } from "@yper-script/react/data/entity/order_item";
-import { Order } from "@yper-script/react/data/entity/order.entity";
-import { Address } from "@yper-script/react/data/entity/address.entity";
+import { Api } from "../provider/http/api";
+import { OrderItem } from "../entity/order_item";
+import { Order } from "../entity/order.entity";
 import { firstValueFrom, from, Observable, switchMap } from "rxjs";
 import { PrebookStorage } from "../provider/local/prebook_storage";
 import {
@@ -19,7 +18,7 @@ export class OrderRepository {
     return await this.api.createOrder(proId);
   }
 
-  public async getOrder(orderId): Promise<Order> {
+  public async getOrder(orderId: string): Promise<Order> {
     return await this.api.getOrder(orderId);
   }
 

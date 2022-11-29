@@ -1,7 +1,7 @@
 import { atom, selector } from "recoil";
 import moment from "moment";
-import { Invoice } from "@yper-script/react/data/entity/invoice.entity";
-import { GetProInvoice } from "@yper-script/react/domain/usecase/invoice/get_pro_invoice";
+import { Invoice } from "../../../data/entity/invoice.entity";
+import { GetProInvoice } from "../../../domain/usecase/invoice/get_pro_invoice";
 
 export enum InvoiceDateFilter {
   THIS_MONTH,

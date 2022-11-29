@@ -1,4 +1,4 @@
-import { ProDeliverer } from "@yper-script/react/data/entity/pro_deliverer.entity";
+import { ProDeliverer } from "../../data/entity/pro_deliverer.entity";
 
 export class FormattedProDeliverer {
   readonly id: string;

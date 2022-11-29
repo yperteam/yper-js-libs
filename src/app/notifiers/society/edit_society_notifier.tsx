@@ -1,6 +1,6 @@
-import { Society } from "@yper-script/react/data/entity/society.entity";
-import { SocietyRequestParams } from "@yper-script/react/data/repository/society.repository";
-import { EditSociety } from "@yper-script/react/domain/usecase/society/edit_society";
+import { Society } from "../../../data/entity/society.entity";
+import { SocietyRequestParams } from "../../../data/repository/society.repository";
+import { EditSociety } from "../../../domain/usecase/society/edit_society";
 import { atom, CallbackInterface, Loadable, RecoilLoadable } from "recoil";
 import { CustomLoadable } from "../custom_loadable";
 

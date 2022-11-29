@@ -1,8 +1,7 @@
-import React, { useState } from "react";
-import Modal, { ModalProvider } from "styled-react-modal";
-import { ModalBackground } from "@yper-script/react/app/screen/deliverer/modal/deprecate_shopper_modal";
-import { Column, Spacing } from "@yper-script/react/app/widget/generic";
-import { Text } from "@yper-script/react/app/widget/mixins";
+import React from "react";
+import Modal from "styled-react-modal";
+import { Column, Spacing } from "./generic";
+import { Text } from "./mixins";
 import styled, { useTheme } from "styled-components";
 import { PulseLoader } from "react-spinners";
 

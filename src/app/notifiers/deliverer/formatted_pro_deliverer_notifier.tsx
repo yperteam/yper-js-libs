@@ -1,12 +1,12 @@
 import { selector } from "recoil";
-import { ProFavoriteDeliverersNotifier } from "@yper-script/react/app/notifiers/deliverer/pro_favorite_deliverers_notifier";
-import { ProDelivererNotifier } from "@yper-script/react/app/notifiers/deliverer/pro_deliverer_notifier";
-import { FormattedProDeliverer } from "@yper-script/react/domain/model/formated_deliverer.model";
-import { ProBlockedDelivererNotifier } from "@yper-script/react/app/notifiers/deliverer/pro_blocked_deliverer_notifier";
+import { ProFavoriteDeliverersNotifier } from "../../../app/notifiers/deliverer/pro_favorite_deliverers_notifier";
+import { ProDelivererNotifier } from "../../../app/notifiers/deliverer/pro_deliverer_notifier";
+import { FormattedProDeliverer } from "../../../domain/model/formated_deliverer.model";
+import { ProBlockedDelivererNotifier } from "../../../app/notifiers/deliverer/pro_blocked_deliverer_notifier";
 import {
   DelivererFilterEnum,
   DelivererFilterNotifier,
-} from "@yper-script/react/app/notifiers/deliverer/deliverer_filter_notifier";
+} from "../../../app/notifiers/deliverer/deliverer_filter_notifier";
 
 export class FormattedProDelivererNotifier {
   static provider = selector({

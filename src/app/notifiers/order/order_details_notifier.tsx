@@ -1,10 +1,10 @@
 import { atomFamily, CallbackInterface, Loadable } from "recoil";
-import { CustomLoadable } from "@yper-script/react/app/notifiers/custom_loadable";
+import { CustomLoadable } from "../../../app/notifiers/custom_loadable";
 import {
   ReturnPolicy,
   TransportType,
-} from "@yper-script/react/data/entity/mission.entity";
-import { EditPrebookDetails } from "@yper-script/react/domain/usecase/order/edit_prebook_details";
+} from "../../../data/entity/mission.entity";
+import { EditPrebookDetails } from "../../../domain/usecase/order/edit_prebook_details";
 
 export class OrderDetailsNotifier {
   static provider = atomFamily<Loadable<void>, string>({

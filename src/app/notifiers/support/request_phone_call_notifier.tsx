@@ -1,7 +1,7 @@
 import { atom, CallbackInterface, Loadable } from "recoil";
-import { CustomLoadable } from "@yper-script/react/app/notifiers/custom_loadable";
-import { RequestPhoneCall } from "@yper-script/react/domain/usecase/support/request_phone_call";
-import { PhoneCallRequest } from "@yper-script/react/data/entity/phone_call_request.entity";
+import { CustomLoadable } from "../../../app/notifiers/custom_loadable";
+import { RequestPhoneCall } from "../../../domain/usecase/support/request_phone_call";
+import { PhoneCallRequest } from "../../../data/entity/phone_call_request.entity";
 
 export class RequestPhoneCallNotifier {
   static provider = atom<Loadable<PhoneCallRequest>>({

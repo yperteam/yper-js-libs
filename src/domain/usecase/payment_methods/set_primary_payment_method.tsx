@@ -1,5 +1,5 @@
-import { PaymentMethodRepository } from "@yper-script/react/data/repository/payment_method.repository";
-import { GetCurrentProId } from "@yper-script/react/domain/usecase/get_current_pro_id";
+import { PaymentMethodRepository } from "../../../data/repository/payment_method.repository";
+import { GetCurrentProId } from "../pro/get_current_pro_id";
 import { firstValueFrom } from "rxjs";
 
 export class SetPrimaryPaymentMethod {

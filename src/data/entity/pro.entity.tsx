@@ -1,4 +1,3 @@
-import { Address } from "@yper-script/react/data/entity/address.entity";
 import { Society } from "./society.entity";
 
 export interface Pro {

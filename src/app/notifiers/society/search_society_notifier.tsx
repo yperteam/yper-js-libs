@@ -1,5 +1,5 @@
-import { SocietyRegistry } from "@yper-script/react/data/entity/society_registry.entity";
-import { SearchSocietyRegistry } from "@yper-script/react/domain/usecase/society/search_society";
+import { SocietyRegistry } from "../../../data/entity/society_registry.entity";
+import { SearchSocietyRegistry } from "../../../domain/usecase/society/search_society";
 import { atom, CallbackInterface, Loadable, RecoilLoadable } from "recoil";
 import { CustomLoadable } from "../custom_loadable";
 

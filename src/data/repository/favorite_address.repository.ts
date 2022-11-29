@@ -2,7 +2,6 @@ import { from, mergeMap, Observable } from "rxjs";
 import { FavoriteAddress } from "../entity/favorite_address";
 import { MissionClient } from "../entity/mission.entity";
 import { Api, FavoriteAddressOwner } from "../provider/http/api";
-import { PaginatedResult } from "../provider/http/paginated_result";
 import { FavoriteAddressStorage } from "../provider/local/favorite_address_storage";
 
 export class FavoriteAddressRepository {

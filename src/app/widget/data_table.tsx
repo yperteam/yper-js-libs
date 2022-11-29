@@ -1,10 +1,10 @@
 import React, { useMemo } from "react";
 import styled, { css, useTheme } from "styled-components";
 import { useTable, usePagination, useSortBy } from "react-table";
-import { Text } from "@yper-script/react/app/widget/mixins";
-import { Col, Row } from "@yper-script/react/app/widget/generic";
-import Paginator from "@yper-script/react/app/widget/paginator";
-import CustomLoader from "@yper-script/react/app/widget/loader";
+import { Text } from "./mixins";
+import { Col, Row } from "./generic";
+import Paginator from "./paginator";
+import CustomLoader from "./loader";
 import { Loadable } from "recoil";
 
 const dropdownIcon = "/img/icon/dropdown_icon_white.svg";

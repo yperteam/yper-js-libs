@@ -1,5 +1,5 @@
-import { SocietyRegistry } from "@yper-script/react/data/entity/society_registry.entity";
-import { SocietyRepository } from "@yper-script/react/data/repository/society.repository";
+import { SocietyRegistry } from "../../../data/entity/society_registry.entity";
+import { SocietyRepository } from "../../../data/repository/society.repository";
 
 export class SearchSocietyRegistry {
   private repository: SocietyRepository = new SocietyRepository();

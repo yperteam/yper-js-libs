@@ -1,6 +1,6 @@
 import { atomFamily, CallbackInterface, Loadable } from "recoil";
-import { CustomLoadable } from "@yper-script/react/app/notifiers/custom_loadable";
-import { PayOrder } from "@yper-script/react/domain/usecase/order/pay_order";
+import { CustomLoadable } from "../../../app/notifiers/custom_loadable";
+import { PayOrder } from "../../../domain/usecase/order/pay_order";
 
 export class OrderPaymentNotifier {
   static provider = atomFamily<Loadable<void>, string>({

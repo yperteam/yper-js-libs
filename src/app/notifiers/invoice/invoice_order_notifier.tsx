@@ -1,7 +1,7 @@
 import { atom, Loadable, SetterOrUpdater } from "recoil";
 import { CustomLoadable } from "../custom_loadable";
-import { OrderInvoices } from "@yper-script/react/domain/usecase/invoice/order_invoices";
-import { Order } from "@yper-script/react/data/entity/order.entity";
+import { OrderInvoices } from "../../../domain/usecase/invoice/order_invoices";
+import { Order } from "../../../data/entity/order.entity";
 
 const redirectEffect = key => ({ onSet }) => {
   onSet(newValue => {

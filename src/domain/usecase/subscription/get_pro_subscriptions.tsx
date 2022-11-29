@@ -4,9 +4,9 @@ import {
   SubscriptionBillingPeriod,
   SubscriptionName,
   SubscriptionStatus,
-} from "@yper-script/react/data/entity/subscription.entity";
-import { ProSubscriptionRepository } from "@yper-script/react/data/repository/pro_subscription.repository";
-import { GetCurrentProId } from "@yper-script/react/domain/usecase/get_current_pro_id";
+} from "../../../data/entity/subscription.entity";
+import { ProSubscriptionRepository } from "../../../data/repository/pro_subscription.repository";
+import { GetCurrentProId } from "../pro/get_current_pro_id";
 
 export class GetProSubscriptions {
   /** Repository */

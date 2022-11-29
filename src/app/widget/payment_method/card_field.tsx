@@ -1,8 +1,7 @@
 import React, { useEffect } from "react";
 import styled, { useTheme } from "styled-components";
-import { Column } from "@yper-script/react/app/widget/generic";
-import { Label, Text } from "@yper-script/react/app/widget/mixins";
-import CustomLoader from "@yper-script/react/app/widget/loader";
+import { Text } from "../mixins";
+import CustomLoader from "../loader";
 import {
   CardElement,
   Elements,

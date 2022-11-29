@@ -1,10 +1,10 @@
-import { StripePaymentNotifier } from "@yper-script/react/app/notifiers/stripe_payment_notifier";
+import { StripePaymentNotifier } from "../../../app/notifiers/stripe_payment_notifier";
 import { atom, Loadable, CallbackInterface } from "recoil";
 import { CustomLoadable } from "../custom_loadable";
 import { CardElement, IbanElement } from "@stripe/react-stripe-js";
 import { firstValueFrom } from "rxjs";
-import { GetPaymentMethods } from "@yper-script/react/domain/usecase/payment_methods/get_payment_methods";
-import { PaymentMethod } from "@yper-script/react/data/entity/payment_method.entity";
+import { GetPaymentMethods } from "../../../domain/usecase/payment_methods/get_payment_methods";
+import { PaymentMethod } from "../../../data/entity/payment_method.entity";
 import { PaymentNotifier } from "../subscription/payment_notifier";
 
 async function paymentSetup(

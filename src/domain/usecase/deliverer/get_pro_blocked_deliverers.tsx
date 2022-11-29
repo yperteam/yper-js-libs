@@ -1,7 +1,7 @@
-import { ProRepository } from "@yper-script/react/data/repository/pro.repository";
-import { BlockedDeliverer } from "@yper-script/react/data/entity/pro_deliverer.entity";
+import { ProRepository } from "../../../data/repository/pro.repository";
+import { BlockedDeliverer } from "../../../data/entity/pro_deliverer.entity";
 import { Observable, switchMap } from "rxjs";
-import { GetCurrentProId } from "../get_current_pro_id";
+import { GetCurrentProId } from "../pro/get_current_pro_id";
 import CallableInstance from "callable-instance";
 
 export class GetProBlockedDeliverers extends CallableInstance<

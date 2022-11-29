@@ -1,10 +1,10 @@
-import { AddProSubscription } from "@yper-script/react/domain/usecase/subscription/add_pro_subscription";
+import { AddProSubscription } from "../../../domain/usecase/subscription/add_pro_subscription";
 import { atom, Loadable, CallbackInterface } from "recoil";
 import { CustomLoadable } from "../custom_loadable";
 import {
   SubscriptionBillingPeriod,
   SubscriptionName,
-} from "@yper-script/react/data/entity/subscription.entity";
+} from "../../../data/entity/subscription.entity";
 import { loadStripe, Stripe } from "@stripe/stripe-js";
 import { StripePaymentNotifier } from "../stripe_payment_notifier";
 

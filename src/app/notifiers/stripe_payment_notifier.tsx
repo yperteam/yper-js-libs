@@ -1,14 +1,14 @@
 import { loadStripe, Stripe, StripeElements } from "@stripe/stripe-js";
-import { AddProCard } from "@yper-script/react/domain/usecase/payment_methods/add_pro_card";
-import { AddProIban } from "@yper-script/react/domain/usecase/payment_methods/add_pro_iban";
-import { atom, selector, DefaultValue } from "recoil";
+import { AddProCard } from "../../domain/usecase/payment_methods/add_pro_card";
+import { AddProIban } from "../../domain/usecase/payment_methods/add_pro_iban";
+import { atom, selector } from "recoil";
 
 export class StripePaymentNotifier {
   static apiKey = process.env.STRIPE_PUBLIC_KEY;
 
   static selectedMethodProvider = atom<{
-    stripe: Stripe;
-    elements: StripeElements;
+    stripe: Stripe | null;
+    elements: StripeElements | null;
   }>({
     key: "stripe-method-provider",
     default: null,

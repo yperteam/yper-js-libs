@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from "react";
 import styled, { useTheme } from "styled-components";
 import { Column, Row } from "../generic";
-import { SvgPicture, Text } from "@yper-script/react/app/widget/mixins";
+import { SvgPicture, Text } from "../../../app/widget/mixins";
 import {
   Notification,
   subTypesEnum,
-} from "@yper-script/react/data/entity/notification.entity";
+} from "../../../data/entity/notification.entity";
 import moment from "moment";
 import { useRecoilCallback } from "recoil";
 import { ReadNotificationNotifier } from "../../notifiers/notification/read_notification_notifier";

@@ -1,8 +1,8 @@
 import ReactTooltip, { Place } from "react-tooltip";
 import React from "react";
-import styled, { useTheme } from "styled-components";
-import { Icon, Text } from "@yper-script/react/app/widget/mixins";
-import { TextStyleClass } from "@yper-script/react/app/widget/theme";
+import styled from "styled-components";
+import { Icon, Text } from "./mixins";
+import { TextStyleClass } from "./theme";
 
 const CustomTooltip = styled.div`
   .__react_component_tooltip {
@@ -56,7 +56,7 @@ function CustomTooltipIcon(data: TooltipInterface) {
   );
 }
 
-const StyledTooltip = styled(ReactTooltip)<{ maxWidth?: string }>`
+const StyledTooltip = styled(ReactTooltip) <{ maxWidth?: string }>`
   padding: 8px;
   max-width: ${props => props.maxWidth ?? "200px"};
   text-align: center;

@@ -1,10 +1,10 @@
 import { atomFamily, CallbackInterface } from "recoil";
-import { ProDislikeShopper } from "@yper-script/react/domain/usecase/deliverer/pro_dislike_shopper";
-import { DelivererDialogProvider } from "@yper-script/react/app/notifiers/deliverer/deliverer_dialog_notifier";
-import { CustomLoadable } from "@yper-script/react/app/notifiers/custom_loadable";
-import { ProFavoriteDeliverersNotifier } from "@yper-script/react/app/notifiers/deliverer/pro_favorite_deliverers_notifier";
-import { DelivererErrorEnum } from "@yper-script/react/app/screen/deliverer/modal/error_modal";
-import { FormattedProDeliverer } from "@yper-script/react/domain/model/formated_deliverer.model";
+import { ProDislikeShopper } from "../../../domain/usecase/deliverer/pro_dislike_shopper";
+import { DelivererDialogProvider } from "../../../app/notifiers/deliverer/deliverer_dialog_notifier";
+import { CustomLoadable } from "../../../app/notifiers/custom_loadable";
+import { ProFavoriteDeliverersNotifier } from "../../../app/notifiers/deliverer/pro_favorite_deliverers_notifier";
+import { DelivererErrorEnum } from "../../../app/screen/deliverer/modal/error_modal";
+import { FormattedProDeliverer } from "../../../domain/model/formated_deliverer.model";
 
 export class DislikeDelivererFamilyNotifier {
   static provider = atomFamily<any, any>({

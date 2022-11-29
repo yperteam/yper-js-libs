@@ -1,7 +1,7 @@
-import { OrderRepository } from "@yper-script/react/data/repository/order.repository";
-import { Order } from "@yper-script/react/data/entity/order.entity";
+import { OrderRepository } from "../../../data/repository/order.repository";
+import { Order } from "../../../data/entity/order.entity";
 import { firstValueFrom } from "rxjs";
-import { GetCurrentProId } from "@yper-script/react/domain/usecase/get_current_pro_id";
+import { GetCurrentProId } from "../pro/get_current_pro_id";
 
 export class OrderInvoices {
   private repository: OrderRepository = new OrderRepository();

@@ -1,9 +1,9 @@
 import {
   SubscriptionBillingPeriod,
   SubscriptionName,
-} from "@yper-script/react/data/entity/subscription.entity";
-import { SubscriptionPreview } from "@yper-script/react/data/entity/subscription_preview.entity";
-import { PreviewSubscriptionChange } from "@yper-script/react/domain/usecase/subscription/preview_subscription_change";
+} from "../../../data/entity/subscription.entity";
+import { SubscriptionPreview } from "../../../data/entity/subscription_preview.entity";
+import { PreviewSubscriptionChange } from "../../../domain/usecase/subscription/preview_subscription_change";
 import { selectorFamily } from "recoil";
 
 export class PreviewSubscriptionNotifier {

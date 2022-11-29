@@ -1,8 +1,8 @@
-import { GetCurrentRetailpointId } from "@yper-script/react/domain/usecase/get_current_retailpoint_id";
+import { GetCurrentRetailpointId } from "../../../domain/usecase/retailpoint/get_current_retailpoint_id";
 import { StreamNotifier } from "../stream_notifier";
 import { Loadable, RecoilLoadable, selector } from "recoil";
 import { ProRetailpointsNotifier } from "./pro_retailpoints_notifier";
-import { Retailpoint } from "@yper-script/react/data/entity/retailpoint.entity";
+import { Retailpoint } from "../../../data/entity/retailpoint.entity";
 
 export class CurrentRetailpointNotifier {
   static idProvider = StreamNotifier.provider({

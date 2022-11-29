@@ -1,7 +1,7 @@
-import { Society } from "@yper-script/react/data/entity/society.entity";
-import { ProRepository } from "@yper-script/react/data/repository/pro.repository";
+import { Society } from "../../../data/entity/society.entity";
+import { ProRepository } from "../../../data/repository/pro.repository";
 import { map, Observable, switchMap } from "rxjs";
-import { GetCurrentProId } from "../get_current_pro_id";
+import { GetCurrentProId } from "../pro/get_current_pro_id";
 
 //TODO: Get society from SocietyRepository
 

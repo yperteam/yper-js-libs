@@ -1,7 +1,7 @@
-import { Api, ClientDetails } from "@yper-script/react/data/provider/http/api";
-import { PaymentMethod } from "@yper-script/react/data/entity/payment_method.entity";
+import { Api, ClientDetails } from "../provider/http/api";
+import { PaymentMethod } from "../entity/payment_method.entity";
 import { Observable, from, mergeMap, firstValueFrom } from "rxjs";
-import { PaymentMethodStorage } from "@yper-script/react/data/provider/local/payment_method_storage";
+import { PaymentMethodStorage } from "../provider/local/payment_method_storage";
 
 export class PaymentMethodRepository {
   private api = new Api();

@@ -1,5 +1,5 @@
-import { OrderRepository } from "@yper-script/react/data/repository/order.repository";
-import { Order } from "@yper-script/react/data/entity/order.entity";
+import { OrderRepository } from "../../../data/repository/order.repository";
+import { Order } from "../../../data/entity/order.entity";
 
 export class GetOrder {
   /** Repository */

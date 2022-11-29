@@ -1,7 +1,7 @@
 import React, { Suspense, useEffect } from "react";
 import styled, { useTheme } from "styled-components";
 import { CardAction, CardFooter, CardHeader, MainCard } from "../card";
-import { SvgPicture, Text } from "@yper-script/react/app/widget/mixins";
+import { SvgPicture, Text } from "../../../app/widget/mixins";
 import { Column, Row } from "../generic";
 import NotificationItem from "./notification_item";
 import { ButtonSecondary } from "../button";
@@ -11,14 +11,14 @@ import {
   useRecoilValue,
   useSetRecoilState,
 } from "recoil";
-import { GetNotificationNotifier } from "@yper-script/react/app/notifiers/notification/get_notification_notifier";
-import { Notification } from "@yper-script/react/data/entity/notification.entity";
+import { GetNotificationNotifier } from "../../../app/notifiers/notification/get_notification_notifier";
+import { Notification } from "../../../data/entity/notification.entity";
 import { ReadAllNotificationNotifier } from "../../notifiers/notification/read_all_notifications";
 import { GetUnreadNotificationNotifier } from "../../notifiers/notification/get_unread_notification_notifier";
 import InfiniteScroll from "react-infinite-scroller";
 import NotificationEmpty from "./notification_empty";
-import CustomLoader from "@yper-script/react/app/widget/loader";
-import { sideBarProvider } from "../app_bar";
+import CustomLoader from "../../../app/widget/loader";
+import { sideBarProvider } from "../side_bar";
 
 const closeIcon = "/img/react/icon/close_icon.svg";
 
@@ -148,7 +148,7 @@ const NotificationCardBody = styled(Row)`
   flex: auto;
 `;
 
-const ReadAllButton = styled(ButtonSecondary)<ReadAllButtonProps>`
+const ReadAllButton = styled(ButtonSecondary) <ReadAllButtonProps>`
   pointer-events: ${(props: ReadAllButtonProps) =>
     props.isAllRead ? "none" : "auto"};
 `;

@@ -1,6 +1,6 @@
 import { atom, CallbackInterface, Loadable } from "recoil";
 import { CustomLoadable } from "../custom_loadable";
-import { EmailInvoices } from "@yper-script/react/domain/usecase/invoice/email_invoices";
+import { EmailInvoices } from "../../../domain/usecase/invoice/email_invoices";
 
 export class InvoiceEmailNotifier {
   static provider = atom<Loadable<void>>({

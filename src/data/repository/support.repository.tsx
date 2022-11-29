@@ -1,5 +1,5 @@
-import { Api } from "@yper-script/react/data/provider/http/api";
-import { ProStorage } from "@yper-script/react/data/provider/local/pro_storage";
+import { Api } from "../provider/http/api";
+import { ProStorage } from "../provider/local/pro_storage";
 import { PhoneCallRequest } from "../entity/phone_call_request.entity";
 import { CallRequestStorage } from "../provider/local/call_request_storage";
 import { firstValueFrom, from, Observable, switchMap } from "rxjs";
