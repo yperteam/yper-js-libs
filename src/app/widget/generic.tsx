@@ -25,7 +25,7 @@ export const RowDefault: RowProps = {
   size: "initial",
 };
 
-interface ColProps extends SpacingProps {
+export interface ColProps extends SpacingProps {
   size?: number;
   justifyContent?: string;
   alignItems?: string;
@@ -145,7 +145,7 @@ export const Flexible = styled.div<FlexProps>`
   align-items: ${(props: FlexProps) => props.alignItems};
 `;
 
-export const Expanded = styled(Flexible)<FlexProps>`
+export const Expanded = styled(Flexible) <FlexProps>`
   ${(props: SpacingProps) => SpacingStyle(props)}
   flex-grow: ${(props: FlexProps) => (props.grow ? props.grow : 1)};
 `;

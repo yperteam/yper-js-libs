@@ -4,6 +4,7 @@ import {
   Col,
   SpacingProps,
   SpacingStyle,
+  ColProps,
 } from "./generic";
 
 export const FormContainer = styled(Col) <{ bgColor?: string }>`
@@ -49,7 +50,7 @@ export const Textarea = styled.textarea`
   }
 `;
 
-export const Label = styled.label<TextInterface>`
+export const InputLabel = styled.label<TextInterface>`
   margin: 0;
   font-family: ${(props: TextInterface) =>
     props.textStyle

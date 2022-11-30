@@ -51,6 +51,7 @@ export const Text = styled.p<TextInterface>`
       : props.theme?.textTheme.body.medium.color};
 `;
 
+
 export const Label = styled.label<LabelInterface>`
   margin: 0;
   height: auto !important;
