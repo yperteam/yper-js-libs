@@ -7,7 +7,7 @@ interface RoundIconStyledProps {
   shadow?: string;
 }
 
-export default function RoundedIcon(props: {
+export function RoundedIcon(props: {
   iconLink: string;
   background?: string;
   iconColor?: string;

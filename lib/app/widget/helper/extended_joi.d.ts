@@ -1,2 +1,1 @@
-declare const Joi: any;
-export default Joi;
+export declare const Joi: any;

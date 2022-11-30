@@ -1,2 +1,2 @@
 /// <reference types="react" />
-export default function NotificationCenter(): JSX.Element;
+export declare function NotificationCenter(): JSX.Element;

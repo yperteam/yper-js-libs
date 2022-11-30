@@ -25,7 +25,7 @@ interface TooltipInterface {
   custom?: boolean;
 }
 
-function CustomTooltipIcon(data: TooltipInterface) {
+export function CustomTooltipIcon(data: TooltipInterface) {
   return (
     <CustomTooltip>
       {data.icon && (
@@ -65,8 +65,6 @@ const StyledTooltip = styled(ReactTooltip) <{ maxWidth?: string }>`
 export const Tooltip = ({ ...props }) => (
   <StyledTooltip effect="solid" multiline {...props} />
 );
-
-export default CustomTooltipIcon;
 
 /** StyledComponent */
 const Img = styled.img<any>`

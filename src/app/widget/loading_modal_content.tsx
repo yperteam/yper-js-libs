@@ -5,7 +5,7 @@ import { Text } from "./mixins";
 import styled, { useTheme } from "styled-components";
 import { PulseLoader } from "react-spinners";
 
-function LoadingModalContent() {
+export function LoadingModalContent() {
   const theme = useTheme();
 
   return (
@@ -32,8 +32,6 @@ function LoadingModalContent() {
     </ModalContent>
   );
 }
-
-export default LoadingModalContent;
 
 /** Styled Component */
 const ModalContent = styled.div`

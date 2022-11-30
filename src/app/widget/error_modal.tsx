@@ -11,7 +11,7 @@ import styled, { useTheme } from "styled-components";
 const closeIcon = "/img/react/icon/close_icon.svg";
 const modalErrorIcon = "/img/react/icon/modal_error_icon.svg";
 
-function ErrorModal() {
+export function ErrorModal() {
   const theme = useTheme();
   const [modal, displayModal] = useRecoilState(
     ErrorModalNotifier.dialogProvider
@@ -74,8 +74,6 @@ function ErrorModal() {
     </ModalProvider>
   );
 }
-
-export default ErrorModal;
 
 /** Styled Component */
 interface CustomModalProps {

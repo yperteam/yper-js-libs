@@ -1,2 +1,2 @@
 /// <reference types="react" />
-export default function NotificationEmpty(): JSX.Element;
+export declare function NotificationEmpty(): JSX.Element;

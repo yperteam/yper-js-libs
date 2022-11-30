@@ -1,5 +1,5 @@
 /// <reference types="react" />
-export default function RoundedIcon(props: {
+export declare function RoundedIcon(props: {
     iconLink: string;
     background?: string;
     iconColor?: string;

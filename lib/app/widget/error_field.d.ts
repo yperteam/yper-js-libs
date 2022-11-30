@@ -15,7 +15,6 @@ export declare const customMessage: (type?: string) => {
     "any.invalid": string;
     "date.format": string;
 };
-declare function ErrorField(props: {
+export declare function ErrorField(props: {
     field: string;
 }): JSX.Element;
-export default ErrorField;

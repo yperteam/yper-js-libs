@@ -1,4 +1,4 @@
-export default function useWindowDimensions(): {
+export declare function useWindowDimensions(): {
     width: number;
     height: number;
 };

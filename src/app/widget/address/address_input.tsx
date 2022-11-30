@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from "react";
-import Joi from "../../../app/widget/helper/extended_joi";
+import { Joi } from "../../../app/widget/helper/extended_joi";
 import { useFormContext } from "react-hook-form";
 import styled, { useTheme } from "styled-components";
 import usePlacesService from "react-google-autocomplete/lib/usePlacesAutocompleteService";
@@ -8,7 +8,7 @@ import { Text, SvgPicture } from "../../../app/widget/mixins";
 import { Typeahead } from "react-bootstrap-typeahead";
 import { Address } from "../../../data/entity/address.entity";
 import { customMessage } from "../error_field";
-import CustomLoader from "../../../app/widget/loader";
+import { CustomLoader } from "../../../app/widget/loader";
 
 // TODO here we do not make it a requirement to have street, streetNumber and city for special cases
 export const addressSchema = Joi.object({
@@ -51,7 +51,7 @@ export const addressSchema = Joi.object({
 const searchIcon = "/img/icon/search_icon.svg";
 const userIcon = "/img/react/icon/ic_pin_location.svg";
 
-function AddressInput(props: {
+export function AddressInput(props: {
   field: string;
   placeholder: string;
   formattedAddress: string;
@@ -216,8 +216,6 @@ function ResultUser(props: {
     </Row>
   );
 }
-
-export default AddressInput;
 
 /** Styled Component */
 const CustomInput = styled.input`

@@ -11,9 +11,9 @@ import { ButtonOutlined, ButtonPrimary } from "../../widget/button";
 import { sideBarProvider } from "../../widget/side_bar";
 import { useRecoilCallback, useRecoilState, useSetRecoilState } from "recoil";
 import { joiResolver } from "@hookform/resolvers/joi";
-import Joi from "../../../app/widget/helper/extended_joi";
+import { Joi } from "../../../app/widget/helper/extended_joi";
 import { FormProvider, useForm } from "react-hook-form";
-import ErrorField, { customMessage } from "../../widget/error_field";
+import { ErrorField, customMessage } from "../../widget/error_field";
 import { Input } from "../../widget/input";
 import { ButtonLoader } from "../../widget/loader";
 import { IconBackground } from "./help_center";
@@ -25,7 +25,7 @@ const lockIcon = "/img/react/icon/ic_lock.svg";
 const callIcon = "/img/react/icon/ic_help_call.svg";
 const paperIcon = "/img/react/icon/ic_help_paper.svg";
 
-export default function LoginHelpScreen() {
+export function LoginHelpScreen() {
   const theme = useTheme();
   // TODO this should be history get back
   let setOpened = useSetRecoilState(sideBarProvider);

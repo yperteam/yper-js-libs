@@ -12,7 +12,7 @@ import { Retailpoint } from "../../data/entity/retailpoint.entity";
 import styled, { useTheme } from "styled-components";
 import { GeoJsonDirections } from "../../data/entity/mission.entity";
 import { atom, useRecoilValue } from "recoil";
-import CustomLoader from "./loader";
+import { CustomLoader } from "./loader";
 import { SvgPicture, Text } from "../../app/widget/mixins";
 import { Row } from "./generic";
 
@@ -33,7 +33,7 @@ export const reloadItineraryMapState = atom<Boolean>({
   default: false,
 });
 
-export default function Map(props: {
+export function Map(props: {
   retailPointList: Retailpoint[];
   enableScrollZoom?: boolean;
   icon: string[];

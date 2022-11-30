@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import styled, { useTheme } from "styled-components";
 import { Column } from "../../../app/widget/generic";
 import { Label, Text } from "../../../app/widget/mixins";
-import CustomLoader from "../../../app/widget/loader";
+import { CustomLoader } from "../../../app/widget/loader";
 import { useFormContext } from "react-hook-form";
 import {
   Elements,

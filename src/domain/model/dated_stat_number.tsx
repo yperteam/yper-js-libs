@@ -1,4 +1,4 @@
-export default interface DatedStatNumber {
+export interface DatedStatNumber {
   date: Date;
   value: number;
 }

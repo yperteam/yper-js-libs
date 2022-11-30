@@ -49,7 +49,7 @@ function customMessageHandler(type?: string) {
   }
 }
 
-function ErrorField(props: { field: string }) {
+export function ErrorField(props: { field: string }) {
   const {
     formState: { errors },
   } = useFormContext();
@@ -68,8 +68,6 @@ function ErrorField(props: { field: string }) {
     />
   );
 }
-
-export default ErrorField;
 
 const Img = styled.img<any>`
   ${(props: SpacingProps) => SpacingStyle(props)}

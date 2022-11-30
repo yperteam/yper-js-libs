@@ -1,9 +1,9 @@
 import { DateRangeInterface } from "./stats_range_notifier";
-import DatedStatNumber from "../../domain/model/dated_stat_number";
+import { DatedStatNumber } from "../../domain/model/dated_stat_number";
 import { StatsInterval } from "../../data/entity/stats_interval.enum";
 import moment from "moment";
 
-export default class DatedStatsNotifier {
+export class DatedStatsNotifier {
   private static compareDates(
     interval: StatsInterval,
     first: Date,

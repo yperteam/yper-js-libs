@@ -12,8 +12,8 @@ interface TooltipInterface {
     textStyle?: TextStyleClass;
     custom?: boolean;
 }
-declare function CustomTooltipIcon(data: TooltipInterface): JSX.Element;
+export declare function CustomTooltipIcon(data: TooltipInterface): JSX.Element;
 export declare const Tooltip: ({ ...props }: {
     [x: string]: any;
 }) => JSX.Element;
-export default CustomTooltipIcon;
+export {};

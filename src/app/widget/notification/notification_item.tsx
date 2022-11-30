@@ -11,7 +11,7 @@ import { useRecoilCallback } from "recoil";
 import { ReadNotificationNotifier } from "../../notifiers/notification/read_notification_notifier";
 const alertIcon = "/img/react/icon/ic_alert_circle_full.svg";
 
-export default function NotificationItem(props: {
+export function NotificationItem(props: {
   notificationInfo: Notification;
   isAllRead: boolean;
 }) {

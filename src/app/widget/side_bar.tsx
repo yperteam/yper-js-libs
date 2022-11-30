@@ -5,21 +5,21 @@ import {
   atom,
   useRecoilState,
 } from "recoil";
-import NotificationCenter from "./notification/notification_center";
-import HelpCenter from "./help/help_center";
 import { MainCard } from "./card";
-import CallHelpScreen from "./help/call_help_center";
-import CancelCallScreen from "./help/cancel_call";
-import RegisterHelpScreen from "./help/register_help_center";
-import LoginHelpScreen from "./help/login_help_center";
-import RequiresAuth from "./requires_auth";
+import { CallHelpScreen } from "./help/call_help_center";
+import { CancelCallScreen } from "./help/cancel_call";
+import { HelpCenter } from "./help/help_center";
+import { LoginHelpScreen } from "./help/login_help_center";
+import { RegisterHelpScreen } from "./help/register_help_center";
+import { NotificationCenter } from "./notification/notification_center";
+import { RequiresAuth } from "./requires_auth";
 
 export const sideBarProvider = atom<boolean | null>({
   key: "side-bar-opened",
   default: false,
 });
 
-export default function SideBar() {
+export function SideBar() {
   let [opened, setOpened] = useRecoilState(sideBarProvider);
 
   return (

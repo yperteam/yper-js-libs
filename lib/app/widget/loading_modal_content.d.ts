@@ -1,3 +1,2 @@
 /// <reference types="react" />
-declare function LoadingModalContent(): JSX.Element;
-export default LoadingModalContent;
+export declare function LoadingModalContent(): JSX.Element;

@@ -6,6 +6,6 @@ interface LoaderInterface {
     radius?: string;
     margin?: string;
 }
-declare function Loader(props: LoaderInterface): JSX.Element;
-export default Loader;
+export declare function CustomLoader(props: LoaderInterface): JSX.Element;
 export declare function ButtonLoader(): JSX.Element;
+export {};

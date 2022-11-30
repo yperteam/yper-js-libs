@@ -11,7 +11,7 @@ import {
   FaqArticle,
   MeanType,
 } from "../../../data/entity/contact_reason.entity";
-import CustomLoader from "../../../app/widget/loader";
+import { CustomLoader } from "../../../app/widget/loader";
 import { sideBarProvider } from "../../widget/side_bar";
 import { PhoneCallRequestNotifier } from "../../notifiers/support/phone_call_request_notifier";
 import { ClipLoader } from "react-spinners";
@@ -25,7 +25,7 @@ const questionMessageIcon = "/img/react/icon/ic_question_help_message.svg";
 const mailIcon = "/img/react/icon/ic_mail.svg";
 const phoneIcon = "/img/react/icon/ic_phone.svg";
 
-export default function HelpCenter() {
+export function HelpCenter() {
   const theme = useTheme();
   let state = useRecoilValue(ProContactReasonsNotifier.provider);
   let byCategoryState = useRecoilValue(

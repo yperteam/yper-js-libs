@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import styled, { useTheme } from "styled-components";
 import { Text } from "../mixins";
-import CustomLoader from "../loader";
+import { CustomLoader } from "../loader";
 import {
   CardElement,
   Elements,
@@ -13,7 +13,7 @@ import { useRecoilValueLoadable, useSetRecoilState } from "recoil";
 import { ErrorMessage } from "@hookform/error-message";
 import { useFormContext } from "react-hook-form";
 
-function CardField({ name }: { name: string }) {
+export function CardField({ name }: { name: string }) {
   const loadable = useRecoilValueLoadable(StripePaymentNotifier.cardProvider);
   const theme = useTheme();
   const methods = useFormContext();
@@ -93,8 +93,6 @@ function CardFieldContainer() {
     />
   );
 }
-
-export default CardField;
 
 const CardCustomElement = styled(CardElement)`
   box-sizing: border-box;

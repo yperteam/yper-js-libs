@@ -1,5 +1,5 @@
 import { StatsInterval } from "../../../data/entity/stats_interval.enum";
-import DatedStatNumber from "../../model/dated_stat_number";
+import { DatedStatNumber } from "../../model/dated_stat_number";
 export declare class GetRetailpointDeliveriesDistribution {
     /** Repository */
     private proRepository;

@@ -1,1 +1,1 @@
-export default function RequiresAuth({ children }: any): any;
+export declare function RequiresAuth({ children }: any): any;

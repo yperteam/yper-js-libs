@@ -11,7 +11,7 @@ interface LoaderInterface {
   margin?: string;
 }
 
-function Loader(props: LoaderInterface) {
+export function CustomLoader(props: LoaderInterface) {
   const theme = useTheme();
 
   const LoaderDisplay = {
@@ -34,8 +34,6 @@ function Loader(props: LoaderInterface) {
     </Expanded>
   );
 }
-
-export default Loader;
 
 export function ButtonLoader() {
   const theme = useTheme();

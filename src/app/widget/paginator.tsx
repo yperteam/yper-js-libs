@@ -26,7 +26,7 @@ interface PaginatorProps {
   pageCount: number;
 }
 
-function Paginator(props: PaginatorProps) {
+export function Paginator(props: PaginatorProps) {
   const theme = useTheme();
 
   let canNextPage = props.pageIndex < props.pageCount - 1;
@@ -145,5 +145,3 @@ const PaginatorContainer = styled(Col)`
   background-color: ${props => props.theme.color.grayscale["000"]};
   padding: 20px 16px;
 `;
-
-export default Paginator;

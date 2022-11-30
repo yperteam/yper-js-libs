@@ -3,13 +3,13 @@ import styled, { css, useTheme } from "styled-components";
 import { useTable, usePagination, useSortBy } from "react-table";
 import { Text } from "./mixins";
 import { Col, Row } from "./generic";
-import Paginator from "./paginator";
-import CustomLoader from "./loader";
+import { Paginator } from "./paginator";
+import { CustomLoader } from "./loader";
 import { Loadable } from "recoil";
 
 const dropdownIcon = "/img/icon/dropdown_icon_white.svg";
 
-function DataTable<T>(props: { columns: any; loadable: Loadable<T[]> }) {
+export function DataTable<T>(props: { columns: any; loadable: Loadable<T[]> }) {
   const theme = useTheme();
   let data = useMemo(
     () => (props.loadable.state == "hasValue" ? props.loadable.contents : []),
@@ -117,8 +117,6 @@ function DataTable<T>(props: { columns: any; loadable: Loadable<T[]> }) {
     </>
   );
 }
-
-export default DataTable;
 
 /** Table */
 const CustomTable = styled.table`

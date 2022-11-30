@@ -12,10 +12,10 @@ import {
   useSetRecoilState,
 } from "recoil";
 import { joiResolver } from "@hookform/resolvers/joi";
-import Joi from "../../../app/widget/helper/extended_joi";
+import { Joi } from "../../../app/widget/helper/extended_joi";
 import { RequestPhoneCallNotifier } from "../../notifiers/support/request_phone_call_notifier";
 import { FormProvider, useForm } from "react-hook-form";
-import ErrorField, { customMessage } from "../error_field";
+import { ErrorField, customMessage } from "../error_field";
 import { Input } from "../../widget/input";
 import { ButtonLoader } from "../../widget/loader";
 import { CurrentProNotifier } from "../../notifiers/pro/current_pro_notifier";
@@ -25,7 +25,7 @@ const arrowIcon = "/img/ic_arrow_back.svg";
 const closeIcon = "/img/react/icon/close_icon.svg";
 const phoneIcon = "/img/react/icon/ic_phone.svg";
 
-export default function CallHelpScreen() {
+export function CallHelpScreen() {
   const theme = useTheme();
   let { reasonId } = useParams();
   let setOpened = useSetRecoilState(sideBarProvider);

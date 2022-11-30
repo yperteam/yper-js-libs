@@ -12,9 +12,9 @@ import {
   useSetRecoilState,
 } from "recoil";
 import { joiResolver } from "@hookform/resolvers/joi";
-import Joi from "../../../app/widget/helper/extended_joi";
+import { Joi } from "../../../app/widget/helper/extended_joi";
 import { Controller, FormProvider, useForm } from "react-hook-form";
-import ErrorField, { customMessage } from "../../widget/error_field";
+import { ErrorField, customMessage } from "../../widget/error_field";
 import { Input } from "../../widget/input";
 import { ButtonLoader } from "../../widget/loader";
 import { UserSex } from "../../../data/entity/user.entity";
@@ -24,7 +24,7 @@ const arrowIcon = "/img/ic_arrow_back.svg";
 const closeIcon = "/img/react/icon/close_icon.svg";
 const infoIcon = "/img/react/icon/ic_information_circle_full.svg";
 
-export default function RegisterHelpScreen() {
+export function RegisterHelpScreen() {
   const theme = useTheme();
   let setOpened = useSetRecoilState(sideBarProvider);
   let navigate = useNavigate();

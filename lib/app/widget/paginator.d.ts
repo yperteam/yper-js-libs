@@ -7,5 +7,5 @@ interface PaginatorProps {
     gotoPage: Function;
     pageCount: number;
 }
-declare function Paginator(props: PaginatorProps): JSX.Element;
-export default Paginator;
+export declare function Paginator(props: PaginatorProps): JSX.Element;
+export {};

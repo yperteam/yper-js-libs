@@ -1,12 +1,11 @@
-import React, { Suspense, useEffect } from "react";
+import React from "react";
 import styled, { useTheme } from "styled-components";
 import { CardAction, CardFooter, CardHeader, MainCard } from "../card";
 import { SvgPicture, Text } from "../../../app/widget/mixins";
 import { Column, Row } from "../generic";
-import NotificationItem from "./notification_item";
+import { NotificationItem } from "./notification_item";
 import { ButtonSecondary } from "../button";
 import {
-  atom,
   useRecoilCallback,
   useRecoilValue,
   useSetRecoilState,
@@ -16,13 +15,13 @@ import { Notification } from "../../../data/entity/notification.entity";
 import { ReadAllNotificationNotifier } from "../../notifiers/notification/read_all_notifications";
 import { GetUnreadNotificationNotifier } from "../../notifiers/notification/get_unread_notification_notifier";
 import InfiniteScroll from "react-infinite-scroller";
-import NotificationEmpty from "./notification_empty";
-import CustomLoader from "../../../app/widget/loader";
+import { NotificationEmpty } from "./notification_empty";
+import { CustomLoader } from "../../../app/widget/loader";
 import { sideBarProvider } from "../side_bar";
 
 const closeIcon = "/img/react/icon/close_icon.svg";
 
-export default function NotificationCenter() {
+export function NotificationCenter() {
   const theme = useTheme();
   const notifications = useRecoilValue(GetNotificationNotifier.provider);
   let setOpened = useSetRecoilState(sideBarProvider);

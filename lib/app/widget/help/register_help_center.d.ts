@@ -1,2 +1,2 @@
 /// <reference types="react" />
-export default function RegisterHelpScreen(): JSX.Element;
+export declare function RegisterHelpScreen(): JSX.Element;

@@ -1,2 +1,2 @@
 /// <reference types="react" />
-export default function CancelCallScreen(): JSX.Element;
+export declare function CancelCallScreen(): JSX.Element;

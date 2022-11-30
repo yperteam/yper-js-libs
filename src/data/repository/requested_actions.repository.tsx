@@ -1,5 +1,5 @@
 import { Api } from "../provider/http/api";
-import Term from "../entity/term.entity";
+import { Term } from "../entity/term.entity";
 
 export class RequestedActionsRepository {
   private api = new Api();

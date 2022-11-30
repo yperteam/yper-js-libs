@@ -1,2 +1,2 @@
 /// <reference types="react" />
-export default function CallHelpScreen(): JSX.Element;
+export declare function CallHelpScreen(): JSX.Element;

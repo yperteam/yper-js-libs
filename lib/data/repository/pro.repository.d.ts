@@ -1,7 +1,7 @@
 import { Observable } from "rxjs";
 import { ProRetailpointStats, ProStats } from "../entity/pro_retailpoint_stats.entity";
 import { StatsInterval } from "../entity/stats_interval.enum";
-import DatedStatNumber from "../../domain/model/dated_stat_number";
+import { DatedStatNumber } from "../../domain/model/dated_stat_number";
 import { ProRetailpointList } from "../entity/retailpoint.entity";
 import { PaginatedResult } from "../provider/http/paginated_result";
 import { Invoice } from "../entity/invoice.entity";

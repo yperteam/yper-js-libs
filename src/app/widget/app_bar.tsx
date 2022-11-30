@@ -14,7 +14,7 @@ import { GetUnreadNotificationNotifier } from "../notifiers/notification/get_unr
 import { CurrentProNotifier } from "../notifiers/pro/current_pro_notifier";
 import { MainCard } from "./card";
 import { LoggedNotifier } from "../notifiers/auth/logged_notifier";
-import SideBar, { sideBarProvider } from "./side_bar";
+import { SideBar, sideBarProvider } from "./side_bar";
 
 const addCircleSolidIcon = "/img/react/icon/ic_add_circle_solid.svg";
 
@@ -259,7 +259,7 @@ function NotificationIcon(props: { onClick: any }) {
   );
 }
 
-export default function AppBar(props: { hasBookReachedLimit: string }) {
+export function AppBar(props: { hasBookReachedLimit: string }) {
   return (
     <MemoryRouter>
       <MainNavigation hasBookReachedLimit={props.hasBookReachedLimit} />

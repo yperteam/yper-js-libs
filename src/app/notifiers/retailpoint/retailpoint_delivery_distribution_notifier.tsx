@@ -2,8 +2,8 @@ import { selector } from "recoil";
 import { GetRetailpointDeliveriesDistribution } from "../../../domain/usecase/retailpoint/get_retailpoint_deliveries_distribution";
 import { StatsRangeNotifier } from "../../../app/notifiers/stats_range_notifier";
 import { StatsDeliveriesIntervalNotifier } from "../../../app/notifiers/stats_deliveries_interval_notifier";
-import DatedStatNumber from "../../../domain/model/dated_stat_number";
-import DatedStatsNotifier from "../../../app/notifiers/dated_stats_notifier";
+import { DatedStatNumber } from "../../../domain/model/dated_stat_number";
+import { DatedStatsNotifier } from "../../../app/notifiers/dated_stats_notifier";
 
 export class RetailpointDeliveryDistributionNotifier {
   static currentProvider = selector<DatedStatNumber[]>({

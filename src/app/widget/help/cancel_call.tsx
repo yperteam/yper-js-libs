@@ -14,7 +14,7 @@ const arrowIcon = "/img/ic_arrow_back.svg";
 const closeIcon = "/img/react/icon/close_icon.svg";
 const alertIcon = "/img/react/icon/ic_alert_circle.svg";
 
-export default function CancelCallScreen() {
+export function CancelCallScreen() {
   const theme = useTheme();
   let { callId } = useParams();
   // TODO this should be history get back

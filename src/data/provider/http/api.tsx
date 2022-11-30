@@ -7,14 +7,13 @@ import {
   ProStats,
 } from "../../../data/entity/pro_retailpoint_stats.entity";
 import { StatsInterval } from "../../../data/entity/stats_interval.enum";
-import DatedStatNumber from "../../../domain/model/dated_stat_number";
+import { DatedStatNumber } from "../../../domain/model/dated_stat_number";
 import { ProRetailpointList } from "../../../data/entity/retailpoint.entity";
 import { PaginatedResult } from "./paginated_result";
 import { Invoice } from "../../../data/entity/invoice.entity";
 import { OrderItem } from "../../../data/entity/order_item";
 import { Order } from "../../../data/entity/order.entity";
 import { MissionTemplate } from "../../../data/entity/mission_template.entity";
-import { Address } from "../../../data/entity/address.entity";
 import { SubscriptionPreview } from "../../../data/entity/subscription_preview.entity";
 import { PaymentMethod } from "../../../data/entity/payment_method.entity";
 import { Pro } from "../../../data/entity/pro.entity";
@@ -45,7 +44,7 @@ import { ContactReasonEntity } from "../../entity/contact_reason.entity";
 import { PhoneCallRequest } from "../../entity/phone_call_request.entity";
 import { firstValueFrom } from "rxjs";
 import { UserSex } from "../../entity/user.entity";
-import Term from "../../../data/entity/term.entity";
+import { Term } from "../../../data/entity/term.entity";
 import { ProLimit } from "../../../data/entity/pro_limit.entity";
 
 export abstract class Singleton {

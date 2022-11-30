@@ -4,7 +4,7 @@ import { Column, Row } from "../generic";
 import { SvgPicture, Text } from "../mixins";
 const mailboxIcon = "/img/react/icon/ic_mailbox_in.svg";
 
-export default function NotificationEmpty() {
+export function NotificationEmpty() {
   const theme = useTheme();
 
   return (
