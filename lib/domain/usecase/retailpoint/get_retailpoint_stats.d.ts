@@ -4,5 +4,5 @@ export declare class GetRetailpointStats {
     /** UseCase */
     private getCurrentProId;
     private getCurrentRetailPoint;
-    call(begin: Date, end: Date): Promise<import("../../../data/entity/pro_retailpoint_stats.entity").ProRetailpointStats>;
+    call(begin: Date, end: Date): Promise<import("../../..").ProRetailpointStats>;
 }

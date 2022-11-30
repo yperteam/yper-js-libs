@@ -18,12 +18,12 @@ import SideBar, { sideBarProvider } from "./side_bar";
 
 const addCircleSolidIcon = "/img/react/icon/ic_add_circle_solid.svg";
 
-function useOutsideAlerter(ref, onOutside) {
+function useOutsideAlerter(ref: React.MutableRefObject<any>, onOutside: () => void) {
   useEffect(() => {
     /**
      * Alert if clicked on outside of element
      */
-    function handleClickOutside(event) {
+    function handleClickOutside(event: MouseEvent) {
       if (ref.current && !ref.current.contains(event.target)) {
         onOutside();
       }

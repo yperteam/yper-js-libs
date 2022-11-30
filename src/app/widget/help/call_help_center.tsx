@@ -4,7 +4,7 @@ import { SvgPicture, Text } from "../../../app/widget/mixins";
 import { useNavigate, useParams } from "react-router-dom";
 import { Column, Row, Spacing } from "../../widget/generic";
 import { ButtonPrimary } from "../../widget/button";
-import { sideBarProvider } from "../../widget/app_bar";
+import { sideBarProvider } from "../../widget/side_bar";
 import {
   useRecoilCallback,
   useRecoilState,
@@ -15,7 +15,7 @@ import { joiResolver } from "@hookform/resolvers/joi";
 import Joi from "../../../app/widget/helper/extended_joi";
 import { RequestPhoneCallNotifier } from "../../notifiers/support/request_phone_call_notifier";
 import { FormProvider, useForm } from "react-hook-form";
-import ErrorField, { customMessage } from "../order/error_field";
+import ErrorField, { customMessage } from "../error_field";
 import { Input } from "../../widget/input";
 import { ButtonLoader } from "../../widget/loader";
 import { CurrentProNotifier } from "../../notifiers/pro/current_pro_notifier";

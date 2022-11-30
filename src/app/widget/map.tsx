@@ -45,6 +45,7 @@ export default function Map(props: {
   ]) as LatLngBoundsExpression;
 
   const marketIcon = Leaflet.icon({
+    // @ts-ignore
     iconUrl: pinMapIcon[`${props.icon[0]}`],
     iconAnchor: [20, 41],
   });

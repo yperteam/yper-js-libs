@@ -113,7 +113,7 @@ export default function HelpCenter() {
               isOptionSelected={o =>
                 (o as ContactReason).id === selectedReason?.id
               }
-              options={state.contents?.filter(
+              options={state.getValue()?.filter(
                 r => r.categoryName == selectedCategory
               )}
             />

@@ -3,7 +3,7 @@ import { Navigate, useLocation } from "react-router-dom";
 import { useRecoilValue } from "recoil";
 import { LoggedNotifier } from "../notifiers/auth/logged_notifier";
 
-export default function RequiresAuth({ children }) {
+export default function RequiresAuth({ children }: any) {
   const authed = useRecoilValue(LoggedNotifier.provider);
   const location = useLocation();
 

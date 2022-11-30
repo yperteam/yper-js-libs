@@ -36,14 +36,6 @@ function LoadingModalContent() {
 export default LoadingModalContent;
 
 /** Styled Component */
-const ModalContainer = styled(Modal)`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  opacity: ${props => props.opacity};
-  transition: all 0.3s ease-in-out;
-`;
-
 const ModalContent = styled.div`
   background-color: ${props => props.theme.color.grayscale["000"]};
   max-width: 500px;

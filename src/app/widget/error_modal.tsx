@@ -78,7 +78,11 @@ function ErrorModal() {
 export default ErrorModal;
 
 /** Styled Component */
-const ModalContainer = styled(Modal)`
+interface CustomModalProps {
+  opacity: number;
+}
+
+const ModalContainer = styled(Modal) <any>`
   display: flex;
   align-items: center;
   justify-content: center;

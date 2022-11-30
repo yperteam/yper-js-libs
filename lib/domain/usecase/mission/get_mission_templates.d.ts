@@ -5,5 +5,5 @@ export declare class GetMissionTemplates {
     /** UseCase */
     private getCurrentProId;
     private getCurrentRetailPoint;
-    call(): Promise<import("../../../data/entity/mission_template.entity").MissionTemplate[]>;
+    call(): Promise<import("../../..").MissionTemplate[]>;
 }

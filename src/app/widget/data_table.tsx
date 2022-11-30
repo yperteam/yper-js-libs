@@ -20,15 +20,22 @@ function DataTable<T>(props: { columns: any; loadable: Loadable<T[]> }) {
     getTableBodyProps,
     headerGroups,
     prepareRow,
+    // @ts-ignore
     page,
+    // @ts-ignore
     pageCount,
+    // @ts-ignore
     gotoPage,
+    // @ts-ignore
     setPageSize,
+    // @ts-ignore
     state: { pageIndex, pageSize },
   } = useTable(
     {
       columns: props.columns,
+      // @ts-ignore
       data: data,
+      // @ts-ignore
       initialState: { pageIndex: 0 },
     },
     useSortBy,
@@ -43,6 +50,7 @@ function DataTable<T>(props: { columns: any; loadable: Loadable<T[]> }) {
             <TableRow {...headerGroup.getHeaderGroupProps()}>
               {headerGroup.headers.map(column => (
                 <TableHeader
+                  // @ts-ignore
                   {...column.getHeaderProps(column.getSortByToggleProps())}
                 >
                   <Row justifyContent={"flex-start"} alignItems={"center"}>
@@ -59,15 +67,17 @@ function DataTable<T>(props: { columns: any; loadable: Loadable<T[]> }) {
 
                     {typeof column.Header != "string" &&
                       column.render("Header")}
-                    {column.isSorted && (
-                      <Col justifyContent="right">
-                        <DropdownIcon
-                          open={column.isSortedDesc}
-                          src={dropdownIcon}
-                          alt={"sorting_icon"}
-                        />
-                      </Col>
-                    )}
+                    {    // @ts-ignore
+                      column.isSorted && (
+                        <Col justifyContent="right">
+                          <DropdownIcon
+                            // @ts-ignore
+                            open={column.isSortedDesc}
+                            src={dropdownIcon}
+                            alt={"sorting_icon"}
+                          />
+                        </Col>
+                      )}
                   </Row>
                 </TableHeader>
               ))}
@@ -75,11 +85,11 @@ function DataTable<T>(props: { columns: any; loadable: Loadable<T[]> }) {
           ))}
         </TableHead>
         <TableBody {...getTableBodyProps()}>
-          {page.map(row => {
+          {page.map((row: any) => {
             prepareRow(row);
             return (
               <TableRowBody {...row.getRowProps()}>
-                {row.cells.map(cell => {
+                {row.cells.map((cell: any) => {
                   return (
                     <td {...cell.getCellProps()}>{cell.render("Cell")}</td>
                   );
