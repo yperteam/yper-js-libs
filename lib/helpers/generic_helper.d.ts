@@ -1,9 +1,8 @@
 /// <reference types="jquery" />
-/// <reference types="jquery" />
-/// <reference types="datatables.net" />
 /// <reference types="jquery.blockui" />
 /// <reference types="jqueryui" />
 /// <reference types="bootstrap" />
+/// <reference types="datatables.net" />
 /// <reference types="select2" />
 export declare var GG_MAPS_LOADED: boolean;
 export declare function isNotSet(prop: any): boolean;

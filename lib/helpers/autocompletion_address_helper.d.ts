@@ -1,9 +1,8 @@
 /// <reference types="jquery" />
-/// <reference types="jquery" />
-/// <reference types="datatables.net" />
 /// <reference types="jquery.blockui" />
 /// <reference types="jqueryui" />
 /// <reference types="bootstrap" />
+/// <reference types="datatables.net" />
 /// <reference types="select2" />
 import { GoogleAddressEntity } from "../entity/google_address_entity";
 export declare class AutocompletionAddressHelper {

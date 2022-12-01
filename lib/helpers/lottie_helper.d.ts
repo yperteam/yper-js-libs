@@ -27,7 +27,7 @@ export default class LottieHelper {
      */
     stop(): void;
 }
-export type LottieConfTypes = {
+export declare type LottieConfTypes = {
     renderer?: 'svg' | 'canvas' | 'html';
     loop?: boolean | number;
     autoplay?: boolean;
