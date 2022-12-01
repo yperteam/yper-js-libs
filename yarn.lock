@@ -1216,7 +1216,7 @@
   resolved "https://registry.yarnpkg.com/@monsonjeremy/react-leaflet-core/-/react-leaflet-core-1.1.1.tgz#123aaf1f500214c0585967c5efd9f43453846220"
   integrity sha512-7FeQIoSUjapFkBMQlrIn1yztKGP3tAnNkfUl6UQ2rdToPU9MAETxgn2VnoCd6B4L+ntTyjidEQXFU2YFDHuf+A==
 
-"@monsonjeremy/react-leaflet@^4.2.0":
+"@monsonjeremy/react-leaflet@^3.2.2":
   version "3.2.2"
   resolved "https://registry.yarnpkg.com/@monsonjeremy/react-leaflet/-/react-leaflet-3.2.2.tgz#06dab9befb46105e945ed7a125a26e9743c99580"
   integrity sha512-LZPm4nXpypqrTIqZzYfQorOtFbZ9osWWWmee831TA4/HAWPGkGgxXfh0W/qzsEP3ruIjmV2NaHnj+Uh/xMSKbA==
