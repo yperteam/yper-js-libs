@@ -33,6 +33,7 @@ module.exports = {
         alias: {
             jquery: "jquery/src/jquery",
             react: path.resolve(__dirname, "./node_modules/react"),
+            react_dom: path.resolve(__dirname, "./node_modules/react-dom")
         }
     },
     output: {
