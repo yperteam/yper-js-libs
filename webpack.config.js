@@ -31,9 +31,7 @@ module.exports = {
         ],
         extensions: ['.tsx', '.ts', '.js'],
         alias: {
-            jquery: "jquery/src/jquery",
-            react: path.resolve(__dirname, "./node_modules/react"),
-            react_dom: path.resolve(__dirname, "./node_modules/react-dom")
+            jquery: "jquery/src/jquery"
         }
     },
     output: {
