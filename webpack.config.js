@@ -1,5 +1,4 @@
 const path = require('path');
-// TODO ? const commonsPlugin = new webpack.optimize.CommonsChunkPlugin('common.js');
 
 module.exports = {
     entry: './src/index.ts',
@@ -40,6 +39,5 @@ module.exports = {
         library: "yperLibs",
         libraryTarget: "umd"
     },
-    // TODO plugins: [commonsPlugin],
     mode: "production",
 };

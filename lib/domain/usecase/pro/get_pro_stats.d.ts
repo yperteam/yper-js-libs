@@ -1,4 +1,4 @@
-import { ProRetailpointStats } from "src/data/entity/pro_retailpoint_stats.entity";
+import { ProRetailpointStats } from "../../../data/entity/pro_retailpoint_stats.entity";
 export declare class GetProStats {
     /** Repository */
     private proRepository;

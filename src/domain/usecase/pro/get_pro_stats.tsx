@@ -1,7 +1,7 @@
 import { firstValueFrom } from "rxjs";
 import { GetCurrentProId } from "../../../domain/usecase/pro/get_current_pro_id";
 import { ProRepository } from "../../../data/repository/pro.repository";
-import { ProRetailpointStats } from "src/data/entity/pro_retailpoint_stats.entity";
+import { ProRetailpointStats } from "../../../data/entity/pro_retailpoint_stats.entity";
 
 export class GetProStats {
   /** Repository */

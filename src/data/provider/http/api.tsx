@@ -67,6 +67,8 @@ export class Api extends Singleton {
     baseURL: baseUrl,
     transitional: {
       silentJSONParsing: false,
+      clarifyTimeoutError: false,
+      forcedJSONParsing: true,
     },
   });
 

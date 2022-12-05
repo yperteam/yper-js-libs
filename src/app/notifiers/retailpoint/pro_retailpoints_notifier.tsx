@@ -5,7 +5,7 @@ import {
   selector,
   selectorFamily,
 } from "recoil";
-import { ProRetailpointList } from "src/data/entity/retailpoint.entity";
+import { ProRetailpointList } from "../../../data/entity/retailpoint.entity";
 import { GetProRetailpoints } from "../../../domain/usecase/pro/get_pro_retailpoints";
 import { StreamNotifier } from "../stream_notifier";
 

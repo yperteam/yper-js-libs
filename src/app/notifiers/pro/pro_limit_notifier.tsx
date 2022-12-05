@@ -1,5 +1,5 @@
 import { selector } from "recoil";
-import { ProLimit } from "src/data/entity/pro_limit.entity";
+import { ProLimit } from "../../../data/entity/pro_limit.entity";
 import { GetProLimit } from "../../../domain/usecase/pro/get_pro_limit";
 
 export class ProLimitNotifier {

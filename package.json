@@ -1,6 +1,6 @@
 {
   "name": "yper-js-libs",
-  "version": "2.0.11",
+  "version": "2.0.12",
   "description": "Yper JS Libs",
   "repository": {
     "type": "git",
@@ -47,6 +47,7 @@
     "@types/stripe-v3": "^3.1.6",
     "@types/styled-components": "^5.1.18",
     "@wojtekmaj/react-daterange-picker": "^3.3.2",
+    "axios": "^0.24.0",
     "axios-case-converter": "^0.9.0",
     "callable-instance": "^2.0.0",
     "chart.js": "^3.7.0",
@@ -125,7 +126,6 @@
     "@types/react-table": "^7.7.12",
     "@types/stripe": "^6.31.14",
     "@types/styled-react-modal": "^1.2.2",
-    "axios": "^0.24.0",
     "babel-loader": "^8.2.2",
     "babel-plugin-styled-components": "^2.0.2",
     "css-loader": "^5.1.2",
@@ -151,5 +151,9 @@
   "homepage": "https://github.com/yperteam/yper-js-libs#readme",
   "directories": {
     "lib": "lib"
+  },
+  "resolutions": {
+    "@types/react": "^17.0.35",
+    "@types/react-dom": "^17.0.11"
   }
 }
