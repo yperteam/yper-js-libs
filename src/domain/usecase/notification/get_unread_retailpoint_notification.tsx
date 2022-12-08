@@ -2,7 +2,7 @@ import { NotificationRepository } from "../../../data/repository/notification.re
 import { GetCurrentRetailpointId } from "../../../domain/usecase/retailpoint/get_current_retailpoint_id";
 import CallableInstance from "callable-instance";
 import { combineLatest, Observable, switchMap } from "rxjs";
-import { GetCurrentUserId } from "../user/get_current_user_id";
+import { WatchCurrentUser } from "../user/watch_current_user";
 
 export class GetUnreadRetailpointNotification extends CallableInstance<
   [],
@@ -10,7 +10,7 @@ export class GetUnreadRetailpointNotification extends CallableInstance<
 > {
   private repository: NotificationRepository = new NotificationRepository();
   private getCurrentRetailPointId: GetCurrentRetailpointId = new GetCurrentRetailpointId();
-  private getCurrentUserId: GetCurrentUserId = new GetCurrentUserId();
+  private watchCurrentUser: WatchCurrentUser = new WatchCurrentUser();
 
   constructor() {
     super("instanceMethod");
@@ -19,10 +19,10 @@ export class GetUnreadRetailpointNotification extends CallableInstance<
   public instanceMethod(): Observable<number> {
     return combineLatest([
       this.getCurrentRetailPointId(),
-      this.getCurrentUserId(),
+      this.watchCurrentUser(),
     ]).pipe(
       switchMap(values =>
-        this.repository.unreadNotificationNumber(values[1], values[0])
+        this.repository.unreadNotificationNumber(values[1].id, values[0])
       )
     );
   }

@@ -22,15 +22,10 @@ export class SupportRepository {
 
   public getPhoneCallRequests(
     userId: string,
-    callerType: string
+    callerType: string,
+    status: string[],
   ): Observable<PhoneCallRequest[]> {
-    return from(
-      this.api.getPhoneCallRequests(
-        userId,
-        ["created", "pending", "processing"],
-        callerType
-      )
-    ).pipe(
+    return from(this.api.getPhoneCallRequests(userId, status, callerType)).pipe(
       switchMap(list => {
         CallRequestStorage.instance.set(list);
         return CallRequestStorage.instance.get();

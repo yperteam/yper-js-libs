@@ -43,7 +43,7 @@ import { FavoriteAddress } from "../../entity/favorite_address";
 import { ContactReasonEntity } from "../../entity/contact_reason.entity";
 import { PhoneCallRequest } from "../../entity/phone_call_request.entity";
 import { firstValueFrom } from "rxjs";
-import { UserSex } from "../../entity/user.entity";
+import { User, UserSex } from "../../entity/user.entity";
 import { Term } from "../../../data/entity/term.entity";
 import { ProLimit } from "../../../data/entity/pro_limit.entity";
 
@@ -60,7 +60,6 @@ export abstract class Singleton {
 }
 
 const baseUrl: string = process.env.YPER_YPERAPI_URL;
-const APP_NAME = "ypershop";
 
 export class Api extends Singleton {
   private api = axios.create({
@@ -111,12 +110,17 @@ export class Api extends Singleton {
         });
         config.headers["Authorization"] = `Bearer ${credentialToken}`;
       } else if (authHeader != "none") {
-        config.headers["Authorization"] = `Bearer ${await firstValueFrom(
-          AuthStorage.instance.get()
-        )}`;
+        const token = await firstValueFrom(AuthStorage.instance.get());
+        if (token == null || token.length == 0) {
+          throw new Error("test");
+        } else {
+          config.headers["Authorization"] = `Bearer ${token}`;
+        }
       }
       config.headers["X-Request-Timestamp"] = new Date().getTime().toString();
       return config;
+    }, function (error) {
+      return Promise.reject(error);
     });
     this.api.interceptors.response.use(
       response => {
@@ -730,7 +734,8 @@ export class Api extends Singleton {
   ): Promise<NotificationResponse> {
     const res = await this.api.get(`/v2/user/${userId}/notification`, {
       params: {
-        app_names: APP_NAME,
+        // TODO send it from usecase ?
+        app_names: process.env.YPER_APP_NAME,
         recipient__id: retailpointId,
         recipient__type__: "retail_point",
         sort: "-sentAt",
@@ -816,6 +821,9 @@ export class Api extends Singleton {
       params: {
         limit: -1,
         user_group_names: userGroups.join(","),
+      },
+      headers: {
+        Authorization: "none",
       },
     });
     return res.data.result.data;
@@ -952,6 +960,12 @@ export class Api extends Singleton {
         version: version
       }
     );
+    return res.data.result;
+  }
+
+  public async getCurrentUser(): Promise<User> {
+    const res = await this.api.get(`/user/me`);
+
     return res.data.result;
   }
 }

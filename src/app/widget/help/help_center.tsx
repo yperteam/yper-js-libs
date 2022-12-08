@@ -6,7 +6,7 @@ import { useNavigate } from "react-router-dom";
 import { CardAction } from "../../widget/card";
 import { Column, Row, Spacing } from "../../widget/generic";
 import { ButtonOutlined, ButtonPrimary, TextButton } from "../../widget/button";
-import { ProContactReasonsNotifier } from "../../notifiers/support/pro_contact_reasons_notifier";
+import { ContactReasonsNotifier } from "../../notifiers/support/pro_contact_reasons_notifier";
 import {
   FaqArticle,
   MeanType,
@@ -17,7 +17,7 @@ import { PhoneCallRequestNotifier } from "../../notifiers/support/phone_call_req
 import { ClipLoader } from "react-spinners";
 import Select from "react-select";
 import { LoggedNotifier } from "../../notifiers/auth/logged_notifier";
-import { ContactReason } from "../../../domain/usecase/support/get_pro_contact_reasons";
+import { ContactReason } from "../../../domain/usecase/support/get_contact_reasons";
 
 const closeIcon = "/img/react/icon/close_icon.svg";
 const questionIcon = "/img/react/icon/ic_question_circle.svg";
@@ -27,9 +27,9 @@ const phoneIcon = "/img/react/icon/ic_phone.svg";
 
 export function HelpCenter() {
   const theme = useTheme();
-  let state = useRecoilValue(ProContactReasonsNotifier.provider);
+  let state = useRecoilValue(ContactReasonsNotifier.provider);
   let byCategoryState = useRecoilValue(
-    ProContactReasonsNotifier.byCategoryProvider
+    ContactReasonsNotifier.byCategoryProvider
   );
   let [selectedCategory, setCategory] = useState<string | null>(null);
   let [selectedReason, setReason] = useState<ContactReason | null>(null);

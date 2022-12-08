@@ -7,7 +7,7 @@ import {
 } from "../../../data/entity/contact_reason.entity";
 import { from, map, Observable } from "rxjs";
 
-export class GetProContactReasons extends CallableInstance<
+export class GetContactReasons extends CallableInstance<
   [],
   Observable<ContactReason[]>
 > {
@@ -17,9 +17,12 @@ export class GetProContactReasons extends CallableInstance<
     super("instanceMethod");
   }
 
+  private getUserGroup(): string {
+    return process.env.YPER_APP_NAME == "ypershop" ? "pro" : "customer";
+  }
+
   public instanceMethod(): Observable<ContactReason[]> {
-    // TODO base it on current app
-    return from(this.repository.getContactReasons(["pro"])).pipe(
+    return from(this.repository.getContactReasons([this.getUserGroup()])).pipe(
       map(l =>
         l.map(e => ({
           ...e,

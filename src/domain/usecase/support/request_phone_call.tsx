@@ -3,7 +3,7 @@ import { SupportRepository } from "../../../data/repository/support.repository";
 import { firstValueFrom } from "rxjs";
 import { PhoneCallRequest } from "../../../data/entity/phone_call_request.entity";
 import { GetCurrentProId } from "../pro/get_current_pro_id";
-import { GetCurrentUserId } from "../user/get_current_user_id";
+import { WatchCurrentUser } from "../user/watch_current_user";
 
 export class RequestPhoneCall extends CallableInstance<
   [string, string, string],
@@ -15,16 +15,14 @@ export class RequestPhoneCall extends CallableInstance<
     super("instanceMethod");
   }
 
-  // TODO base it on app env
-  private getCallerId(): Promise<string> {
-    return true
+  private async getCallerId(): Promise<string> {
+    return process.env.YPER_APP_NAME == "ypershop"
       ? firstValueFrom(new GetCurrentProId()())
-      : firstValueFrom(new GetCurrentUserId()());
+      : (await firstValueFrom(new WatchCurrentUser()())).id;
   }
 
-  // TODO base it on app env
   private getCallerType(): string {
-    return true ? "pro" : "customer";
+    return process.env.YPER_APP_NAME == "ypershop" ? "pro" : "customer";
   }
 
   public async instanceMethod(

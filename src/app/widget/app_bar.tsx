@@ -14,28 +14,10 @@ import { GetUnreadNotificationNotifier } from "../notifiers/notification/get_unr
 import { CurrentProNotifier } from "../notifiers/pro/current_pro_notifier";
 import { MainCard } from "./card";
 import { LoggedNotifier } from "../notifiers/auth/logged_notifier";
+import { useOutsideAlerter } from "../hooks/use_outside_alerter";
 import { SideBar, sideBarProvider } from "./side_bar";
 
 const addCircleSolidIcon = "/img/react/icon/ic_add_circle_solid.svg";
-
-function useOutsideAlerter(ref: React.MutableRefObject<any>, onOutside: () => void) {
-  useEffect(() => {
-    /**
-     * Alert if clicked on outside of element
-     */
-    function handleClickOutside(event: MouseEvent) {
-      if (ref.current && !ref.current.contains(event.target)) {
-        onOutside();
-      }
-    }
-    // Bind the event listener
-    document.addEventListener("mousedown", handleClickOutside);
-    return () => {
-      // Unbind the event listener on clean up
-      document.removeEventListener("mousedown", handleClickOutside);
-    };
-  }, [ref]);
-}
 
 function MainNavigation(props: { hasBookReachedLimit: string }) {
   const pro = useRecoilValue(CurrentProNotifier.provider);

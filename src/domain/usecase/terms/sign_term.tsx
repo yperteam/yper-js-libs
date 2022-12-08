@@ -1,11 +1,11 @@
 import CallableInstance from "callable-instance";
 import { RequestedActionsRepository } from "../../../data/repository/requested_actions.repository";
-import { GetCurrentUserId } from "../user/get_current_user_id";
+import { WatchCurrentUser } from "../user/watch_current_user";
 import { firstValueFrom } from "rxjs";
 
 export class SignTerm extends CallableInstance<[string], Promise<string>> {
     private repository = new RequestedActionsRepository();
-    private getUserId = new GetCurrentUserId();
+    private getUser = new WatchCurrentUser();
 
     constructor() {
         super("instanceMethod");
@@ -13,7 +13,7 @@ export class SignTerm extends CallableInstance<[string], Promise<string>> {
 
     public async instanceMethod(termName: string): Promise<string> {
         const term = await this.repository.getTerm(termName);
-        const userId = await firstValueFrom(this.getUserId());
-        return this.repository.signTerm({ userId: userId, term: termName, version: term.version });
+        const user = await firstValueFrom(this.getUser());
+        return this.repository.signTerm({ userId: user.id, term: termName, version: term.version });
     }
 }

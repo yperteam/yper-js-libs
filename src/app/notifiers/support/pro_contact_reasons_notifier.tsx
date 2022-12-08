@@ -1,21 +1,21 @@
 import { StreamNotifier } from "../stream_notifier";
 import {
   ContactReason,
-  GetProContactReasons,
-} from "../../../domain/usecase/support/get_pro_contact_reasons";
-import { Loadable, selector } from "recoil";
+  GetContactReasons,
+} from "../../../domain/usecase/support/get_contact_reasons";
+import { selector } from "recoil";
 
-export class ProContactReasonsNotifier {
+export class ContactReasonsNotifier {
   static provider = StreamNotifier.provider({
-    key: "pro_contact_reasons",
-    stream: new GetProContactReasons()(),
+    key: "contact_reasons_notifier",
+    stream: new GetContactReasons()(),
   });
 
   // TODO type
   static byCategoryProvider = selector<ContactReason[]>({
-    key: "pro_contact_reasons_category",
+    key: "contact_reasons_category_notifier",
     get: ({ get }) => {
-      return get(ProContactReasonsNotifier.provider).map(reasons =>
+      return get(ContactReasonsNotifier.provider).map(reasons =>
         reasons.reduce((reasons, reason) => {
           if (
             reasons.findIndex(c => c.categoryName == reason.categoryName) == -1
