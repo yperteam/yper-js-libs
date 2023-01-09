@@ -1,6 +1,6 @@
 /* @preserve
- * Leaflet 1.7.1, a JS library for interactive maps. http://leafletjs.com
- * (c) 2010-2019 Vladimir Agafonkin, (c) 2010-2011 CloudMade
+ * Leaflet 1.9.3, a JS library for interactive maps. https://leafletjs.com
+ * (c) 2010-2022 Vladimir Agafonkin, (c) 2010-2011 CloudMade
  */
 
 /*!
@@ -26,15 +26,6 @@
  * http://www.gnu.org/licenses/gpl.html
  *
  * Thanks to Amir-Hossein Sobhi for some excellent contributions!
- */
-
-/*!
- Transformation Matrix v2.0
- (c) Epistemex 2014-2015
- www.epistemex.com
- By Ken Fyrstenberg
- Contributions by leeoniya.
- License: MIT, header required.
  */
 
 //! moment.js

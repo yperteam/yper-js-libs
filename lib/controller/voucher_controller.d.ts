@@ -2,6 +2,8 @@
 /// <reference types="jquery.blockui" />
 /// <reference types="jqueryui" />
 /// <reference types="bootstrap" />
+/// <reference types="datatables.net" />
+/// <reference types="select2" />
 import { AbstractLib } from "../libs/abstract_lib";
 export default class VoucherController extends AbstractLib {
     /**

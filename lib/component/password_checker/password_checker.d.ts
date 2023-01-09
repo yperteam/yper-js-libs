@@ -2,6 +2,8 @@
 /// <reference types="jquery.blockui" />
 /// <reference types="jqueryui" />
 /// <reference types="bootstrap" />
+/// <reference types="datatables.net" />
+/// <reference types="select2" />
 import CallbackHelper from "../../helpers/callback_helper";
 /**
  * PasswordCheckerHelper used to check password

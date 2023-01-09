@@ -2,6 +2,8 @@
 /// <reference types="jquery.blockui" />
 /// <reference types="jqueryui" />
 /// <reference types="bootstrap" />
+/// <reference types="datatables.net" />
+/// <reference types="select2" />
 /**
  * Abstract lib to manage libs
  */
