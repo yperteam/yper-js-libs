@@ -68,7 +68,7 @@ import * as Error from "./error/yper_exception";
 
 export * from "./app/helpers/generic_helper";
 export * from "./app/widget/app_bar";
-/*export * from "./app/widget/breakpoints";
+export * from "./app/widget/breakpoints";
 export * from "./app/widget/button";
 export * from "./app/widget/card";
 export * from "./app/widget/custom_accordion";
@@ -87,7 +87,7 @@ export * from "./app/widget/requires_auth";
 export * from "./app/widget/rounded_icon";
 export * from "./app/widget/side_bar";
 export * from "./app/widget/tags";
-export * from "./app/widget/theme";
+//export * from "./app/widget/theme";
 export * from "./app/widget/tooltip";
 export * from "./app/widget/window_dimension_hook";
 export * from "./app/widget/address/address_input";
@@ -227,7 +227,7 @@ export * from "./data/entity/subscription.entity";
 export * from "./data/provider/local/pro_storage";
 export * from "./data/provider/local/current_user_storage";
 export * from "./data/provider/local/current_retailpoint_storage";
-export * from "./data/provider/local/auth_storage";*/
+export * from "./data/provider/local/auth_storage";
 
 export {
     translationHelper,
