@@ -4,8 +4,8 @@ import { PhoneCallRequest } from "../../../data/entity/phone_call_request.entity
 export declare class GetPhoneCallRequest extends CallableInstance<[
 ], Observable<PhoneCallRequest[]>> {
     private repository;
-    private userRepository;
+    private watchCurrentUser;
     constructor();
-    getCallerType(): string;
+    getCallerType(): "pro" | "customer";
     instanceMethod(): Observable<PhoneCallRequest[]>;
 }

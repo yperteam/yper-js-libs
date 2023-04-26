@@ -3,3 +3,10 @@ export declare enum UserSex {
     male = "male",
     female = "female"
 }
+export interface User {
+    id: string;
+    username: string;
+    firstname: string;
+    lastname: String;
+    nickname?: string | null;
+}

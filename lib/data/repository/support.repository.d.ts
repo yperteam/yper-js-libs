@@ -6,7 +6,7 @@ export declare class SupportRepository {
     private proStorage;
     getContactReasons(userGroups: string[]): Promise<ContactReasonEntity[]>;
     getPhoneCallRequest(requestId: string): Promise<PhoneCallRequest>;
-    getPhoneCallRequests(userId: string, callerType: string): Observable<PhoneCallRequest[]>;
+    getPhoneCallRequests(userId: string, callerType: string, status: string[]): Observable<PhoneCallRequest[]>;
     requestPhoneCall(props: {
         callerId: string;
         phoneNumber: string;

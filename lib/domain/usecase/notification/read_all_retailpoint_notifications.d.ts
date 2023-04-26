@@ -1,6 +1,6 @@
 export declare class ReadAllRetailpointNotifications {
     private repository;
     private getCurrentRetailPointId;
-    private getCurrentUserId;
+    private watchCurrentUser;
     call(): Promise<void>;
 }

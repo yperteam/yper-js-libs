@@ -20,7 +20,7 @@ import { NotificationResponse, NotificationUnreadResponse } from "../../../data/
 import { FavoriteAddress } from "../../entity/favorite_address";
 import { ContactReasonEntity } from "../../entity/contact_reason.entity";
 import { PhoneCallRequest } from "../../entity/phone_call_request.entity";
-import { UserSex } from "../../entity/user.entity";
+import { User, UserSex } from "../../entity/user.entity";
 import { Term } from "../../../data/entity/term.entity";
 import { ProLimit } from "../../../data/entity/pro_limit.entity";
 export declare abstract class Singleton {
@@ -110,6 +110,7 @@ export declare class Api extends Singleton {
     }): Promise<any>;
     getTerm(termName: string): Promise<Term>;
     acceptTerm(userId: string, term: string, version: number): Promise<any>;
+    getCurrentUser(): Promise<User>;
 }
 export interface ClientDetails {
     stripeDetails: {

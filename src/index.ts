@@ -66,9 +66,9 @@ import PasswordChecker from "./component/password_checker/password_checker";
 
 import * as Error from "./error/yper_exception";
 
-/*export * from "./app/helpers/generic_helper";
+export * from "./app/helpers/generic_helper";
 export * from "./app/widget/app_bar";
-export * from "./app/widget/breakpoints";
+/*export * from "./app/widget/breakpoints";
 export * from "./app/widget/button";
 export * from "./app/widget/card";
 export * from "./app/widget/custom_accordion";

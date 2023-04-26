@@ -4,7 +4,7 @@ export declare class GetUnreadRetailpointNotification extends CallableInstance<[
 ], Observable<number>> {
     private repository;
     private getCurrentRetailPointId;
-    private getCurrentUserId;
+    private watchCurrentUser;
     constructor();
     instanceMethod(): Observable<number>;
 }

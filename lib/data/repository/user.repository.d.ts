@@ -1,8 +1,11 @@
 import { Observable } from "rxjs";
-import { UserSex } from "../entity/user.entity";
+import { User, UserSex } from "../entity/user.entity";
 export declare class UserRepository {
     private api;
-    getCurrentUserId(): Observable<string>;
+    private userLock;
+    private _getCurrentUser;
+    getCurrentUser(): Observable<User>;
+    watchCurrentUser(): Observable<User>;
     registerUser(props: RegisterUserProps): Promise<any>;
 }
 export interface RegisterUserProps {
