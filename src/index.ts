@@ -66,7 +66,7 @@ import PasswordChecker from "./component/password_checker/password_checker";
 
 import * as Error from "./error/yper_exception";
 
-export * from "./app/helpers/generic_helper";
+/*export * from "./app/helpers/generic_helper";
 export * from "./app/widget/app_bar";
 export * from "./app/widget/breakpoints";
 export * from "./app/widget/button";
@@ -227,7 +227,7 @@ export * from "./data/entity/subscription.entity";
 export * from "./data/provider/local/pro_storage";
 export * from "./data/provider/local/current_user_storage";
 export * from "./data/provider/local/current_retailpoint_storage";
-export * from "./data/provider/local/auth_storage";
+export * from "./data/provider/local/auth_storage";*/
 
 export {
     translationHelper,
